@@ -1,0 +1,53 @@
+{
+    "version": "0.1.0",
+    "command": "${workspaceRoot}/.vscode/CompileOmniPascalServerProject.sh"
+    "isShellCommand": true,
+    "showOutput": "always",
+    "runner": "terminal",
+    "tasks": [
+        {
+           "taskName": "build",
+           "isBuildCommand": true,
+           "problemMatcher": {
+               "owner": "external",
+               "fileLocation": ["absolute"],
+               "pattern": {
+                   "regexp": "(\\/?(?:[^\\/:*?\\\"<>|\\r\\n]+\\/)*[^\\/\\s\\(:*?\\\"<>|\\r\\n]*)\\((\\d+),(\\d+)\\)\\s.*(Fatal|Error|Warning|Hint|Note):\\s\\((\\d+)\\)\\s(.*)$",
+                   "file": 1,
+                   "line": 2,
+                   "column": 3,
+                   "severity": 4,
+                   "code": 5,
+                   "message": 6
+               },
+                "severity": "info"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+           "taskName": "test",
+           "isTestCommand": true,
+           "problemMatcher": {
+               "owner": "external",
+               "fileLocation": ["absolute"],
+               "pattern": {
+                   "regexp": "(\\/?(?:[^\\/:*?\\\"<>|\\r\\n]+\\/)*[^\\/\\s\\(:*?\\\"<>|\\r\\n]*)\\((\\d+),(\\d+)\\)\\s.*(Fatal|Error|Warning|Hint|Note):\\s\\((\\d+)\\)\\s(.*)$",
+                   "file": 1,
+                   "line": 2,
+                   "column": 3,
+                   "severity": 4,
+                   "code": 5,
+                   "message": 6
+               },
+                "severity": "info"
+            },
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        }
+    ]
+}

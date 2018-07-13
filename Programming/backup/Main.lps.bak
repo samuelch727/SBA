@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="10"/>
+    <BuildModes Active="Default"/>
+    <Units Count="1">
+      <Unit0>
+        <Filename Value="Main.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="10"/>
+        <CursorPos X="43" Y="56"/>
+        <UsageCount Value="21"/>
+        <Loaded Value="True"/>
+      </Unit0>
+    </Units>
+    <JumpHistory Count="8" HistoryIndex="7">
+      <Position1>
+        <Filename Value="Main.lpr"/>
+        <Caret Line="31" Column="82"/>
+      </Position1>
+      <Position2>
+        <Filename Value="Main.lpr"/>
+        <Caret Line="18" Column="68"/>
+      </Position2>
+      <Position3>
+        <Filename Value="Main.lpr"/>
+        <Caret Line="17" Column="37"/>
+      </Position3>
+      <Position4>
+        <Filename Value="Main.lpr"/>
+        <Caret Line="18" Column="30"/>
+      </Position4>
+      <Position5>
+        <Filename Value="Main.lpr"/>
+        <Caret Line="21" Column="43"/>
+      </Position5>
+      <Position6>
+        <Filename Value="Main.lpr"/>
+        <Caret Line="15" Column="17"/>
+      </Position6>
+      <Position7>
+        <Filename Value="Main.lpr"/>
+        <Caret Line="18" Column="6"/>
+      </Position7>
+      <Position8>
+        <Filename Value="Main.lpr"/>
+        <Caret Line="41" Column="42"/>
+      </Position8>
+    </JumpHistory>
+  </ProjectSession>
+</CONFIG>
