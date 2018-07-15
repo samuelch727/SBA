@@ -5,7 +5,7 @@ Type
         seed : Boolean;
     End;
 var
-    a : array [1..10] of userData;
+    a : array of userData;
     i : Integer;
     checkInput : Boolean;
     tempSeed : String;

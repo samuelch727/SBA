@@ -1,8 +1,15 @@
 program Main;
 uses Crt;
+type
+    userData = record
+        ID : Integer;
+        seed : Boolean;
+        Name : String;
+        School : String;
+    End;
 var
-    a : String;
-    myfile : Text;
+    data : array of userData;
+    arraySize : Integer;
 function dataEncryption(data : String):String;
     var 
         keyFile : Text;                                 // File that stored the encryption key 
@@ -56,24 +63,102 @@ function dataDecryption(data : String):String;
         // Return encrypted message
         dataDecryption := encryptedMessage;
     end;
-
+procedure addUserData();
+    var
+        sourceFile : Text;
+        inputSuccess : Boolean;
+        temp : String;
+    begin
+        arraySize := arraySize + 1;
+        try
+            begin
+              Assign(sourceFile, '/Users/samuel/Documents/SelfProgramming/SBA/Programming/File/Competitors.epd');
+              SetLength(data, arraySize);
+            end;
+        except
+            begin
+                TextColor(Red);
+                WriteLn('Initialization Error');
+                TextColor(Black);
+            end;
+        end;
+        Append(sourceFile);
+        inputSuccess := False;
+        repeat
+            Write('input ID');
+            try
+                try
+                  Readln(data[arraySize].ID);
+                except
+                    TextColor(Red);
+                    WriteLn('Invaild Data');
+                    TextColor(Black);
+                end;
+            finally
+                inputSuccess := True;
+            end;
+            WriteLn(sourceFile, data[arraySize].ID);
+        until inputSuccess;
+        inputSuccess := False;
+        repeat
+            Write('Name');
+            try
+                try
+                  Readln(data[arraySize].Name);
+                except
+                    TextColor(Red);
+                    WriteLn('Invaild Data');
+                    TextColor(Black);
+                end;
+            finally
+                inputSuccess := True;
+            end;
+            WriteLn(sourceFile, data[arraySize].Name);
+        until inputSuccess;
+        inputSuccess := False;
+        repeat
+            Write('School');
+            try
+                try
+                  Readln(data[arraySize].School);
+                except
+                    TextColor(Red);
+                    WriteLn('Invaild Data');
+                    TextColor(Black);
+                end;
+            finally
+                inputSuccess := True;
+            end;
+            WriteLn(sourceFile, data[arraySize].School);
+        until inputSuccess;
+        inputSuccess := False;
+        repeat
+            Write('seed? [Y/N]');
+            try
+                try
+                  ReadLn(temp);
+                except
+                    TextColor(Red);
+                    WriteLn('Invaild Data');
+                    TextColor(Black);
+                end;
+            finally
+                inputSuccess := True;
+            end;
+            case temp of
+                'Y' : data[arraySize].seed := True;
+                'N' : data[arraySize].seed := False;
+            else
+                TextColor(Red);
+                WriteLn('Invaild Data');
+                TextColor(Black);
+            end;
+            WriteLn(sourceFile, data[arraySize].seed);
+        until inputSuccess;
+    end;
 
 begin
     ClrScr;
-    WriteLn('enter message');
-    try
-        ReadLn(a);
-    except
-        WriteLn('invalid message');
-    end;
-    Write('encrypted message: ');
-    a := dataEncryption(a);
-    Assign(myfile, '/Users/samuel/Documents/SelfProgramming/SBA/Programming/File/Competitors.epd');
-    Rewrite(myfile);
-    WriteLn(myfile, a);
-    Close(myfile);
-    WriteLn(a);
-    Write('decrypted message: ');
-    Writeln(dataDecryption(a));
+    addUserData;
 end.
 
