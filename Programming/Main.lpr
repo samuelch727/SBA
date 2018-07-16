@@ -2,7 +2,7 @@ program Main;
 uses Crt;
 type
     userData = record
-        ID : Integer;
+        ID : String;
         seed : Boolean;
         Name : String;
         School : String;
@@ -10,6 +10,8 @@ type
 var
     data : array of userData;
     arraySize : Integer;
+    test : TextFile;
+    temp : String;
 function dataEncryption(data : String):String;
     var 
         keyFile : Text;                                 // File that stored the encryption key 
@@ -67,12 +69,11 @@ procedure addUserData();
     var
         sourceFile : Text;
         inputSuccess : Boolean;
-        temp : String;
+        temp, temp1, temp2, temp3 : String;
     begin
         arraySize := arraySize + 1;
         try
             begin
-              Assign(sourceFile, '/Users/samuel/Documents/SelfProgramming/SBA/Programming/File/Competitors.epd');
               SetLength(data, arraySize);
             end;
         except
@@ -82,83 +83,62 @@ procedure addUserData();
                 TextColor(Black);
             end;
         end;
-        Append(sourceFile);
+        Write('input ID');
+        try
+            Readln(data[arraySize].ID);
+        except
+            TextColor(Red);
+            WriteLn('Invaild Data');
+            TextColor(Black);
+        end;
+        WriteLn(dataEncryption(data[arraySize].ID));
+        Write('input Name');
+        try
+            Readln(data[arraySize].Name);
+        except
+            TextColor(Red);
+            WriteLn('Invaild Data');
+            TextColor(Black);
+        end;
+        temp2 := (data[arraySize].Name);
+        Write('input School');
+        try
+            Readln(data[arraySize].School);
+        except
+            TextColor(Red);
+            WriteLn('Invaild Data');
+            TextColor(Black);
+        end;
         inputSuccess := False;
         repeat
-            Write('input ID');
-            try
-                try
-                  Readln(data[arraySize].ID);
-                except
-                    TextColor(Red);
-                    WriteLn('Invaild Data');
-                    TextColor(Black);
-                end;
-            finally
-                inputSuccess := True;
-            end;
-            WriteLn(sourceFile, data[arraySize].ID);
-        until inputSuccess;
-        inputSuccess := False;
-        repeat
-            Write('Name');
-            try
-                try
-                  Readln(data[arraySize].Name);
-                except
-                    TextColor(Red);
-                    WriteLn('Invaild Data');
-                    TextColor(Black);
-                end;
-            finally
-                inputSuccess := True;
-            end;
-            WriteLn(sourceFile, data[arraySize].Name);
-        until inputSuccess;
-        inputSuccess := False;
-        repeat
-            Write('School');
-            try
-                try
-                  Readln(data[arraySize].School);
-                except
-                    TextColor(Red);
-                    WriteLn('Invaild Data');
-                    TextColor(Black);
-                end;
-            finally
-                inputSuccess := True;
-            end;
-            WriteLn(sourceFile, data[arraySize].School);
-        until inputSuccess;
-        inputSuccess := False;
-        repeat
-            Write('seed? [Y/N]');
-            try
-                try
-                  ReadLn(temp);
-                except
-                    TextColor(Red);
-                    WriteLn('Invaild Data');
-                    TextColor(Black);
-                end;
-            finally
-                inputSuccess := True;
-            end;
-            case temp of
-                'Y' : data[arraySize].seed := True;
-                'N' : data[arraySize].seed := False;
-            else
+        temp3 := (data[arraySize].School);
+        WriteLn('Seed? [Y/N]');
+        ReadLn(temp);
+        inputSuccess := True;
+        case temp of
+            'Y' : data[arraySize].seed := True;
+            'N' : data[arraySize].seed := True;
+        else
+            begin
                 TextColor(Red);
                 WriteLn('Invaild Data');
                 TextColor(Black);
+                inputSuccess := False
             end;
-            WriteLn(sourceFile, data[arraySize].seed);
+        end;
         until inputSuccess;
+        Assign(sourceFile, '/Users/samuel/Documents/SelfProgramming/SBA/Programming/File/Competitors.txt');
+        Append(sourceFile);
+        WriteLn(sourceFile, temp1);
+        WriteLn(sourceFile, temp2);
+        WriteLn(sourceFile, temp3);
+        WriteLn(sourceFile, data[arraySize].seed);
+        Close(sourceFile);
     end;
 
 begin
     ClrScr;
     addUserData;
+    Writeln('test positive');
 end.
 
