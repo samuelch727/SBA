@@ -9,22 +9,32 @@ type
     End;
 var
     data : array of userData;
-    arraySize : Integer;
+    participantArraySize : Integer;
     debugMode, logedIn, admin : Boolean;
+procedure ClearDebugLog();
+    var
+        DebugFile : Text;
+    begin
+        Assign(DebugFile, '/Users/samuel/Documents/SelfProgramming/SBA/Programming/File/debugLog.txt');
+        Rewrite(DebugFile);
+        Close(DebugFile);
+    end;
 procedure debugLog(message : String ; level : Integer); //Level 1: Fatal Error, Level 2: Warnning, Level 3: Debug
+    var
+        DebugFile : Text;
     begin
         if debugMode then
             begin
                 case level of
                     1 : begin
                         TextColor(Red);
-                        Write('Fatal Error, Level 1');
+                        Write('Fatal Error: ');
                         WriteLn(message);
                         TextColor(Black);
                     end;
                     2 : begin
-                        TextColor(Red);
-                        Write('Warnning, Level 2');
+                        TextColor(Yellow);
+                        Write('Warnning: ');
                         WriteLn(message);
                         TextColor(Black);
                     end;
@@ -33,9 +43,26 @@ procedure debugLog(message : String ; level : Integer); //Level 1: Fatal Error, 
                         Write('Debug:');
                         WriteLn(message);
                         TextColor(Black);
+                    end;
                 end;
             end;
+        Assign(DebugFile, '/Users/samuel/Documents/SelfProgramming/SBA/Programming/File/debugLog.txt');
+        Append(DebugFile);
+        case level of
+            1 : begin
+                Write(DebugFile, 'Fatal Error, Level 1: ');
+                WriteLn(DebugFile, message);
+            end;
+            2 : begin
+                Write(DebugFile, 'Warnning, Level 2: ');
+                WriteLn(DebugFile, message);
+            end;
+            3 : begin
+                Write(DebugFile, 'Debug: ');
+                WriteLn(DebugFile, message);
+            end;
         end;
+        Close(DebugFile);
     end;
 function dataEncryption(data : String):String;
     var 
@@ -45,12 +72,14 @@ function dataEncryption(data : String):String;
     begin
         // Load File
         try
-          Assign(keyFile, '/Users/samuel/Documents/SelfProgramming/SBA/Programming/File/encryption.key');
-          Reset(keyFile);
-          ReadLn(keyFile, key);
-          Close(keyFile);
+            debugLog('Started Data Encryption', 3);
+            Assign(keyFile, '/Users/samuel/Documents/SelfProgramming/SBA/Programming/File/encryption.key');
+            Reset(keyFile);
+            ReadLn(keyFile, key);
+            Close(keyFile);
         except
-          writeln('Error: Cant read key file');         // Handle unexpected error
+            debugLog('Fail to load key file', 1);
+            WriteLn('Error when encryption');         // Handle unexpected error
         end;
         keyLength := Length(key);
         counter := 1;
@@ -61,6 +90,7 @@ function dataEncryption(data : String):String;
                 counter := (counter mod keyLength) + 1;
             end;
         // Return encrypted message
+        debugLog('Enncryption Successful',3);
         dataEncryption := encryptedMessage;
     end;
 
@@ -72,22 +102,29 @@ function dataDecryption(data : String):String;
     begin
         // Load File
         try
-          Assign(keyFile, '/Users/samuel/Documents/SelfProgramming/SBA/Programming/File/encryption.key');
-          Reset(keyFile);
-          ReadLn(keyFile, key);
-          Close(keyFile);
+            debugLog('Decryption Started', 3);
+            Assign(keyFile, '/Users/samuel/Documents/SelfProgramming/SBA/Programming/File/encryption.key');
+            Reset(keyFile);
+            ReadLn(keyFile, key);
+            Close(keyFile);
         except
-          writeln('Error: Cant read key file');         // Handle unexpected error
+            debugLog('error when decryption', 1);
+            writeln('Error when decryption');         // Handle unexpected error
         end;
-        keyLength := Length(key);
-        counter := 1;
-        // Encrpytion
-        for i := 1 to Length(data) do
-            begin
-                encryptedMessage := encryptedMessage + chr((ord(data[i]) - Ord(key[counter])));
-                counter := (counter mod keyLength) + 1;
-            end;
-        // Return encrypted message
+        try
+            keyLength := Length(key);
+            counter := 1;
+            // Encrpytion
+            for i := 1 to Length(data) do
+                begin
+                    encryptedMessage := encryptedMessage + chr((ord(data[i]) - Ord(key[counter])));
+                    counter := (counter mod keyLength) + 1;
+                end;
+            // Return encrypted message
+        except
+            debugLog('Key Error', 1);
+        end;
+        debugLog('decryption successful', 3);
         dataDecryption := encryptedMessage;
     end;
 procedure inputDataToFile(ID : String; Name : String; School : String; Seed : Boolean);
@@ -111,16 +148,73 @@ procedure inputDataToFile(ID : String; Name : String; School : String; Seed : Bo
         WriteLn(sourceFile, seedText);
         Close(sourceFile);
     end;
-procedure addUserData();
+function numberOfParticipant() : Integer;
+    var
+        sourceFile : Text;
+        temp : String;
+    begin
+        Assign(sourceFile, '/Users/samuel/Documents/SelfProgramming/SBA/Programming/File/Competitors.epd');
+        Reset(sourceFile);
+        participantArraySize := 0;
+        while not Eof(sourceFile) do
+            begin
+                debugLog('Counting Participators', 3);
+                participantArraySize := participantArraySize + 1;
+                ReadLn(sourceFile, temp);
+                ReadLn(sourceFile, temp);
+                ReadLn(sourceFile, temp);
+                ReadLn(sourceFile, temp);
+            end;
+        Close(sourceFile);
+    end;
+procedure LoadParticipant();
+    var
+        sourceFile : Text;
+        temp : String;
+        loop : Integer;
+    begin
+        debugLog('Start Load Participant Data', 3);
+        Assign(sourceFile, '/Users/samuel/Documents/SelfProgramming/SBA/Programming/File/Competitors.epd');
+        Reset(sourceFile);
+        debugLog('Loaded File', 3);
+        numberOfParticipant();
+        SetLength(data, participantArraySize);
+        loop := -1;
+        debugLog('Array Length Set', 3);
+        while not Eof(sourceFile) do
+            begin
+                debugLog('Loading Data', 3);
+                loop := loop + 1;
+                ReadLn(sourceFile, temp);
+                data[loop].ID := dataDecryption(temp);
+                debugLog('Loaded ID', 3);
+                ReadLn(sourceFile, temp);
+                data[loop].Name := dataDecryption(temp);
+                debugLog('Loaded Name', 3);
+                ReadLn(sourceFile, temp);
+                data[loop].School := dataDecryption(temp);
+                debugLog('Loaded School', 3);
+                ReadLn(sourceFile, temp);
+                temp := dataDecryption(temp);
+                if temp = 'True' then
+                    data[loop].seed := True
+                else
+                    data[loop].seed := False;
+                debugLog('Loaded Seed', 3);
+            end;
+        Close(sourceFile);
+    end;
+procedure addParticipantData();
     var
         inputSuccess : Boolean;
         temp, temp1, temp2, temp3 : String;
         temp4 : Boolean;
     begin
-        arraySize := arraySize + 1;
+        debugLog('Loading for adding participant', 3);
+        participantArraySize := participantArraySize + 1;
         try
             begin
-              SetLength(data, arraySize);
+              SetLength(data, participantArraySize);
             end;
         except
             begin
@@ -129,9 +223,8 @@ procedure addUserData();
                 TextColor(Black);
             end;
         end;
-        data[arraySize].ID := '';
-        data[arraySize].School := '';
-        Write('input ID');
+        debugLog('append array success', 3);
+        WriteLn('input ID:');
         try
             Readln(temp1);
         except
@@ -139,7 +232,7 @@ procedure addUserData();
             WriteLn('Invaild Data');
             TextColor(Black);
         end;
-        Write('input Name');
+        WriteLn('input Name:');
         try
             Readln(temp2);
         except
@@ -147,7 +240,7 @@ procedure addUserData();
             WriteLn('Invaild Data');
             TextColor(Black);
         end;
-        Write('input School');
+        WriteLn('input School:');
         try
             Readln(temp3);
         except
@@ -180,6 +273,7 @@ procedure loadUserName(var usrData : array of String);
         numberOfUser : Integer;
         temp : String;
     begin
+        debugLog('Loading User File', 3);
         Assign(sourceFile, '/Users/samuel/Documents/SelfProgramming/SBA/Programming/File/user.epd');
         Reset(sourceFile);
         numberOfUser := 0;
@@ -218,11 +312,13 @@ function numberOfUser() : Integer;
 function checkUserExist(usrName : String):Boolean; //Return false if user does exist
     var
         userName : array of String;
-        numberOfUser, tempForLoop : Integer;
+        tempForLoop : Integer;
         temp : String;
     begin
         checkUserExist := True;
+        debugLog('checking',3);
         SetLength(userName, numberOfUser);
+        debugLog('checking',3);
         loadUserName(userName);
         for tempForLoop := 1 to numberOfUser do
             begin
@@ -236,6 +332,7 @@ procedure creatAccount(isAdmin : Boolean);
         userName, password, valiPassword, tempInput : String;
         temp, inputSuccess: Boolean;
     begin
+        debugLog('Start Create AC', 3);
         if not isAdmin then
             begin
                 inputSuccess := False;
@@ -256,20 +353,25 @@ procedure creatAccount(isAdmin : Boolean);
                 end;
                 until inputSuccess;
             end;
+        debugLog('loading File', 3);
         Assign(acFile, '/Users/samuel/Documents/SelfProgramming/SBA/Programming/File/user.epd');
         Append(acFile);
         repeat
+            WriteLn('Enter username');
             ReadLn(userName);
+            debugLog('username entered', 3);
             temp := checkUserExist(userName);
             if not checkUserExist(userName) then
                 WriteLn('User Already Exist');
         until temp;
         WriteLn(acFile, dataEncryption(userName));
         debugLog('User Name Saved', 3);
-        WriteLn('password');
+        WriteLn('Enter password');
         repeat
             ReadLn(password);
+            WriteLn('ReEnter Password');
             ReadLn(valiPassword);
+            debugLog('Password Entered', 3);
             if not (password = valiPassword) then
                 begin
                     TextColor(Red);
@@ -277,6 +379,7 @@ procedure creatAccount(isAdmin : Boolean);
                     TextColor(Black);
                 end;
         until password = valiPassword;
+        debugLog('Password Validation Success', 3);
         writeln(acFile, dataEncryption(password));
         debugLog('User Password Saved' ,3);
         if isAdmin then
@@ -308,24 +411,51 @@ procedure logIn();
         until (fileUserName = UserName) or Eof(acFile);
         isAdmin := dataDecryption(isAdmin);
         if fileUserName <> fileUserName then
-            writeln('Username  incorrect')
+            begin
+                writeln('Username  incorrect');
+            end
         else if Password <> filePassword then
-            writeln('Username or Password incorrect')
+            begin
+                writeln('Username or Password incorrect');
+                debugLog('login fail, username/password incorrect', 2)
+            end
             else begin
               logedIn := True;
-              WriteLn(logedIn);
               if isAdmin = 'True' then admin := True;
+              debugLog('loged in', 3);
             end;
-        debugLog('loged in', 3);
     end;
-procedure menu();
+procedure logOut();
+    begin
+      logedIn := False;
+      admin := False;
+    end;
+procedure showParticipant();
+    var
+        temp : Integer;
+    begin
+        LoadParticipant();
+        for temp := 0 to (participantArraySize - 1) do
+            begin
+                Write(' ID: ');
+                Write(data[temp].ID :8);
+                Write(' Name: ');
+                Write(data[temp].Name :8);
+                Write(' School: ');
+                Write(data[temp].School :8);
+                Write(' Seed: ');
+                WriteLn(data[temp].seed :8);
+            end;
+    end;
+procedure Mainmenu();
     var
         choice : Integer;
+        temp : String;
     begin
         repeat
             ClrScr;
-            WriteLn('1. Login AC');
-            WriteLn('2. View Competiton Chart');
+            if logedIn then WriteLn('1. Logout AC') else WriteLn('1. Login AC');
+            WriteLn('2. View Competitors');
             if logedIn then WriteLn ('3. Enter Data');
             if admin then WriteLn('4. Add Account');
             WriteLn('9. Quit');
@@ -334,28 +464,37 @@ procedure menu();
             try
                 ReadLn(choice);
             except
-                WriteLn('Invalid choice');
             end;
-            debugLog('choice ok', 3);
+            debugLog('Choice entered', 3);
+            Str(choice, temp);
+            debugLog('User Choice : ' + temp, 3);
             case choice of
-                1 : logIn();
-                2 : WriteLn('working on it 🙇🏻‍');
-                3 : if logedIn then addUserData else WriteLn('Invalid choice');
+                1 : if logedIn then logOut else logIn;
+                2 : showParticipant();
+                3 : if logedIn then addParticipantData else WriteLn('Invalid choice');
                 4 : if admin then creatAccount(False) else WriteLn('Invalid choice');
                 9 : Break;
             else
                 begin
+                    TextColor(Red);
+                    debugLog('User Entered Invalid Option in Mainmenu', 2);
                     WriteLn('Invalid choice');
-                    menu;
                 end;
             end;
+            TextColor(Green);
+            WriteLn('press enter to continue');
+            TextColor(Black);
+            ReadLn;
         until choice = 9;
     end;
 begin
+    ClearDebugLog;
+    debugMode := True;
+    LoadParticipant;
     logedIn := False;
     admin := False;
-    debugMode := False;
+    // addParticipantData;
     if numberOfUser = 0 then creatAccount(True);
-    menu();
+    Mainmenu();
 end.
 
