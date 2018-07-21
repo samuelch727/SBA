@@ -127,26 +127,88 @@ function dataDecryption(data : String):String;
         debugLog('decryption successful', 3);
         dataDecryption := encryptedMessage;
     end;
-procedure inputDataToFile(ID : String; Name : String; School : String; Seed : Boolean);
+procedure quickSortParticipant(start, ending : Integer);
+    var
+        privot, wall, loop : Integer;
+        temp : String;
+        temp2 : Boolean;
+    begin
+        wall := start;
+        privot := ending;
+        if start < ending then
+            begin
+                debugLog('quicksort started', 3);
+                WriteLn(start);
+                WriteLn(ending);
+                for loop := start to ending - 1 do
+                    begin
+                        if data[privot].School > data[loop].School then
+                            begin
+                            debugLog('quicksort change position', 3);
+                            temp := data[loop].School;
+                            data[loop].School := data[wall].School;
+                            data[wall].School := temp;
+                            temp := data[loop].Name;
+                            data[loop].Name := data[wall].Name;
+                            data[wall].Name := temp;
+                            temp := data[loop].ID;
+                            data[loop].ID := data[wall].ID;
+                            data[wall].ID := temp;
+                            temp2 := data[loop].seed;
+                            data[loop].seed := data[wall].seed;
+                            data[wall].seed := temp2;
+                            wall := wall + 1;
+                            end;
+                    end;
+                temp := data[privot].School;
+                data[privot].School := data[wall].School;
+                data[wall].School := temp;
+                temp := data[privot].Name;
+                data[privot].Name := data[wall].Name;
+                data[wall].Name := temp;
+                temp := data[privot].ID;
+                data[privot].ID := data[wall].ID;
+                data[wall].ID := temp;
+                temp2 := data[privot].seed;
+                data[privot].seed := data[wall].seed;
+                data[wall].seed := temp2;
+                quickSortParticipant(start, wall - 1);
+                quickSortParticipant(wall + 1, ending);
+            end;
+    end;
+procedure inputDataToFile();
     var
         sourceFile : Text;
-        seedText : String;
+        seedText, ID, Name, School : String;
+        loop : Integer;
+        Seed : Boolean;
     begin
-        if Seed then
-            seedText := 'True'
-        else
-            seedText := 'False';
-        ID := dataEncryption(ID);
-        Name := dataEncryption(Name);
-        School := dataEncryption(School);
-        seedText := dataEncryption(seedText);
         Assign(sourceFile, '/Users/samuel/Documents/SelfProgramming/SBA/Programming/File/Competitors.epd');
-        Append(sourceFile);
-        WriteLn(sourceFile, ID);
-        WriteLn(sourceFile, Name);
-        WriteLn(sourceFile, School);
-        WriteLn(sourceFile, seedText);
+        Rewrite(sourceFile);
         Close(sourceFile);
+        // quickSortParticipant(0, participantArraySize - 1);
+        for loop := 0 to participantArraySize - 1 do
+            begin
+                ID := data[loop].ID;
+                School := data[loop].School;
+                Name := data[loop].Name;
+                Seed := data[loop].seed;
+                if Seed then
+                    seedText := 'True'
+                else
+                    seedText := 'False';
+                ID := dataEncryption(ID);
+                Name := dataEncryption(Name);
+                School := dataEncryption(School);
+                seedText := dataEncryption(seedText);
+                Assign(sourceFile, '/Users/samuel/Documents/SelfProgramming/SBA/Programming/File/Competitors.epd');
+                Append(sourceFile);
+                WriteLn(sourceFile, ID);
+                WriteLn(sourceFile, Name);
+                WriteLn(sourceFile, School);
+                WriteLn(sourceFile, seedText);
+                Close(sourceFile);
+            end;
     end;
 function numberOfParticipant() : Integer;
     var
@@ -204,6 +266,13 @@ procedure LoadParticipant();
             end;
         Close(sourceFile);
     end;
+
+procedure ValidateParticipantData();
+    begin
+        LoadParticipant();
+        debugLog('Validating Participant', 3);
+    end;
+// procedure generateID();
 procedure addParticipantData();
     var
         inputSuccess : Boolean;
@@ -265,7 +334,12 @@ procedure addParticipantData();
             end;
         end;
         until inputSuccess;
-        inputDataToFile(temp1, temp2, temp3, temp4);
+        data[participantArraySize -1].ID := temp1;
+        data[participantArraySize -1].Name := temp2;
+        data[participantArraySize -1].School := temp3;
+        data[participantArraySize -1].seed := temp4;
+        quickSortParticipant(0, participantArraySize - 1);
+        inputDataToFile();
     end;
 procedure loadUserName(var usrData : array of String);
     var
@@ -326,14 +400,14 @@ function checkUserExist(usrName : String):Boolean; //Return false if user does e
                     checkUserExist := False;
             end;  
     end;
-procedure creatAccount(isAdmin : Boolean);
+procedure creatAccount(isAdmin, ask : Boolean);
     var
         acFile : Text;
         userName, password, valiPassword, tempInput : String;
         temp, inputSuccess: Boolean;
     begin
         debugLog('Start Create AC', 3);
-        if not isAdmin then
+        if ask then
             begin
                 inputSuccess := False;
                 repeat
@@ -430,6 +504,10 @@ procedure logOut();
       logedIn := False;
       admin := False;
     end;
+procedure ChangePassword();
+    begin
+        
+    end;
 procedure showParticipant();
     var
         temp : Integer;
@@ -447,13 +525,30 @@ procedure showParticipant();
                 WriteLn(data[temp].seed :8);
             end;
     end;
-procedure Mainmenu();
+procedure AccountManagementMenu();
     var
         choice : Integer;
         temp : String;
     begin
+        ClrScr;
+        Writeln('1. Change Password');
+        Writeln('2. Change Username');
+        Writeln('3. Delete Account');
+        Writeln('9. Back To Main Screen');
+    end;
+procedure Mainmenu();
+    var
+        choice, test : Integer;
+        temp : String;
+    begin
         repeat
             ClrScr;
+            for test := 0 to participantArraySize - 1 do
+                begin
+                    WriteLn(data[test].ID);
+                    WriteLn(data[test].Name);
+                    WriteLn(data[test].School);
+                end;
             if logedIn then WriteLn('1. Logout AC') else WriteLn('1. Login AC');
             WriteLn('2. View Competitors');
             if logedIn then WriteLn ('3. Enter Data');
@@ -472,7 +567,7 @@ procedure Mainmenu();
                 1 : if logedIn then logOut else logIn;
                 2 : showParticipant();
                 3 : if logedIn then addParticipantData else WriteLn('Invalid choice');
-                4 : if admin then creatAccount(False) else WriteLn('Invalid choice');
+                4 : if admin then creatAccount(False, True) else WriteLn('Invalid choice');
                 9 : Break;
             else
                 begin
@@ -489,12 +584,13 @@ procedure Mainmenu();
     end;
 begin
     ClearDebugLog;
-    debugMode := True;
+    debugMode := False;
     LoadParticipant;
+    quickSortParticipant(0, participantArraySize);
     logedIn := False;
     admin := False;
     // addParticipantData;
-    if numberOfUser = 0 then creatAccount(True);
+    if numberOfUser = 0 then creatAccount(True, False);
     Mainmenu();
 end.
 
