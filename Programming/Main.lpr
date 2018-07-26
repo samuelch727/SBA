@@ -1,5 +1,5 @@
 program Main;
-uses Crt;
+uses Crt, md5;
 type
     userData = record
         ID : String;
@@ -23,6 +23,13 @@ procedure debugLog(message : String ; level : Integer); //Level 1: Fatal Error, 
     var
         DebugFile : Text;
     begin
+        if level = 1 then 
+            begin
+                TextColor(Red);
+                Writeln('Oops. I have detected an error in my program. Try restart me :(');
+                Writeln('Please also contact administrator');
+                TextColor(Black);
+            end;
         if debugMode then
             begin
                 case level of
@@ -63,6 +70,10 @@ procedure debugLog(message : String ; level : Integer); //Level 1: Fatal Error, 
             end;
         end;
         Close(DebugFile);
+    end;
+function passwordEncryption(password : String):String;
+    begin
+        passwordEncryption := MD5Print(MD5String(password));
     end;
 function dataEncryption(data : String):String;
     var 
@@ -127,7 +138,7 @@ function dataDecryption(data : String):String;
         debugLog('decryption successful', 3);
         dataDecryption := encryptedMessage;
     end;
-procedure quickSortParticipant(start, ending : Integer);
+procedure quickSortParticipant(start, ending : Integer ; accrodingTo : Integer = 2); // 1 = Name, 2 = School, 3 = ID
     var
         privot, wall, loop : Integer;
         temp : String;
@@ -138,26 +149,67 @@ procedure quickSortParticipant(start, ending : Integer);
         if start < ending then
             begin
                 debugLog('quicksort started', 3);
-                WriteLn(start);
-                WriteLn(ending);
                 for loop := start to ending - 1 do
                     begin
-                        if data[privot].School > data[loop].School then
+                        if accrodingTo = 1 then
                             begin
-                            debugLog('quicksort change position', 3);
-                            temp := data[loop].School;
-                            data[loop].School := data[wall].School;
-                            data[wall].School := temp;
-                            temp := data[loop].Name;
-                            data[loop].Name := data[wall].Name;
-                            data[wall].Name := temp;
-                            temp := data[loop].ID;
-                            data[loop].ID := data[wall].ID;
-                            data[wall].ID := temp;
-                            temp2 := data[loop].seed;
-                            data[loop].seed := data[wall].seed;
-                            data[wall].seed := temp2;
-                            wall := wall + 1;
+                                if data[privot].Name > data[loop].Name then
+                                    begin
+                                    debugLog('quicksort change position', 3);
+                                    temp := data[loop].School;
+                                    data[loop].School := data[wall].School;
+                                    data[wall].School := temp;
+                                    temp := data[loop].Name;
+                                    data[loop].Name := data[wall].Name;
+                                    data[wall].Name := temp;
+                                    temp := data[loop].ID;
+                                    data[loop].ID := data[wall].ID;
+                                    data[wall].ID := temp;
+                                    temp2 := data[loop].seed;
+                                    data[loop].seed := data[wall].seed;
+                                    data[wall].seed := temp2;
+                                    wall := wall + 1;
+                                    end;
+                            end;
+                        if accrodingTo = 2 then
+                            begin
+                                if data[privot].School > data[loop].School then
+                                    begin
+                                    debugLog('quicksort change position', 3);
+                                    temp := data[loop].School;
+                                    data[loop].School := data[wall].School;
+                                    data[wall].School := temp;
+                                    temp := data[loop].Name;
+                                    data[loop].Name := data[wall].Name;
+                                    data[wall].Name := temp;
+                                    temp := data[loop].ID;
+                                    data[loop].ID := data[wall].ID;
+                                    data[wall].ID := temp;
+                                    temp2 := data[loop].seed;
+                                    data[loop].seed := data[wall].seed;
+                                    data[wall].seed := temp2;
+                                    wall := wall + 1;
+                                    end;
+                            end;
+                        if accrodingTo = 3 then
+                            begin
+                                if data[privot].ID > data[loop].ID then
+                                    begin
+                                    debugLog('quicksort change position', 3);
+                                    temp := data[loop].School;
+                                    data[loop].School := data[wall].School;
+                                    data[wall].School := temp;
+                                    temp := data[loop].Name;
+                                    data[loop].Name := data[wall].Name;
+                                    data[wall].Name := temp;
+                                    temp := data[loop].ID;
+                                    data[loop].ID := data[wall].ID;
+                                    data[wall].ID := temp;
+                                    temp2 := data[loop].seed;
+                                    data[loop].seed := data[wall].seed;
+                                    data[wall].seed := temp2;
+                                    wall := wall + 1;
+                                    end;
                             end;
                     end;
                 temp := data[privot].School;
@@ -172,9 +224,156 @@ procedure quickSortParticipant(start, ending : Integer);
                 temp2 := data[privot].seed;
                 data[privot].seed := data[wall].seed;
                 data[wall].seed := temp2;
-                quickSortParticipant(start, wall - 1);
-                quickSortParticipant(wall + 1, ending);
+                quickSortParticipant(start, wall - 1, accrodingTo);
+                quickSortParticipant(wall + 1, ending, accrodingTo);
             end;
+    end;
+function SearchForUser(Name : String = ''; ID : String = ''; School : String = '' ; var SearchResult : array of Integer) : Integer;
+    var
+        legnthOfArray, middle, top, bottom, temp, kmpLoop, kmpTargetLoop, kmpTempForTargetPointer, kmpCounter : Integer;
+        found, same : Boolean;
+        KMP, output: array of Integer;
+    begin
+        legnthOfArray := -1;
+        bottom := 0;
+        top := participantArraySize - 1;
+        found := False;
+        quickSortParticipant(0, participantArraySize - 1);
+        //Search By ID
+        if ID <> '' then
+            begin
+                try
+                    quickSortParticipant(0, participantArraySize - 1, 3);
+                except
+                    debugLog('quick sort error', 3);
+                end;
+                repeat
+                    middle := (top + bottom) div 2;
+                    if ID > data[middle].ID then bottom := middle + 1
+                    else if ID < data[middle].ID then top := middle - 1
+                    else found := True;
+                until found or (bottom > top);
+                writeln(top);
+                writeln(bottom);
+                WriteLn(found);
+                if found then
+                    begin
+                        legnthOfArray := legnthOfArray + 1;
+                        SearchResult[legnthOfArray] := middle;
+                    end;
+            end;
+        if Name <> '' then
+            begin
+                debugLog('searching for : ' + Name, 3);
+                temp := -1;
+                debugLog('kmp for name started', 3);
+                repeat
+                    temp := temp + 1;
+                    SetLength(KMP, Length(data[temp].Name) + 1);
+                    kmpTargetLoop := 1;
+                    kmpTempForTargetPointer := 0;
+                    KMP[1] := 0;
+                    repeat
+                        debugLog('kmp looping', 3);
+                        kmpTargetLoop := kmpTargetLoop + 1;
+                        if Name[kmpTargetLoop] = Name[kmpTempForTargetPointer] then
+                            begin
+                                kmpTempForTargetPointer := kmpTempForTargetPointer + 1;
+                                KMP[kmpTargetLoop] := kmpTempForTargetPointer;
+                                debugLog('kmp found same text', 3);
+                            end
+                        else 
+                            begin
+                                debugLog('kmp target not found, resetting', 3);
+                                kmpTempForTargetPointer := 0;
+                                KMP[kmpTargetLoop] := 0;
+                            end;
+                    until kmpTargetLoop >= Length(Name);
+                    kmpLoop := 0;
+                    kmpTargetLoop := 0;
+                    kmpCounter := 0;
+                    repeat
+                        kmpLoop := kmpLoop + 1;
+                        if data[temp].Name[kmpLoop] = Name[kmpTargetLoop + 1] then
+                            begin
+                                kmpTargetLoop := kmpTargetLoop + 1;
+                                kmpCounter := kmpCounter + 1;
+                            end
+                        else
+                            begin
+                                kmpCounter := 0;
+                                kmpTargetLoop := KMP[kmpTargetLoop];
+                            end;
+                    until (kmpCounter = Length(Name)) or (kmpLoop = Length(data[temp].Name));
+                    debugLog('kmp check complete', 3);
+                    if (kmpCounter = Length(Name)) then
+                        begin
+                            debugLog('kmp search : Found Target, saving to array', 3);
+                            legnthOfArray := legnthOfArray + 1;
+                            SearchResult[legnthOfArray] := temp;
+                            debugLog('kmp save complete', 3);
+                        end;
+                until temp + 1 = participantArraySize;
+            end;
+        if School <> '' then
+            begin
+                temp := -1;
+                debugLog('kmp for school started', 3);
+                repeat
+                    temp := temp + 1;
+                    SetLength(KMP, Length(data[temp].School) + 1);
+                    kmpTargetLoop := 1;
+                    kmpTempForTargetPointer := 0;
+                    KMP[1] := 0;
+                    repeat
+                        debugLog('kmp looping', 3);
+                        kmpTargetLoop := kmpTargetLoop + 1;
+                        if School[kmpTargetLoop] = School[kmpTempForTargetPointer] then
+                            begin
+                                kmpTempForTargetPointer := kmpTempForTargetPointer + 1;
+                                KMP[kmpTargetLoop] := kmpTempForTargetPointer;
+                                debugLog('kmp found same text', 3);
+                            end
+                        else 
+                            begin
+                                debugLog('kmp target not found, resetting', 3);
+                                kmpTempForTargetPointer := 0;
+                                KMP[kmpTargetLoop] := 0;
+                            end;
+                    until kmpTargetLoop = Length(School);
+                    debugLog('KMP: check repeat word complete', 3);
+                    kmpLoop := 0;
+                    kmpTargetLoop := 0;
+                    kmpCounter := 0;
+                    debugLog('kmp search target: ' + School, 3);
+                    debugLog('kmp searching in string: ' + data[temp].School, 3);
+                    repeat
+                        kmpLoop := kmpLoop + 1;
+                        debugLog(data[temp].School[kmpLoop], 3);
+                        debugLog(School[kmpTargetLoop + 1], 3);
+                        if data[temp].School[kmpLoop] = School[kmpTargetLoop + 1] then
+                            begin
+                                kmpTargetLoop := kmpTargetLoop + 1;
+                                kmpCounter := kmpCounter + 1;
+                            end
+                        else
+                            begin
+                                kmpCounter := 0;
+                                kmpTargetLoop := KMP[kmpTargetLoop];
+                            end;
+                    until (kmpCounter = Length(School)) or (kmpLoop = Length(data[temp].School));
+                    debugLog('kmp check complete', 3);
+                    if (kmpCounter = Length(School)) then
+                        begin
+                            debugLog('kmp search : Found Target, saving to array', 3);
+                            legnthOfArray := legnthOfArray + 1;
+                            SearchResult[legnthOfArray] := temp;
+                            debugLog('kmp save complete', 3);
+                        end;
+                until temp + 1 = participantArraySize;
+            end;
+        debugLog('search complete', 3);
+        SearchForUser := legnthOfArray;
     end;
 procedure inputDataToFile();
     var
@@ -186,7 +385,6 @@ procedure inputDataToFile();
         Assign(sourceFile, '/Users/samuel/Documents/SelfProgramming/SBA/Programming/File/Competitors.epd');
         Rewrite(sourceFile);
         Close(sourceFile);
-        // quickSortParticipant(0, participantArraySize - 1);
         for loop := 0 to participantArraySize - 1 do
             begin
                 ID := data[loop].ID;
@@ -267,12 +465,20 @@ procedure LoadParticipant();
         Close(sourceFile);
     end;
 
-procedure ValidateParticipantData();
+function ValidateParticipantData(userSchool : String) : Boolean;
+    var
+        tempArray : Array of Integer;
+        numberOfReseult : Integer;
     begin
-        LoadParticipant();
         debugLog('Validating Participant', 3);
+        SetLength(tempArray, participantArraySize);
+        try
+            if participantArraySize > 0 then numberOfReseult := SearchForUser('','', userSchool, tempArray);
+        except
+            debugLog('search error', 1);
+        end;
+        if numberOfReseult >= 1 then Result := False else Result := True;
     end;
-// procedure generateID();
 procedure addParticipantData();
     var
         inputSuccess : Boolean;
@@ -280,27 +486,8 @@ procedure addParticipantData();
         temp4 : Boolean;
     begin
         debugLog('Loading for adding participant', 3);
-        participantArraySize := participantArraySize + 1;
-        try
-            begin
-              SetLength(data, participantArraySize);
-            end;
-        except
-            begin
-                TextColor(Red);
-                WriteLn('Initialization Error');
-                TextColor(Black);
-            end;
-        end;
         debugLog('append array success', 3);
-        WriteLn('input ID:');
-        try
-            Readln(temp1);
-        except
-            TextColor(Red);
-            WriteLn('Invaild Data');
-            TextColor(Black);
-        end;
+        Str(participantArraySize + 1, temp1);        
         WriteLn('input Name:');
         try
             Readln(temp2);
@@ -334,12 +521,25 @@ procedure addParticipantData();
             end;
         end;
         until inputSuccess;
-        data[participantArraySize -1].ID := temp1;
-        data[participantArraySize -1].Name := temp2;
-        data[participantArraySize -1].School := temp3;
-        data[participantArraySize -1].seed := temp4;
-        quickSortParticipant(0, participantArraySize - 1);
-        inputDataToFile();
+        if ValidateParticipantData(temp3) then
+            begin
+                try
+                    begin
+                    participantArraySize := participantArraySize + 1;
+                    SetLength(data, participantArraySize);
+                    end;
+                except
+                    begin
+                        debugLog('append array fail', 1);
+                    end;
+                end;
+                data[participantArraySize -1].ID := temp1;
+                data[participantArraySize -1].Name := temp2;
+                data[participantArraySize -1].School := temp3;
+                data[participantArraySize -1].seed := temp4;
+                quickSortParticipant(0, participantArraySize - 1);
+                inputDataToFile();
+            end else WriteLn('This school already have 2 participant.');
     end;
 procedure loadUserName(var usrData : array of String);
     var
@@ -382,6 +582,7 @@ function numberOfUser() : Integer;
               ReadLn(sourceFile, temp);
               ReadLn(sourceFile, temp);
             end;
+        Close(sourceFile);
     end;
 function checkUserExist(usrName : String):Boolean; //Return false if user does exist
     var
@@ -454,7 +655,7 @@ procedure creatAccount(isAdmin, ask : Boolean);
                 end;
         until password = valiPassword;
         debugLog('Password Validation Success', 3);
-        writeln(acFile, dataEncryption(password));
+        writeln(acFile, passwordEncryption(password));
         debugLog('User Password Saved' ,3);
         if isAdmin then
             WriteLn(acFile, dataEncryption('True'))
@@ -472,19 +673,20 @@ procedure logIn();
         Readln(UserName);
         WriteLn('Enter Password');
         ReadLn(Password);
+        UserName := dataEncryption(UserName);
+        Password := passwordEncryption(Password);
+        debugLog(Password, 3);
         Assign(acFile,'/Users/samuel/Documents/SelfProgramming/SBA/Programming/File/user.epd');
         Reset(acFile);
         debugLog('Checking Ac', 3);
         repeat
             ReadLn(acFile, fileUserName);
-            fileUserName := dataDecryption(fileUserName);
-            // WriteLn(fileUserName);
             ReadLn(acFile, filePassword);
-            filePassword := dataDecryption(filePassword);
             ReadLn(acFile, isAdmin);
+            isAdmin := dataDecryption(isAdmin);
         until (fileUserName = UserName) or Eof(acFile);
         isAdmin := dataDecryption(isAdmin);
-        if fileUserName <> fileUserName then
+        if fileUserName <> UserName then
             begin
                 writeln('Username  incorrect');
             end
@@ -498,6 +700,7 @@ procedure logIn();
               if isAdmin = 'True' then admin := True;
               debugLog('loged in', 3);
             end;
+        Close(acFile);
     end;
 procedure logOut();
     begin
@@ -512,7 +715,13 @@ procedure showParticipant();
     var
         temp : Integer;
     begin
-        LoadParticipant();
+        // try
+        //     LoadParticipant();
+        // except
+        //     debugLog('show participant data: load data error', 1);
+        // end;
+        quickSortParticipant(0, participantArraySize - 1, 3);
+        debugLog('show participant data: sort success', 3);
         for temp := 0 to (participantArraySize - 1) do
             begin
                 Write(' ID: ');
@@ -536,23 +745,51 @@ procedure AccountManagementMenu();
         Writeln('3. Delete Account');
         Writeln('9. Back To Main Screen');
     end;
+procedure SearchMenu();
+    var
+        ID, Name, School : String;
+        temp, temp2 : Integer;
+        tempArray : Array of Integer;
+    begin
+        for temp2 := 1 to Length(tempArray) - 1 do
+            begin
+                tempArray[temp2] := -1;
+            end;
+        writeln('Leave it blank if you dont know');
+        write('ID : ');
+        ReadLn(ID);
+        Write('Name : ');
+        ReadLn(Name);
+        Write('School : ');
+        ReadLn(School);
+        SetLength(tempArray, participantArraySize);
+        temp2 := SearchForUser(Name, ID, School, tempArray);
+        debugLog('Search complete', 3);
+        for temp := 0 to temp2 do
+            begin
+                Write(' ID: ');
+                Write(data[tempArray[temp]].ID :8);
+                Write(' Name: ');
+                Write(data[tempArray[temp]].Name :8);
+                Write(' School: ');
+                Write(data[tempArray[temp]].School :8);
+                Write(' Seed: ');
+                WriteLn(data[tempArray[temp]].seed :8);
+            end;
+    end;
 procedure Mainmenu();
     var
-        choice, test : Integer;
+        choice : Integer;
         temp : String;
     begin
         repeat
             ClrScr;
-            for test := 0 to participantArraySize - 1 do
-                begin
-                    WriteLn(data[test].ID);
-                    WriteLn(data[test].Name);
-                    WriteLn(data[test].School);
-                end;
+            temp := '';
             if logedIn then WriteLn('1. Logout AC') else WriteLn('1. Login AC');
             WriteLn('2. View Competitors');
             if logedIn then WriteLn ('3. Enter Data');
             if admin then WriteLn('4. Add Account');
+            WriteLn('5. Search for user (Under testing🙇🏻‍)');
             WriteLn('9. Quit');
             Writeln;
             Write('Your Choice: ');
@@ -568,7 +805,8 @@ procedure Mainmenu();
                 2 : showParticipant();
                 3 : if logedIn then addParticipantData else WriteLn('Invalid choice');
                 4 : if admin then creatAccount(False, True) else WriteLn('Invalid choice');
-                9 : Break;
+                5 : SearchMenu();
+                9 : begin debugLog('Program ended', 3); Break; end;
             else
                 begin
                     TextColor(Red);
@@ -586,7 +824,11 @@ begin
     ClearDebugLog;
     debugMode := False;
     LoadParticipant;
-    quickSortParticipant(0, participantArraySize);
+    try
+        quickSortParticipant(0, participantArraySize - 1);
+    except
+        debugLog('quick sort error', 1);
+    end;
     logedIn := False;
     admin := False;
     // addParticipantData;

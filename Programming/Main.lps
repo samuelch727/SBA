@@ -8,13 +8,13 @@
         <Filename Value="Main.lpr"/>
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="114"/>
-        <CursorPos X="26" Y="141"/>
-        <UsageCount Value="22"/>
+        <TopLine Value="467"/>
+        <CursorPos X="18" Y="494"/>
+        <UsageCount Value="109"/>
         <Loaded Value="True"/>
       </Unit0>
     </Units>
-    <JumpHistory Count="14" HistoryIndex="13">
+    <JumpHistory Count="28" HistoryIndex="27">
       <Position1>
         <Filename Value="Main.lpr"/>
         <Caret Line="31" Column="82"/>
@@ -71,6 +71,62 @@
         <Filename Value="Main.lpr"/>
         <Caret Line="141" Column="31" TopLine="114"/>
       </Position14>
+      <Position15>
+        <Filename Value="Main.lpr"/>
+        <Caret Line="162" Column="75" TopLine="114"/>
+      </Position15>
+      <Position16>
+        <Filename Value="Main.lpr"/>
+        <Caret Line="296" Column="33" TopLine="269"/>
+      </Position16>
+      <Position17>
+        <Filename Value="Main.lpr"/>
+        <Caret Line="325" Column="53" TopLine="299"/>
+      </Position17>
+      <Position18>
+        <Filename Value="Main.lpr"/>
+        <Caret Line="241" Column="21" TopLine="215"/>
+      </Position18>
+      <Position19>
+        <Filename Value="Main.lpr"/>
+        <Caret Line="256" Column="29" TopLine="229"/>
+      </Position19>
+      <Position20>
+        <Filename Value="Main.lpr"/>
+        <Caret Line="259" Column="29" TopLine="232"/>
+      </Position20>
+      <Position21>
+        <Filename Value="Main.lpr"/>
+        <Caret Line="265" Column="71" TopLine="233"/>
+      </Position21>
+      <Position22>
+        <Filename Value="Main.lpr"/>
+        <Caret Line="231" Column="112" TopLine="204"/>
+      </Position22>
+      <Position23>
+        <Filename Value="Main.lpr"/>
+        <Caret Line="381" Column="9" TopLine="354"/>
+      </Position23>
+      <Position24>
+        <Filename Value="Main.lpr"/>
+        <Caret Line="762" Column="26" TopLine="736"/>
+      </Position24>
+      <Position25>
+        <Filename Value="Main.lpr"/>
+        <Caret Line="766" Column="42" TopLine="740"/>
+      </Position25>
+      <Position26>
+        <Filename Value="Main.lpr"/>
+        <Caret Line="712" Column="9" TopLine="686"/>
+      </Position26>
+      <Position27>
+        <Filename Value="Main.lpr"/>
+        <Caret Line="241" Column="9" TopLine="214"/>
+      </Position27>
+      <Position28>
+        <Filename Value="Main.lpr"/>
+        <Caret Line="467" Column="5" TopLine="440"/>
+      </Position28>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>

@@ -1,61 +1,12 @@
 Debug: Start Load Participant Data
 Debug: Loaded File
-Debug: Counting Participators
-Debug: Counting Participators
-Debug: Counting Participators
-Debug: Array Length Set
-Debug: Loading Data
-Debug: Decryption Started
-Debug: decryption successful
-Debug: Loaded ID
-Debug: Decryption Started
-Debug: decryption successful
-Debug: Loaded Name
-Debug: Decryption Started
-Debug: decryption successful
-Debug: Loaded School
-Debug: Decryption Started
-Debug: decryption successful
-Debug: Loaded Seed
-Debug: Loading Data
-Debug: Decryption Started
-Debug: decryption successful
-Debug: Loaded ID
-Debug: Decryption Started
-Debug: decryption successful
-Debug: Loaded Name
-Debug: Decryption Started
-Debug: decryption successful
-Debug: Loaded School
-Debug: Decryption Started
-Debug: decryption successful
-Debug: Loaded Seed
-Debug: Loading Data
-Debug: Decryption Started
-Debug: decryption successful
-Debug: Loaded ID
-Debug: Decryption Started
-Debug: decryption successful
-Debug: Loaded Name
-Debug: Decryption Started
-Debug: decryption successful
-Debug: Loaded School
-Debug: Decryption Started
-Debug: decryption successful
-Debug: Loaded Seed
-Debug: quicksort started
-Debug: quicksort started
-Debug: quicksort change position
-Debug: Choice entered
-Debug: User Choice : 2
-Debug: Start Load Participant Data
-Debug: Loaded File
 Debug: Array Length Set
 Debug: Choice entered
 Debug: User Choice : 1
+Debug: Started Data Encryption
+Debug: Enncryption Successful
+Debug: 21232f297a57a5a743894a0e4a801fc3
 Debug: Checking Ac
-Debug: Decryption Started
-Debug: decryption successful
 Debug: Decryption Started
 Debug: decryption successful
 Debug: Decryption Started
@@ -65,27 +16,7 @@ Debug: Choice entered
 Debug: User Choice : 3
 Debug: Loading for adding participant
 Debug: append array success
-Debug: Started Data Encryption
-Debug: Enncryption Successful
-Debug: Started Data Encryption
-Debug: Enncryption Successful
-Debug: Started Data Encryption
-Debug: Enncryption Successful
-Debug: Started Data Encryption
-Debug: Enncryption Successful
-Debug: Choice entered
-Debug: User Choice : 3
-Debug: Loading for adding participant
-Debug: append array success
-Debug: quicksort started
-Debug: Started Data Encryption
-Debug: Enncryption Successful
-Debug: Started Data Encryption
-Debug: Enncryption Successful
-Debug: Started Data Encryption
-Debug: Enncryption Successful
-Debug: Started Data Encryption
-Debug: Enncryption Successful
+Debug: Validating Participant
 Debug: Started Data Encryption
 Debug: Enncryption Successful
 Debug: Started Data Encryption
@@ -96,36 +27,9 @@ Debug: Started Data Encryption
 Debug: Enncryption Successful
 Debug: Choice entered
 Debug: User Choice : 2
-Debug: Start Load Participant Data
-Debug: Loaded File
-Debug: Counting Participators
-Debug: Counting Participators
-Debug: Array Length Set
-Debug: Loading Data
-Debug: Decryption Started
-Debug: decryption successful
-Debug: Loaded ID
-Debug: Decryption Started
-Debug: decryption successful
-Debug: Loaded Name
-Debug: Decryption Started
-Debug: decryption successful
-Debug: Loaded School
-Debug: Decryption Started
-Debug: decryption successful
-Debug: Loaded Seed
-Debug: Loading Data
-Debug: Decryption Started
-Debug: decryption successful
-Debug: Loaded ID
-Debug: Decryption Started
-Debug: decryption successful
-Debug: Loaded Name
-Debug: Decryption Started
-Debug: decryption successful
-Debug: Loaded School
-Debug: Decryption Started
-Debug: decryption successful
-Debug: Loaded Seed
+Debug: show participant data: sort success
+Debug: Choice entered
+Debug: User Choice : 1
 Debug: Choice entered
 Debug: User Choice : 9
+Debug: Program ended
