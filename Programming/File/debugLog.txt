@@ -1,35 +1,130 @@
 Debug: Start Load Participant Data
 Debug: Loaded File
+Debug: Counting Participators
+Debug: Counting Participators
+Debug: Counting Participators
+Debug: Counting Participators
+Debug: Counting Participators
 Debug: Array Length Set
-Debug: Choice entered
-Debug: User Choice : 1
-Debug: Started Data Encryption
-Debug: Enncryption Successful
-Debug: 21232f297a57a5a743894a0e4a801fc3
-Debug: Checking Ac
+Debug: Loading Data
 Debug: Decryption Started
 Debug: decryption successful
+Debug: Loaded ID
 Debug: Decryption Started
 Debug: decryption successful
-Debug: loged in
+Debug: Loaded Name
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded School
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Seed
+Debug: Loading Data
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded ID
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Name
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded School
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Seed
+Debug: Loading Data
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded ID
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Name
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded School
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Seed
+Debug: Loading Data
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded ID
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Name
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded School
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Seed
+Debug: Loading Data
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded ID
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Name
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded School
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Seed
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort started
+Debug: quicksort change position
 Debug: Choice entered
-Debug: User Choice : 3
-Debug: Loading for adding participant
-Debug: append array success
-Debug: Validating Participant
-Debug: Started Data Encryption
-Debug: Enncryption Successful
-Debug: Started Data Encryption
-Debug: Enncryption Successful
-Debug: Started Data Encryption
-Debug: Enncryption Successful
-Debug: Started Data Encryption
-Debug: Enncryption Successful
-Debug: Choice entered
-Debug: User Choice : 2
-Debug: show participant data: sort success
-Debug: Choice entered
-Debug: User Choice : 1
-Debug: Choice entered
-Debug: User Choice : 9
-Debug: Program ended
+Debug: User Choice : 6
+Debug: creatCompetitionChart: numberOfBye Counted
+Debug: creatCompetitionChart: seted competitonRecord length
+Debug: creatCompetitionChart: initialization complete
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort started
+Debug: quicksort started
+Debug: creatCompetitionChart: quicksort complete
+Debug: creacCompetitionChart: seed speration calculation complete
+Debug: creacCompetitionChart: complete distributing seed
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort started
+Debug: quicksort change position
+Debug: creacCompetitionChart: quicksort school complete
+Debug: length of array: 8
+Debug: First: 0
+Debug: pointer: 1
+Debug: data pointer: 0
+Debug: First: 0
+Debug: not last
+Debug: pointer: 6
+Debug: data pointer: 1
+Debug: First: 1
+Debug: pointer: 6
+Debug: data pointer: 2
+Debug: First: 2
+Debug: not last
+Debug: pointer: 3
+Debug: data pointer: 3
+Debug: First: 3
+Debug: not last
+Debug: I ran 1
+Debug: init pointer: 3
+Debug: pointer: 4
+Debug: pointer after cal: 5
+Debug: pointer: 2
+Debug: data pointer: 4
+Debug: First: 4
+Debug: pointer: 2
+Debug: data pointer: 5
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort started
+Debug: quicksort change position
