@@ -908,7 +908,7 @@ procedure creatCompetitionChart();
     end;
 procedure creatChart2(start : Integer = 0; ending : Integer = 0; noOfSeed : Integer = 0 ; noOfPlayer : Integer = 0; inputArray : array of Integer);
     var 
-        handledPlayer, tempForLoop, tempForLoop2, customArrayPointer : Integer;
+        handledPlayer, tempForLoop, tempForLoop2, customArrayPointer, sameSchoolPointer : Integer;
         customArray : array of Integer;
     begin
         if Length(competitonRecord) = 0 then
@@ -923,7 +923,27 @@ procedure creatChart2(start : Integer = 0; ending : Integer = 0; noOfSeed : Inte
                 noOfSeed := tempForLoop;
                 SetLength(customArray, ending - start + 1);
                 for tempForLoop := 0 to Length(customArray) - 1 do customArray[tempForLoop] := -1;
-                for tempForLoop := 0 to participantArraySize - 1 do customArray[tempForLoop] := tempForLoop;
+                quickSortParticipant(0, participantArraySize - 1, 4);
+                customArrayPointer := 0;
+                for tempForLoop := 0 to participantArraySize - 1 do
+                    begin
+                        customArray[customArrayPointer] := StrToInt(data[tempForLoop].ID);
+                        if customArrayPointer >= Length(customArray) div 2 then
+                            begin
+                                for tempForLoop2 := Length(customArray) div 2 to Length(customArray) - 1 do
+                                    begin
+                                        if data[tempForLoop].School = data[tempForLoop2].School then Break;
+                                    end; 
+                                    if tempForLoop2 <> Length(customArray) - 1 then
+                                        begin
+                                            customArray[customArrayPointer] := -1;
+                                            customArrayPointer := 0;
+                                            while customArray[customArrayPointer] <> -1 do customArrayPointer := customArrayPointer + 1;
+                                            customArray[customArrayPointer] := StrToInt(data[tempForLoop].ID);
+                                        end;
+                            end;
+                        customArrayPointer := (customArrayPointer + Length(customArray) div 2) mod Length(customArray);
+                    end;
             end
         else
             begin
@@ -949,8 +969,10 @@ procedure creatChart2(start : Integer = 0; ending : Integer = 0; noOfSeed : Inte
                     begin
                         if not data[inputArray[tempForLoop]].havePosition then
                             begin
-                                for temp
+                                while customArray[customArrayPointer] <> -1 do customArrayPointer := customArrayPointer + 1;
+                                
                             end;
+
                     end;
 
             end;
