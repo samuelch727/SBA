@@ -10,7 +10,7 @@ type
     End;
 var
     data : array of userData;
-    participantArraySize : Integer;
+    participantArraySize, competitonRecordPointer : Integer;
     debugMode, logedIn, admin, finalized, temp, createdChart : Boolean;
     competitonRecord : array of Integer;
 procedure ClearDebugLog();
@@ -224,7 +224,7 @@ procedure quickSortParticipant(start, ending : Integer ; accrodingTo : Integer =
                             end;
                         if accrodingTo = 4 then
                             begin
-                                if data[privot].seed > data[loop].seed then
+                                if data[privot].seed < data[loop].seed then
                                     begin
                                     debugLog('quicksort change position', 3);
                                     temp := data[loop].School;
@@ -775,213 +775,157 @@ procedure showParticipant();
                 WriteLn(data[temp].seed :8);
             end;
     end;
-procedure creatCompetitionChart();
+procedure creatChart2(start, ending ,noOfSeed ,noOfPlayer : Integer; inputArray : array of Integer);
     var 
-        numberOfBye, tempForLoop, tempForLoop2, seedPointer, competitionArrayPointer, seedCounter, numberOfParticipatorHandled, tempID, competitionArrayPointerForSameSchoolInSeed, temp, temp2, temp3, groupSperation: Integer;
-        tempArray : array of Integer;
+        tempForLoop, wall, passInArrayPointer, tempForCheckSchool, leftPlayer, tempForDebug : Integer;
+        passInArray : array of Integer;
+        sameSchool : Boolean;
     begin
-        Randomize;
-        if (not createdChart) and (Length(data) > 4) then
+        debugLog('creatChart: start: ' + IntToStr(start));
+        debugLog('creatChart: ending: ' + IntToStr(ending));
+        debugLog('creatChart: player need to handle: ' + IntToStr(noOfPlayer));
+        SetLength(passInArray, ending - start + 1);
+        debugLog('creatChart: array Lenght: ' + IntToStr(Length(passInArray)));
+        for tempForLoop := 0 to Length(passInArray) - 1 do passInArray[tempForLoop] := -1;
+        debugLog('creatChart: arrat init success');
+        tempForLoop := start;
+        passInArrayPointer := 0;
+        wall := Length(passInArray) div 2;
+        debugLog('creatChart: wall set, value: ' + IntToStr(wall));
+        debugLog('creatChart: number of seed need to handle: ' + IntToStr(noOfSeed));
+        while tempForLoop < (noOfSeed + start) do
             begin
-            createdChart := True;
-            numberOfBye := ceil(power(2, ceil(log2(participantArraySize)))) - participantArraySize;
-            debugLog('creatCompetitionChart: numberOfBye Counted', 3);
-            SetLength(competitonRecord, ceil(power(2, ceil(log2(participantArraySize)))));
-            debugLog('creatCompetitionChart: seted competitonRecord length', 3);
-            SetLength(tempArray, participantArraySize);
-            for tempForLoop := 0 to Length(competitonRecord) - 1 do
-                begin
-                    competitonRecord[tempForLoop] := -1;
-                end;
-            debugLog('creatCompetitionChart: initialization complete', 3);
-            quickSortParticipant(0, participantArraySize - 1, 4);
-            debugLog('creatCompetitionChart: quicksort complete', 3);
-            tempForLoop := participantArraySize - 1;
-            seedPointer := 0;
-            competitionArrayPointer := 0;
-            seedCounter := 0;
-            numberOfParticipatorHandled := 1;
-            while (data[tempForLoop].seed) do
-                begin
-                    seedCounter := seedCounter + 1;
-                    tempForLoop := tempForLoop - 1;
-                end;
-            groupSperation := Length(competitonRecord) div seedCounter;
-            debugLog('creacCompetitionChart: seed speration calculation complete', 3);
-            for tempForLoop := participantArraySize - seedCounter to participantArraySize - 1 do
-                begin
-                    competitonRecord[competitionArrayPointer] := StrToInt(data[tempForLoop].ID);
-                    data[tempForLoop].havePosition := True;
-                    competitionArrayPointer := competitionArrayPointer + groupSperation;
-                end;
-            debugLog('creacCompetitionChart: complete distributing seed', 3);
-            quickSortParticipant(0, participantArraySize - 1, 2);
-            debugLog('creacCompetitionChart: quicksort school complete', 3);
-            tempForLoop := 0;
-            competitionArrayPointer := 0;
-            debugLog('length of array: ' + IntToStr(Length(competitonRecord)), 3);
-            while tempForLoop <= Length(data) - 1 do
-                begin
-                    debugLog('First: ' + IntToStr(tempForLoop), 3);
-                    if competitonRecord[competitionArrayPointer] = -1 then
-                        begin
-                            if not data[tempForLoop].havePosition then
-                                begin
-                                    competitonRecord[competitionArrayPointer] := StrToInt(data[tempForLoop].ID);
-                                    data[tempForLoop].havePosition := True;
-                                    if tempForLoop < Length(data) - 1 then
-                                        begin
-                                            debugLog('not last');
-                                            if (data[tempForLoop + 1].School = data[tempForLoop].School) then
-                                                if  (not data[tempForLoop + 1].havePosition) then
-                                                    begin
-                                                        competitionArrayPointer := (competitionArrayPointer + Length(competitonRecord) div 2 + 1) mod Length(competitonRecord);
-                                                        tempForLoop := tempForLoop + 1;
-                                                        debugLog('Second: ' +IntToStr(tempForLoop), 3);
-                                                        while competitonRecord[competitionArrayPointer] <> -1 do
-                                                            begin
-                                                                WriteLn;
-                                                                debugLog('competitionArrayPointer: ' + IntToStr(competitionArrayPointer), 3);
-                                                                if competitionArrayPointer > Length(competitonRecord) div 2 then
-                                                                    competitionArrayPointer := (((competitionArrayPointer - Length(competitonRecord) div 2) + 1) mod (Length(competitonRecord) div 2)) + (Length(competitonRecord) div 2)
-                                                                    else
-                                                                    competitionArrayPointer := (competitionArrayPointer + 1) mod (Length(competitonRecord) div 2);
-                                                                    debugLog('calculated competitionArrayPointer: ' + IntToStr(competitionArrayPointer));
-                                                            end;
-                                                        competitonRecord[competitionArrayPointer] := StrToInt(data[tempForLoop].ID);
-                                                        data[tempForLoop].havePosition := True;
-                                                    end 
-                                                else
-                                                    if competitionArrayPointer < Length(competitonRecord) div 2 then
-                                                        begin
-                                                            for temp := 0 to Length(competitonRecord) div 2 - 1 do
-                                                            if StrToInt(data[tempForLoop + 1].ID) = competitonRecord[temp] then
-                                                                begin
-                                                                    debugLog('I ran 1');
-                                                                    debugLog('init pointer: ' + IntToStr(competitionArrayPointer));
-                                                                    competitonRecord[competitionArrayPointer] := -1;
-                                                                    competitionArrayPointer := Length(competitonRecord) div 2;
-                                                                    debugLog('pointer: ' + IntToStr(competitionArrayPointer));
-                                                                    while competitonRecord[competitionArrayPointer] <> -1 do
-                                                                        begin
-                                                                            competitionArrayPointer := competitionArrayPointer + 1;
-                                                                        end;
-                                                                    debugLog('pointer after cal: ' + IntToStr(competitionArrayPointer));
-                                                                    competitonRecord[competitionArrayPointer] := StrToInt(data[tempForLoop].ID);
-                                                                    data[tempForLoop].havePosition := True;
-                                                                    Break;
-                                                                end;
-                                                        end 
-                                                    else
-                                                        begin
-                                                            for temp := 0 to Length(competitonRecord) div 2 - 1 do
-                                                            if StrToInt(data[tempForLoop + 1].ID) = competitonRecord[temp] then
-                                                                begin
-                                                                    debugLog('I ran 2');
-                                                                    debugLog('init pointer: ' + IntToStr(competitionArrayPointer));
-                                                                    competitonRecord[competitionArrayPointer] := -1;
-                                                                    competitionArrayPointer := 0;
-                                                                    debugLog('pointer: ' + IntToStr(competitionArrayPointer));
-                                                                    while competitonRecord[competitionArrayPointer] <> -1 do
-                                                                        begin
-                                                                            competitionArrayPointer := competitionArrayPointer + 1;
-                                                                        end;
-                                                                    debugLog('pointer after cal: ' + IntToStr(competitionArrayPointer));
-                                                                    competitonRecord[competitionArrayPointer] := StrToInt(data[tempForLoop].ID);
-                                                                    data[tempForLoop].havePosition := True;
-                                                                    Break;
-                                                                end;
-                                                        end;
-                                        end;
-                                        competitionArrayPointer := (competitionArrayPointer + Length(competitonRecord) div 2 + 1) mod Length(competitonRecord);
-                                end;
-                                tempForLoop := tempForLoop + 1;
-                        end else competitionArrayPointer := competitionArrayPointer + 1;
-                    debugLog('pointer: ' + IntToStr(competitionArrayPointer));
-                    debugLog('data pointer: ' + IntToStr(tempForLoop));
-                end;
-            end
-            else
-                begin
-                    debugLog('chart alread created', 2);
-                end;
-    end;
-procedure creatChart2(start : Integer = 0; ending : Integer = 0; noOfSeed : Integer = 0 ; noOfPlayer : Integer = 0; inputArray : array of Integer);
-    var 
-        handledPlayer, tempForLoop, tempForLoop2, customArrayPointer, sameSchoolPointer : Integer;
-        customArray : array of Integer;
-    begin
-        if Length(competitonRecord) = 0 then
+                debugLog('creatChart: handling seed ' + IntToStr(tempForLoop));
+                passInArray[passInArrayPointer] := inputArray[tempForLoop];
+                tempForLoop := tempForLoop + 1;
+                passInArrayPointer := (passInArrayPointer + wall + (passInArrayPointer div wall)) mod Length(passInArray);
+            end;
+        while tempForLoop < (noOfPlayer + start) do
             begin
-                noOfPlayer := participantArraySize;
-                SetLength(competitonRecord, ceil(power(2, ceil(log2(participantArraySize)))));
-                for tempForLoop := 0 to Length(competitonRecord) - 1 do competitonRecord[tempForLoop] := -1;
-                ending := Length(competitonRecord) - 1;
-                quickSortParticipant(0, participantArraySize - 1, 4);
-                tempForLoop := 0;
-                while data[tempForLoop].seed do tempForLoop := tempForLoop + 1;
-                noOfSeed := tempForLoop;
-                SetLength(customArray, ending - start + 1);
-                for tempForLoop := 0 to Length(customArray) - 1 do customArray[tempForLoop] := -1;
-                quickSortParticipant(0, participantArraySize - 1, 4);
-                customArrayPointer := 0;
-                for tempForLoop := 0 to participantArraySize - 1 do
+                debugLog('creatChart: handling: ' + IntToStr(tempForLoop));
+                if passInArrayPointer >= wall then
                     begin
-                        customArray[customArrayPointer] := StrToInt(data[tempForLoop].ID);
-                        if customArrayPointer >= Length(customArray) div 2 then
+                        debugLog('creatChart: pointer on right side');
+                        tempForCheckSchool := wall;
+                        sameSchool := False;
+                        while passInArray[tempForCheckSchool] <> -1 do
                             begin
-                                for tempForLoop2 := Length(customArray) div 2 to Length(customArray) - 1 do
+                                if data[passInArray[tempForCheckSchool]].School = data[inputArray[tempForLoop]].School then
                                     begin
-                                        if data[tempForLoop].School = data[tempForLoop2].School then Break;
-                                    end; 
-                                    if tempForLoop2 <> Length(customArray) - 1 then
-                                        begin
-                                            customArray[customArrayPointer] := -1;
-                                            customArrayPointer := 0;
-                                            while customArray[customArrayPointer] <> -1 do customArrayPointer := customArrayPointer + 1;
-                                            customArray[customArrayPointer] := StrToInt(data[tempForLoop].ID);
-                                        end;
+                                        sameSchool := True;
+                                        Break
+                                    end;
+                                tempForCheckSchool := tempForCheckSchool + 1;
                             end;
-                        customArrayPointer := (customArrayPointer + Length(customArray) div 2) mod Length(customArray);
-                    end;
-            end
-        else
-            begin
-                SetLength(customArray, ending - start + 1);
-                for tempForLoop := 0 to Length(customArray) - 1 do customArray[tempForLoop] := -1;
-                customArrayPointer := 0;
-                handledPlayer := 0;
-                tempForLoop := 0;
-                // handle seed
-                while tempForLoop < noOfSeed do 
-                    begin
-                        tempForLoop2 := 0;
-                        while not data[inputArray[tempForLoop2]].seed do tempForLoop2 := tempForLoop2 + 1;
-                        tempForLoop := tempForLoop + 1;
-                        customArray[customArrayPointer] := inputArray[tempForLoop2];
-                        data[inputArray[tempForLoop2]].havePosition := True;
-                        customArrayPointer := customArrayPointer + 1;
-                        handledPlayer := handledPlayer + 1;
-                    end;
-                // handle other player
-                tempForLoop := 0;
-                while customArrayPointer < noOfPlayer do
-                    begin
-                        if not data[inputArray[tempForLoop]].havePosition then
+                        if sameSchool then 
                             begin
-                                while customArray[customArrayPointer] <> -1 do customArrayPointer := customArrayPointer + 1;
-                                
+                                debugLog('creatChart: same school detected');
+                                passInArrayPointer := (passInArrayPointer + wall + (passInArrayPointer div wall)) mod Length(passInArray);
+                                if passInArray[passInArrayPointer] <> -1 then passInArrayPointer := passInArrayPointer + 1;
+                                passInArray[passInArrayPointer] := inputArray[tempForLoop];
+                                passInArrayPointer := (passInArrayPointer + wall + (passInArrayPointer div wall) - 1) mod Length(passInArray);
+                                debugLog('done');
+                            end
+                        else
+                            begin
+                                debugLog('creatChart: same school not detected');
+                                if passInArray[passInArrayPointer] <> -1 then passInArrayPointer := (passInArrayPointer + wall + (passInArrayPointer div wall)) mod Length(passInArray);
+                                passInArray[passInArrayPointer] := inputArray[tempForLoop];
+                                debugLog('done');
                             end;
-
+                    end
+                else
+                    begin
+                        debugLog('creatChart: pointer on left side');
+                        tempForCheckSchool := 0;
+                        sameSchool := False;
+                        while passInArray[tempForCheckSchool] <> -1 do
+                            begin
+                                if data[passInArray[tempForCheckSchool]].School = data[inputArray[tempForLoop]].School then
+                                    begin
+                                        sameSchool := True;
+                                        Break
+                                    end;
+                                tempForCheckSchool := tempForCheckSchool + 1;
+                            end;
+                        if sameSchool then 
+                            begin
+                                debugLog('creatChart: same school detected');
+                                debugLog('creatChart: original pointer: ' + IntToStr(passInArrayPointer));
+                                passInArrayPointer := (passInArrayPointer + wall + (passInArrayPointer div wall)) mod Length(passInArray);
+                                debugLog('creatChart: current pointer: ' + IntToStr(passInArrayPointer));
+                                if passInArray[passInArrayPointer] <> -1 then passInArrayPointer := passInArrayPointer + 1;
+                                passInArray[passInArrayPointer] := inputArray[tempForLoop];
+                                passInArrayPointer := (passInArrayPointer + wall + (passInArrayPointer div wall) - 1) mod Length(passInArray);
+                            end
+                        else
+                            begin
+                                debugLog('creatChart: same school not detected');
+                                if passInArray[passInArrayPointer] <> -1 then passInArrayPointer := (passInArrayPointer + wall + (passInArrayPointer div wall)) mod Length(passInArray);
+                                passInArray[passInArrayPointer] := inputArray[tempForLoop];
+                            end;
                     end;
-
+                for tempForDebug := 0 to Length(passInArray) - 1 do debugLog('creatChart: passInArray[' + IntToStr(tempForDebug) + '] = ' + IntToStr(passInArray[tempForDebug]));
+                tempForLoop := tempForLoop + 1;
             end;
-        if (ending - start) > 2 then
+        leftPlayer := 0;
+        while passInArray[leftPlayer] <> -1 do 
             begin
-                creatChart2(start, ending div 2 - 1, noOfSeed div 2, noOfPlayer div 2);
-                creatChart2(ending div 2, ending, noOfSeed - (noOfSeed div 2), noOfPlayer - (noOfPlayer div 2));
+                if leftPlayer = wall then Break;
+                leftPlayer := leftPlayer + 1;
             end;
-            // note: else need to add custom array back to chartdata array
+        debugLog('creatChart: leftPlayer : ' + IntToStr(leftPlayer));
+        if ending - start > 1 then
+            begin
+                debugLog('creatChart: not smallest group, looping');
+                creatChart2(0, wall - 1, noOfSeed - noOfSeed div 2, leftPlayer, passInArray);
+                creatChart2(wall, Length(passInArray) - 1, noOfSeed div 2, noOfPlayer - leftPlayer, passInArray);
+            end
+        else 
+            begin
+                passInArrayPointer := 0;
+                for passInArrayPointer := 0 to 1 do 
+                    begin
+                        debugLog('creatChart: adding ' + IntToStr(passInArray[passInArrayPointer]) + ' to competitionRecord[' + IntToStr(competitonRecordPointer) + ']');
+                        competitonRecord[competitonRecordPointer] := passInArray[passInArrayPointer];
+                        competitonRecordPointer := competitonRecordPointer + 1;
+                    end;
+                debugLog('creatChart: smallest group, imported, array now is in size of: ' + IntToStr(competitonRecordPointer));
+                for wall := 0 to competitonRecordPointer - 1 do debugLog('debug array: competitionRecord[' + IntToStr(wall) + '] = ' + IntToStr(competitonRecord[wall]));
+            end;
+    end;
+procedure startCreatingChart();
+    var
+        passInArray : Array of Integer;
+        tempForLoop, passInNoSeed : Integer;
+    begin
+        competitonRecordPointer := 0;
+        createdChart := True;
+        debugLog('Chart gen: Start init');
+        SetLength(competitonRecord, ceil(power(2, ceil(log2(participantArraySize)))));
+        debugLog('Chart gen: create output array success');
+        SetLength(passInArray, Length(competitonRecord));
+        for tempForLoop := 0 to Length(passInArray) - 1 do passInArray[tempForLoop] := -1;
+        for tempForLoop := 0 to Length(competitonRecord) - 1 do competitonRecord[tempForLoop] := -1;
+        debugLog('Chart gen: passIn array set lenght and init success, lenght set to: ' + IntToStr(Length(passInArray)));
+        quickSortParticipant(0, participantArraySize - 1, 4);
+        debugLog('Chart gen: quickSort success');
+        for tempForLoop := 0 to Length(data) - 1 do
+            begin
+                debugLog('looping: ' + IntToStr(tempForLoop));
+                passInArray[tempForLoop] := StrToInt(data[tempForLoop].ID) - 1;
+            end;
+        debugLog('Chart gen: imported raw data to passIn array');
+        passInNoSeed := 0;
+        while data[passInNoSeed].seed do passInNoSeed := passInNoSeed + 1;
+        debugLog('Chart gen: counted number of seed as: ' + IntToStr(passInNoSeed));
+        debugLog('Chart gen: creating chart');
+        // try
+            creatChart2(0, Length(passInArray) - 1, passInNoSeed, tempForLoop + 1, passInArray);
+        // except
+            // debugLog('gen chart error', 1);
+        // end;
+        debugLog('Chart gen: creat chart successfully');
     end;
 procedure ShowChart();
     var
@@ -1013,15 +957,16 @@ procedure ShowChart();
                 until correctInput;
                 if valiBoolean then
                     begin
-                        creatCompetitionChart;
-                        quickSortParticipant(0, Length(data) - 1);
+                        if not createdChart then startCreatingChart;
+                        quickSortParticipant(0, Length(data) - 1, 3);
+                        for temp := 0 to Length(competitonRecord) - 1 do debugLog('competitonRecord[' + IntToStr(temp) + '] = ' + IntToStr(competitonRecord[temp]));
                         for temp := 0 to Length(competitonRecord) - 1 do
                             begin
                                 if competitonRecord[temp] <> -1 then
                                     begin
-                                        Write(data[competitonRecord[temp] - 1].Name);
-                                        if data[competitonRecord[temp] - 1].Seed then Write('*');
-                                        WriteLn('(' + data[competitonRecord[temp] - 1].School + ')' :10);
+                                        Write(data[competitonRecord[temp]].Name);
+                                        if data[competitonRecord[temp]].Seed then Write('*');
+                                        WriteLn('(' + data[competitonRecord[temp]].School + ')' :10);
                                     end
                                 else
                                     Writeln('Bye');
@@ -1136,4 +1081,3 @@ begin
     if numberOfUser = 0 then creatAccount(True, False);
     Mainmenu();
 end.
-
