@@ -5,6 +5,12 @@ Debug: Counting Participators
 Debug: Counting Participators
 Debug: Counting Participators
 Debug: Counting Participators
+Debug: Counting Participators
+Debug: Counting Participators
+Debug: Counting Participators
+Debug: Counting Participators
+Debug: Counting Participators
+Debug: Counting Participators
 Debug: Array Length Set
 Debug: Loading Data
 Debug: Decryption Started
@@ -71,130 +77,1551 @@ Debug: Loaded School
 Debug: Decryption Started
 Debug: decryption successful
 Debug: Loaded Seed
+Debug: Loading Data
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded ID
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Name
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded School
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Seed
+Debug: Loading Data
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded ID
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Name
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded School
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Seed
+Debug: Loading Data
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded ID
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Name
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded School
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Seed
+Debug: Loading Data
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded ID
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Name
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded School
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Seed
+Debug: Loading Data
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded ID
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Name
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded School
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Seed
+Debug: Loading Data
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded ID
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Name
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded School
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Seed
 Debug: quicksort started
 Debug: quicksort change position
 Debug: quicksort change position
 Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 5
+Debug: data[1].ID = 3
+Debug: data[2].ID = 4
+Debug: data[3].ID = 10
+Debug: data[4].ID = 9
+Debug: data[5].ID = 2
+Debug: data[6].ID = 1
+Debug: data[7].ID = 6
+Debug: data[8].ID = 11
+Debug: data[9].ID = 8
+Debug: data[10].ID = 7
 Debug: quicksort started
 Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 5
+Debug: data[1].ID = 3
+Debug: data[2].ID = 4
+Debug: data[3].ID = 10
+Debug: data[4].ID = 9
+Debug: data[5].ID = 2
+Debug: data[6].ID = 1
+Debug: data[7].ID = 6
+Debug: data[8].ID = 11
+Debug: data[9].ID = 8
+Debug: data[10].ID = 7
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 5
+Debug: data[1].ID = 3
+Debug: data[2].ID = 4
+Debug: data[3].ID = 10
+Debug: data[4].ID = 9
+Debug: data[5].ID = 2
+Debug: data[6].ID = 1
+Debug: data[7].ID = 6
+Debug: data[8].ID = 11
+Debug: data[9].ID = 8
+Debug: data[10].ID = 7
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 5
+Debug: data[1].ID = 3
+Debug: data[2].ID = 4
+Debug: data[3].ID = 10
+Debug: data[4].ID = 9
+Debug: data[5].ID = 2
+Debug: data[6].ID = 1
+Debug: data[7].ID = 6
+Debug: data[8].ID = 11
+Debug: data[9].ID = 8
+Debug: data[10].ID = 7
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 5
+Debug: data[1].ID = 3
+Debug: data[2].ID = 4
+Debug: data[3].ID = 10
+Debug: data[4].ID = 9
+Debug: data[5].ID = 1
+Debug: data[6].ID = 2
+Debug: data[7].ID = 6
+Debug: data[8].ID = 11
+Debug: data[9].ID = 8
+Debug: data[10].ID = 7
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 5
+Debug: data[1].ID = 3
+Debug: data[2].ID = 4
+Debug: data[3].ID = 9
+Debug: data[4].ID = 10
+Debug: data[5].ID = 1
+Debug: data[6].ID = 2
+Debug: data[7].ID = 6
+Debug: data[8].ID = 11
+Debug: data[9].ID = 8
+Debug: data[10].ID = 7
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 5
+Debug: data[1].ID = 4
+Debug: data[2].ID = 3
+Debug: data[3].ID = 9
+Debug: data[4].ID = 10
+Debug: data[5].ID = 1
+Debug: data[6].ID = 2
+Debug: data[7].ID = 6
+Debug: data[8].ID = 11
+Debug: data[9].ID = 8
+Debug: data[10].ID = 7
 Debug: Choice entered
 Debug: User Choice : 6
 Debug: Chart gen: Start init
 Debug: Chart gen: create output array success
-Debug: Chart gen: passIn array set lenght and init success, lenght set to: 8
+Debug: Chart gen: passIn array set lenght and init success, lenght set to: 16
 Debug: quicksort started
+Debug: data[0].ID = 7
+Debug: data[1].ID = 4
+Debug: data[2].ID = 3
+Debug: data[3].ID = 9
+Debug: data[4].ID = 10
+Debug: data[5].ID = 1
+Debug: data[6].ID = 2
+Debug: data[7].ID = 6
+Debug: data[8].ID = 11
+Debug: data[9].ID = 8
+Debug: data[10].ID = 5
 Debug: quicksort started
 Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 7
+Debug: data[1].ID = 3
+Debug: data[2].ID = 1
+Debug: data[3].ID = 6
+Debug: data[4].ID = 5
+Debug: data[5].ID = 4
+Debug: data[6].ID = 2
+Debug: data[7].ID = 9
+Debug: data[8].ID = 11
+Debug: data[9].ID = 8
+Debug: data[10].ID = 10
 Debug: quicksort started
+Debug: data[0].ID = 7
+Debug: data[1].ID = 6
+Debug: data[2].ID = 1
+Debug: data[3].ID = 3
+Debug: data[4].ID = 5
+Debug: data[5].ID = 4
+Debug: data[6].ID = 2
+Debug: data[7].ID = 9
+Debug: data[8].ID = 11
+Debug: data[9].ID = 8
+Debug: data[10].ID = 10
+Debug: quicksort started
+Debug: data[0].ID = 7
+Debug: data[1].ID = 6
+Debug: data[2].ID = 3
+Debug: data[3].ID = 1
+Debug: data[4].ID = 5
+Debug: data[5].ID = 4
+Debug: data[6].ID = 2
+Debug: data[7].ID = 9
+Debug: data[8].ID = 11
+Debug: data[9].ID = 8
+Debug: data[10].ID = 10
+Debug: quicksort started
+Debug: data[0].ID = 7
+Debug: data[1].ID = 6
+Debug: data[2].ID = 3
+Debug: data[3].ID = 1
+Debug: data[4].ID = 5
+Debug: data[5].ID = 10
+Debug: data[6].ID = 2
+Debug: data[7].ID = 9
+Debug: data[8].ID = 11
+Debug: data[9].ID = 8
+Debug: data[10].ID = 4
+Debug: quicksort started
+Debug: data[0].ID = 7
+Debug: data[1].ID = 6
+Debug: data[2].ID = 3
+Debug: data[3].ID = 1
+Debug: data[4].ID = 5
+Debug: data[5].ID = 10
+Debug: data[6].ID = 4
+Debug: data[7].ID = 9
+Debug: data[8].ID = 11
+Debug: data[9].ID = 8
+Debug: data[10].ID = 2
+Debug: quicksort started
+Debug: data[0].ID = 7
+Debug: data[1].ID = 6
+Debug: data[2].ID = 3
+Debug: data[3].ID = 1
+Debug: data[4].ID = 5
+Debug: data[5].ID = 10
+Debug: data[6].ID = 4
+Debug: data[7].ID = 2
+Debug: data[8].ID = 11
+Debug: data[9].ID = 8
+Debug: data[10].ID = 9
+Debug: quicksort started
+Debug: data[0].ID = 7
+Debug: data[1].ID = 6
+Debug: data[2].ID = 3
+Debug: data[3].ID = 1
+Debug: data[4].ID = 5
+Debug: data[5].ID = 10
+Debug: data[6].ID = 4
+Debug: data[7].ID = 2
+Debug: data[8].ID = 9
+Debug: data[9].ID = 8
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: data[0].ID = 7
+Debug: data[1].ID = 6
+Debug: data[2].ID = 3
+Debug: data[3].ID = 1
+Debug: data[4].ID = 5
+Debug: data[5].ID = 10
+Debug: data[6].ID = 4
+Debug: data[7].ID = 2
+Debug: data[8].ID = 9
+Debug: data[9].ID = 11
+Debug: data[10].ID = 8
 Debug: Chart gen: quickSort success
 Debug: looping: 0
 Debug: looping: 1
 Debug: looping: 2
 Debug: looping: 3
 Debug: looping: 4
+Debug: looping: 5
+Debug: looping: 6
+Debug: looping: 7
+Debug: looping: 8
+Debug: looping: 9
+Debug: looping: 10
 Debug: Chart gen: imported raw data to passIn array
-Debug: Chart gen: counted number of seed as: 2
+Debug: Chart gen: counted number of seed as: 4
 Debug: Chart gen: creating chart
+Debug: creatChart: inputArray[0] = 6
+Debug: creatChart: inputArray[1] = 5
+Debug: creatChart: inputArray[2] = 2
+Debug: creatChart: inputArray[3] = 0
+Debug: creatChart: inputArray[4] = 4
+Debug: creatChart: inputArray[5] = 9
+Debug: creatChart: inputArray[6] = 3
+Debug: creatChart: inputArray[7] = 1
+Debug: creatChart: inputArray[8] = 8
+Debug: creatChart: inputArray[9] = 10
+Debug: creatChart: inputArray[10] = 7
+Debug: creatChart: inputArray[11] = -1
+Debug: creatChart: inputArray[12] = -1
+Debug: creatChart: inputArray[13] = -1
+Debug: creatChart: inputArray[14] = -1
+Debug: creatChart: inputArray[15] = -1
+Debug: creatChart: start: 0
+Debug: creatChart: ending: 15
+Debug: creatChart: player need to handle: 11
+Debug: creatChart: array Lenght: 16
+Debug: creatChart: arrat init success
+Debug: creatChart: wall set, value: 8
+Debug: creatChart: number of seed need to handle: 4
+Debug: creatChart: handling seed 0
+Debug: creatChart: handling seed 1
+Debug: creatChart: handling seed 2
+Debug: creatChart: handling seed 3
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 7
+Debug: data[1].ID = 6
+Debug: data[2].ID = 3
+Debug: data[3].ID = 1
+Debug: data[4].ID = 5
+Debug: data[5].ID = 4
+Debug: data[6].ID = 2
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 11
+Debug: data[10].ID = 10
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 7
+Debug: data[4].ID = 5
+Debug: data[5].ID = 4
+Debug: data[6].ID = 6
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 11
+Debug: data[10].ID = 10
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 5
+Debug: data[4].ID = 4
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 11
+Debug: data[10].ID = 10
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 11
+Debug: data[10].ID = 10
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: creatChart: handling: 4
+Debug: creatChart: current pointer: 2
+Debug: creatChart: pointer on left side
+Debug: creatChart: check same school: checking: 0
+Debug: creatChart: check same school: checking: 1
+Debug: creatChart: same school not detected
+Debug: creatChart: passInArray[0] = 6
+Debug: creatChart: passInArray[1] = 2
+Debug: creatChart: passInArray[2] = 4
+Debug: creatChart: passInArray[3] = -1
+Debug: creatChart: passInArray[4] = -1
+Debug: creatChart: passInArray[5] = -1
+Debug: creatChart: passInArray[6] = -1
+Debug: creatChart: passInArray[7] = -1
+Debug: creatChart: passInArray[8] = 5
+Debug: creatChart: passInArray[9] = 0
+Debug: creatChart: passInArray[10] = -1
+Debug: creatChart: passInArray[11] = -1
+Debug: creatChart: passInArray[12] = -1
+Debug: creatChart: passInArray[13] = -1
+Debug: creatChart: passInArray[14] = -1
+Debug: creatChart: passInArray[15] = -1
+Debug: creatChart: handling: 5
+Debug: creatChart: current pointer: 2
+Debug: creatChart: pointer on left side
+Debug: creatChart: check same school: checking: 0
+Debug: creatChart: check same school: checking: 1
+Debug: creatChart: check same school: checking: 2
+Debug: creatChart: same school not detected
+Debug: 3
+Debug: creatChart: passInArray[0] = 6
+Debug: creatChart: passInArray[1] = 2
+Debug: creatChart: passInArray[2] = 4
+Debug: creatChart: passInArray[3] = 9
+Debug: creatChart: passInArray[4] = -1
+Debug: creatChart: passInArray[5] = -1
+Debug: creatChart: passInArray[6] = -1
+Debug: creatChart: passInArray[7] = -1
+Debug: creatChart: passInArray[8] = 5
+Debug: creatChart: passInArray[9] = 0
+Debug: creatChart: passInArray[10] = -1
+Debug: creatChart: passInArray[11] = -1
+Debug: creatChart: passInArray[12] = -1
+Debug: creatChart: passInArray[13] = -1
+Debug: creatChart: passInArray[14] = -1
+Debug: creatChart: passInArray[15] = -1
+Debug: creatChart: handling: 6
+Debug: creatChart: current pointer: 3
+Debug: creatChart: pointer on left side
+Debug: creatChart: check same school: checking: 0
+Debug: creatChart: check same school: checking: 1
+Debug: hi
+Debug: creatChart: same school detected
+Debug: creatChart: original pointer: 3
+Debug: creatChart: current pointer: 8
+Debug: 9
+Debug: 10
+Debug: creatChart: passInArray[0] = 6
+Debug: creatChart: passInArray[1] = 2
+Debug: creatChart: passInArray[2] = 4
+Debug: creatChart: passInArray[3] = 9
+Debug: creatChart: passInArray[4] = -1
+Debug: creatChart: passInArray[5] = -1
+Debug: creatChart: passInArray[6] = -1
+Debug: creatChart: passInArray[7] = -1
+Debug: creatChart: passInArray[8] = 5
+Debug: creatChart: passInArray[9] = 0
+Debug: creatChart: passInArray[10] = 3
+Debug: creatChart: passInArray[11] = -1
+Debug: creatChart: passInArray[12] = -1
+Debug: creatChart: passInArray[13] = -1
+Debug: creatChart: passInArray[14] = -1
+Debug: creatChart: passInArray[15] = -1
+Debug: creatChart: handling: 7
+Debug: creatChart: current pointer: 1
+Debug: creatChart: pointer on left side
+Debug: creatChart: check same school: checking: 0
+Debug: creatChart: check same school: checking: 1
+Debug: creatChart: check same school: checking: 2
+Debug: creatChart: check same school: checking: 3
+Debug: creatChart: same school not detected
+Debug: 2
+Debug: 3
+Debug: 4
+Debug: creatChart: passInArray[0] = 6
+Debug: creatChart: passInArray[1] = 2
+Debug: creatChart: passInArray[2] = 4
+Debug: creatChart: passInArray[3] = 9
+Debug: creatChart: passInArray[4] = 1
+Debug: creatChart: passInArray[5] = -1
+Debug: creatChart: passInArray[6] = -1
+Debug: creatChart: passInArray[7] = -1
+Debug: creatChart: passInArray[8] = 5
+Debug: creatChart: passInArray[9] = 0
+Debug: creatChart: passInArray[10] = 3
+Debug: creatChart: passInArray[11] = -1
+Debug: creatChart: passInArray[12] = -1
+Debug: creatChart: passInArray[13] = -1
+Debug: creatChart: passInArray[14] = -1
+Debug: creatChart: passInArray[15] = -1
+Debug: creatChart: handling: 8
+Debug: creatChart: current pointer: 4
+Debug: creatChart: pointer on left side
+Debug: creatChart: check same school: checking: 0
+Debug: creatChart: check same school: checking: 1
+Debug: creatChart: check same school: checking: 2
+Debug: creatChart: check same school: checking: 3
+Debug: hi
+Debug: creatChart: same school detected
+Debug: creatChart: original pointer: 4
+Debug: creatChart: current pointer: 8
+Debug: 9
+Debug: 10
+Debug: 11
+Debug: creatChart: passInArray[0] = 6
+Debug: creatChart: passInArray[1] = 2
+Debug: creatChart: passInArray[2] = 4
+Debug: creatChart: passInArray[3] = 9
+Debug: creatChart: passInArray[4] = 1
+Debug: creatChart: passInArray[5] = -1
+Debug: creatChart: passInArray[6] = -1
+Debug: creatChart: passInArray[7] = -1
+Debug: creatChart: passInArray[8] = 5
+Debug: creatChart: passInArray[9] = 0
+Debug: creatChart: passInArray[10] = 3
+Debug: creatChart: passInArray[11] = 8
+Debug: creatChart: passInArray[12] = -1
+Debug: creatChart: passInArray[13] = -1
+Debug: creatChart: passInArray[14] = -1
+Debug: creatChart: passInArray[15] = -1
+Debug: creatChart: handling: 9
+Debug: creatChart: current pointer: 2
+Debug: creatChart: pointer on left side
+Debug: creatChart: check same school: checking: 0
+Debug: creatChart: check same school: checking: 1
+Debug: creatChart: check same school: checking: 2
+Debug: creatChart: check same school: checking: 3
+Debug: creatChart: check same school: checking: 4
+Debug: creatChart: same school not detected
+Debug: 3
+Debug: 4
+Debug: 5
+Debug: creatChart: passInArray[0] = 6
+Debug: creatChart: passInArray[1] = 2
+Debug: creatChart: passInArray[2] = 4
+Debug: creatChart: passInArray[3] = 9
+Debug: creatChart: passInArray[4] = 1
+Debug: creatChart: passInArray[5] = 10
+Debug: creatChart: passInArray[6] = -1
+Debug: creatChart: passInArray[7] = -1
+Debug: creatChart: passInArray[8] = 5
+Debug: creatChart: passInArray[9] = 0
+Debug: creatChart: passInArray[10] = 3
+Debug: creatChart: passInArray[11] = 8
+Debug: creatChart: passInArray[12] = -1
+Debug: creatChart: passInArray[13] = -1
+Debug: creatChart: passInArray[14] = -1
+Debug: creatChart: passInArray[15] = -1
+Debug: creatChart: handling: 10
+Debug: creatChart: current pointer: 5
+Debug: creatChart: pointer on left side
+Debug: creatChart: check same school: checking: 0
+Debug: creatChart: check same school: checking: 1
+Debug: creatChart: check same school: checking: 2
+Debug: creatChart: check same school: checking: 3
+Debug: creatChart: check same school: checking: 4
+Debug: creatChart: check same school: checking: 5
+Debug: creatChart: same school not detected
+Debug: 6
+Debug: creatChart: passInArray[0] = 6
+Debug: creatChart: passInArray[1] = 2
+Debug: creatChart: passInArray[2] = 4
+Debug: creatChart: passInArray[3] = 9
+Debug: creatChart: passInArray[4] = 1
+Debug: creatChart: passInArray[5] = 10
+Debug: creatChart: passInArray[6] = 7
+Debug: creatChart: passInArray[7] = -1
+Debug: creatChart: passInArray[8] = 5
+Debug: creatChart: passInArray[9] = 0
+Debug: creatChart: passInArray[10] = 3
+Debug: creatChart: passInArray[11] = 8
+Debug: creatChart: passInArray[12] = -1
+Debug: creatChart: passInArray[13] = -1
+Debug: creatChart: passInArray[14] = -1
+Debug: creatChart: passInArray[15] = -1
+Debug: creatChart: leftPlayer : 7
+Debug: creatChart: not smallest group, looping
+Debug: creatChart: inputArray[0] = 6
+Debug: creatChart: inputArray[1] = 2
+Debug: creatChart: inputArray[2] = 4
+Debug: creatChart: inputArray[3] = 9
+Debug: creatChart: inputArray[4] = 1
+Debug: creatChart: inputArray[5] = 10
+Debug: creatChart: inputArray[6] = 7
+Debug: creatChart: inputArray[7] = -1
+Debug: creatChart: inputArray[8] = 5
+Debug: creatChart: inputArray[9] = 0
+Debug: creatChart: inputArray[10] = 3
+Debug: creatChart: inputArray[11] = 8
+Debug: creatChart: inputArray[12] = -1
+Debug: creatChart: inputArray[13] = -1
+Debug: creatChart: inputArray[14] = -1
+Debug: creatChart: inputArray[15] = -1
 Debug: creatChart: start: 0
 Debug: creatChart: ending: 7
-Debug: creatChart: player need to handle: 5
+Debug: creatChart: player need to handle: 7
 Debug: creatChart: array Lenght: 8
 Debug: creatChart: arrat init success
 Debug: creatChart: wall set, value: 4
 Debug: creatChart: number of seed need to handle: 2
 Debug: creatChart: handling seed 0
 Debug: creatChart: handling seed 1
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
 Debug: creatChart: handling: 2
+Debug: creatChart: current pointer: 1
 Debug: creatChart: pointer on left side
-Debug: creatChart: same school detected
-Debug: creatChart: original pointer: 1
-Debug: creatChart: current pointer: 5
-Debug: creatChart: passInArray[0] = 0
-Debug: creatChart: passInArray[1] = -1
+Debug: creatChart: check same school: checking: 0
+Debug: creatChart: same school not detected
+Debug: creatChart: passInArray[0] = 6
+Debug: creatChart: passInArray[1] = 4
 Debug: creatChart: passInArray[2] = -1
 Debug: creatChart: passInArray[3] = -1
 Debug: creatChart: passInArray[4] = 2
-Debug: creatChart: passInArray[5] = 4
+Debug: creatChart: passInArray[5] = -1
 Debug: creatChart: passInArray[6] = -1
 Debug: creatChart: passInArray[7] = -1
 Debug: creatChart: handling: 3
+Debug: creatChart: current pointer: 1
 Debug: creatChart: pointer on left side
+Debug: creatChart: check same school: checking: 0
+Debug: creatChart: check same school: checking: 1
 Debug: creatChart: same school not detected
-Debug: creatChart: passInArray[0] = 0
-Debug: creatChart: passInArray[1] = 3
-Debug: creatChart: passInArray[2] = -1
+Debug: 2
+Debug: creatChart: passInArray[0] = 6
+Debug: creatChart: passInArray[1] = 4
+Debug: creatChart: passInArray[2] = 9
 Debug: creatChart: passInArray[3] = -1
 Debug: creatChart: passInArray[4] = 2
-Debug: creatChart: passInArray[5] = 4
+Debug: creatChart: passInArray[5] = -1
 Debug: creatChart: passInArray[6] = -1
 Debug: creatChart: passInArray[7] = -1
 Debug: creatChart: handling: 4
+Debug: creatChart: current pointer: 2
 Debug: creatChart: pointer on left side
-Debug: creatChart: same school detected
-Debug: creatChart: original pointer: 1
-Debug: creatChart: current pointer: 5
-Debug: creatChart: passInArray[0] = 0
-Debug: creatChart: passInArray[1] = 3
-Debug: creatChart: passInArray[2] = -1
-Debug: creatChart: passInArray[3] = -1
+Debug: creatChart: check same school: checking: 0
+Debug: creatChart: check same school: checking: 1
+Debug: creatChart: check same school: checking: 2
+Debug: creatChart: same school not detected
+Debug: 3
+Debug: creatChart: passInArray[0] = 6
+Debug: creatChart: passInArray[1] = 4
+Debug: creatChart: passInArray[2] = 9
+Debug: creatChart: passInArray[3] = 1
 Debug: creatChart: passInArray[4] = 2
-Debug: creatChart: passInArray[5] = 4
-Debug: creatChart: passInArray[6] = 1
+Debug: creatChart: passInArray[5] = -1
+Debug: creatChart: passInArray[6] = -1
 Debug: creatChart: passInArray[7] = -1
-Debug: creatChart: leftPlayer : 2
+Debug: creatChart: handling: 5
+Debug: creatChart: current pointer: 3
+Debug: creatChart: pointer on left side
+Debug: creatChart: check same school: checking: 0
+Debug: creatChart: check same school: checking: 1
+Debug: creatChart: check same school: checking: 2
+Debug: creatChart: check same school: checking: 3
+Debug: creatChart: same school not detected
+Debug: 4
+Debug: 5
+Debug: creatChart: passInArray[0] = 6
+Debug: creatChart: passInArray[1] = 4
+Debug: creatChart: passInArray[2] = 9
+Debug: creatChart: passInArray[3] = 1
+Debug: creatChart: passInArray[4] = 2
+Debug: creatChart: passInArray[5] = 10
+Debug: creatChart: passInArray[6] = -1
+Debug: creatChart: passInArray[7] = -1
+Debug: creatChart: handling: 6
+Debug: creatChart: current pointer: 5
+Debug: creatChart: pointer on right side
+Debug: creatChart: check same school: checking: 4
+Debug: creatChart: check same school: checking: 5
+Debug: creatChart: same school not detected
+Debug: 6
+Debug: done
+Debug: creatChart: passInArray[0] = 6
+Debug: creatChart: passInArray[1] = 4
+Debug: creatChart: passInArray[2] = 9
+Debug: creatChart: passInArray[3] = 1
+Debug: creatChart: passInArray[4] = 2
+Debug: creatChart: passInArray[5] = 10
+Debug: creatChart: passInArray[6] = 7
+Debug: creatChart: passInArray[7] = -1
+Debug: creatChart: leftPlayer : 4
 Debug: creatChart: not smallest group, looping
+Debug: creatChart: inputArray[0] = 6
+Debug: creatChart: inputArray[1] = 4
+Debug: creatChart: inputArray[2] = 9
+Debug: creatChart: inputArray[3] = 1
+Debug: creatChart: inputArray[4] = 2
+Debug: creatChart: inputArray[5] = 10
+Debug: creatChart: inputArray[6] = 7
+Debug: creatChart: inputArray[7] = -1
 Debug: creatChart: start: 0
 Debug: creatChart: ending: 3
-Debug: creatChart: player need to handle: 2
+Debug: creatChart: player need to handle: 4
 Debug: creatChart: array Lenght: 4
 Debug: creatChart: arrat init success
 Debug: creatChart: wall set, value: 2
 Debug: creatChart: number of seed need to handle: 1
 Debug: creatChart: handling seed 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
 Debug: creatChart: handling: 1
+Debug: creatChart: current pointer: 2
 Debug: creatChart: pointer on right side
 Debug: creatChart: same school not detected
 Debug: done
-Debug: creatChart: passInArray[0] = 0
+Debug: creatChart: passInArray[0] = 6
 Debug: creatChart: passInArray[1] = -1
-Debug: creatChart: passInArray[2] = 3
+Debug: creatChart: passInArray[2] = 4
 Debug: creatChart: passInArray[3] = -1
-Debug: creatChart: leftPlayer : 1
+Debug: creatChart: handling: 2
+Debug: creatChart: current pointer: 2
+Debug: creatChart: pointer on right side
+Debug: creatChart: check same school: checking: 2
+Debug: creatChart: same school not detected
+Debug: 3
+Debug: done
+Debug: creatChart: passInArray[0] = 6
+Debug: creatChart: passInArray[1] = -1
+Debug: creatChart: passInArray[2] = 4
+Debug: creatChart: passInArray[3] = 9
+Debug: creatChart: handling: 3
+Debug: creatChart: current pointer: 3
+Debug: creatChart: pointer on right side
+Debug: creatChart: check same school: checking: 2
+Debug: creatChart: check same school: checking: 3
+Debug: creatChart: same school not detected
+Debug: 0
+Debug: 1
+Debug: done
+Debug: creatChart: passInArray[0] = 6
+Debug: creatChart: passInArray[1] = 1
+Debug: creatChart: passInArray[2] = 4
+Debug: creatChart: passInArray[3] = 9
+Debug: creatChart: leftPlayer : 2
 Debug: creatChart: not smallest group, looping
+Debug: creatChart: inputArray[0] = 6
+Debug: creatChart: inputArray[1] = 1
+Debug: creatChart: inputArray[2] = 4
+Debug: creatChart: inputArray[3] = 9
 Debug: creatChart: start: 0
 Debug: creatChart: ending: 1
-Debug: creatChart: player need to handle: 1
+Debug: creatChart: player need to handle: 2
 Debug: creatChart: array Lenght: 2
 Debug: creatChart: arrat init success
 Debug: creatChart: wall set, value: 1
 Debug: creatChart: number of seed need to handle: 1
 Debug: creatChart: handling seed 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: creatChart: handling: 1
+Debug: creatChart: current pointer: 1
+Debug: creatChart: pointer on right side
+Debug: creatChart: same school not detected
+Debug: done
+Debug: creatChart: passInArray[0] = 6
+Debug: creatChart: passInArray[1] = 1
 Debug: creatChart: leftPlayer : 1
-Debug: creatChart: adding 0 to competitionRecord[0]
-Debug: creatChart: adding -1 to competitionRecord[1]
+Debug: creatChart: adding 6 to competitionRecord[0]
+Debug: creatChart: adding 1 to competitionRecord[1]
 Debug: creatChart: smallest group, imported, array now is in size of: 2
-Debug: debug array: competitionRecord[0] = 0
-Debug: debug array: competitionRecord[1] = -1
+Debug: debug array: competitionRecord[0] = 6
+Debug: debug array: competitionRecord[1] = 1
+Debug: creatChart: inputArray[0] = 6
+Debug: creatChart: inputArray[1] = 1
+Debug: creatChart: inputArray[2] = 4
+Debug: creatChart: inputArray[3] = 9
 Debug: creatChart: start: 2
 Debug: creatChart: ending: 3
-Debug: creatChart: player need to handle: 1
+Debug: creatChart: player need to handle: 2
 Debug: creatChart: array Lenght: 2
 Debug: creatChart: arrat init success
 Debug: creatChart: wall set, value: 1
 Debug: creatChart: number of seed need to handle: 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
 Debug: creatChart: handling: 2
+Debug: creatChart: current pointer: 0
 Debug: creatChart: pointer on left side
 Debug: creatChart: same school not detected
-Debug: creatChart: passInArray[0] = 3
+Debug: creatChart: passInArray[0] = 4
 Debug: creatChart: passInArray[1] = -1
+Debug: creatChart: handling: 3
+Debug: creatChart: current pointer: 0
+Debug: creatChart: pointer on left side
+Debug: creatChart: check same school: checking: 0
+Debug: creatChart: same school not detected
+Debug: 1
+Debug: creatChart: passInArray[0] = 4
+Debug: creatChart: passInArray[1] = 9
 Debug: creatChart: leftPlayer : 1
-Debug: creatChart: adding 3 to competitionRecord[2]
-Debug: creatChart: adding -1 to competitionRecord[3]
+Debug: creatChart: adding 4 to competitionRecord[2]
+Debug: creatChart: adding 9 to competitionRecord[3]
 Debug: creatChart: smallest group, imported, array now is in size of: 4
-Debug: debug array: competitionRecord[0] = 0
-Debug: debug array: competitionRecord[1] = -1
-Debug: debug array: competitionRecord[2] = 3
-Debug: debug array: competitionRecord[3] = -1
+Debug: debug array: competitionRecord[0] = 6
+Debug: debug array: competitionRecord[1] = 1
+Debug: debug array: competitionRecord[2] = 4
+Debug: debug array: competitionRecord[3] = 9
+Debug: creatChart: inputArray[0] = 6
+Debug: creatChart: inputArray[1] = 4
+Debug: creatChart: inputArray[2] = 9
+Debug: creatChart: inputArray[3] = 1
+Debug: creatChart: inputArray[4] = 2
+Debug: creatChart: inputArray[5] = 10
+Debug: creatChart: inputArray[6] = 7
+Debug: creatChart: inputArray[7] = -1
 Debug: creatChart: start: 4
 Debug: creatChart: ending: 7
 Debug: creatChart: player need to handle: 3
@@ -203,118 +1630,2265 @@ Debug: creatChart: arrat init success
 Debug: creatChart: wall set, value: 2
 Debug: creatChart: number of seed need to handle: 1
 Debug: creatChart: handling seed 4
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
 Debug: creatChart: handling: 5
+Debug: creatChart: current pointer: 2
 Debug: creatChart: pointer on right side
 Debug: creatChart: same school not detected
 Debug: done
 Debug: creatChart: passInArray[0] = 2
 Debug: creatChart: passInArray[1] = -1
-Debug: creatChart: passInArray[2] = 4
+Debug: creatChart: passInArray[2] = 10
 Debug: creatChart: passInArray[3] = -1
 Debug: creatChart: handling: 6
+Debug: creatChart: current pointer: 2
 Debug: creatChart: pointer on right side
+Debug: creatChart: check same school: checking: 2
 Debug: creatChart: same school not detected
+Debug: 3
 Debug: done
 Debug: creatChart: passInArray[0] = 2
-Debug: creatChart: passInArray[1] = 1
-Debug: creatChart: passInArray[2] = 4
-Debug: creatChart: passInArray[3] = -1
-Debug: creatChart: leftPlayer : 2
+Debug: creatChart: passInArray[1] = -1
+Debug: creatChart: passInArray[2] = 10
+Debug: creatChart: passInArray[3] = 7
+Debug: creatChart: leftPlayer : 1
 Debug: creatChart: not smallest group, looping
+Debug: creatChart: inputArray[0] = 2
+Debug: creatChart: inputArray[1] = -1
+Debug: creatChart: inputArray[2] = 10
+Debug: creatChart: inputArray[3] = 7
 Debug: creatChart: start: 0
 Debug: creatChart: ending: 1
-Debug: creatChart: player need to handle: 2
+Debug: creatChart: player need to handle: 1
 Debug: creatChart: array Lenght: 2
 Debug: creatChart: arrat init success
 Debug: creatChart: wall set, value: 1
 Debug: creatChart: number of seed need to handle: 1
 Debug: creatChart: handling seed 0
-Debug: creatChart: handling: 1
-Debug: creatChart: pointer on right side
-Debug: creatChart: same school not detected
-Debug: done
-Debug: creatChart: passInArray[0] = 2
-Debug: creatChart: passInArray[1] = 1
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
 Debug: creatChart: leftPlayer : 1
 Debug: creatChart: adding 2 to competitionRecord[4]
-Debug: creatChart: adding 1 to competitionRecord[5]
+Debug: creatChart: adding -1 to competitionRecord[5]
 Debug: creatChart: smallest group, imported, array now is in size of: 6
-Debug: debug array: competitionRecord[0] = 0
-Debug: debug array: competitionRecord[1] = -1
-Debug: debug array: competitionRecord[2] = 3
-Debug: debug array: competitionRecord[3] = -1
+Debug: debug array: competitionRecord[0] = 6
+Debug: debug array: competitionRecord[1] = 1
+Debug: debug array: competitionRecord[2] = 4
+Debug: debug array: competitionRecord[3] = 9
 Debug: debug array: competitionRecord[4] = 2
-Debug: debug array: competitionRecord[5] = 1
+Debug: debug array: competitionRecord[5] = -1
+Debug: creatChart: inputArray[0] = 2
+Debug: creatChart: inputArray[1] = -1
+Debug: creatChart: inputArray[2] = 10
+Debug: creatChart: inputArray[3] = 7
 Debug: creatChart: start: 2
 Debug: creatChart: ending: 3
-Debug: creatChart: player need to handle: 1
+Debug: creatChart: player need to handle: 2
 Debug: creatChart: array Lenght: 2
 Debug: creatChart: arrat init success
 Debug: creatChart: wall set, value: 1
 Debug: creatChart: number of seed need to handle: 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
 Debug: creatChart: handling: 2
+Debug: creatChart: current pointer: 0
 Debug: creatChart: pointer on left side
 Debug: creatChart: same school not detected
-Debug: creatChart: passInArray[0] = 4
+Debug: creatChart: passInArray[0] = 10
 Debug: creatChart: passInArray[1] = -1
+Debug: creatChart: handling: 3
+Debug: creatChart: current pointer: 0
+Debug: creatChart: pointer on left side
+Debug: creatChart: check same school: checking: 0
+Debug: creatChart: same school not detected
+Debug: 1
+Debug: creatChart: passInArray[0] = 10
+Debug: creatChart: passInArray[1] = 7
 Debug: creatChart: leftPlayer : 1
-Debug: creatChart: adding 4 to competitionRecord[6]
-Debug: creatChart: adding -1 to competitionRecord[7]
+Debug: creatChart: adding 10 to competitionRecord[6]
+Debug: creatChart: adding 7 to competitionRecord[7]
 Debug: creatChart: smallest group, imported, array now is in size of: 8
-Debug: debug array: competitionRecord[0] = 0
-Debug: debug array: competitionRecord[1] = -1
-Debug: debug array: competitionRecord[2] = 3
-Debug: debug array: competitionRecord[3] = -1
+Debug: debug array: competitionRecord[0] = 6
+Debug: debug array: competitionRecord[1] = 1
+Debug: debug array: competitionRecord[2] = 4
+Debug: debug array: competitionRecord[3] = 9
 Debug: debug array: competitionRecord[4] = 2
-Debug: debug array: competitionRecord[5] = 1
-Debug: debug array: competitionRecord[6] = 4
-Debug: debug array: competitionRecord[7] = -1
+Debug: debug array: competitionRecord[5] = -1
+Debug: debug array: competitionRecord[6] = 10
+Debug: debug array: competitionRecord[7] = 7
+Debug: creatChart: inputArray[0] = 6
+Debug: creatChart: inputArray[1] = 2
+Debug: creatChart: inputArray[2] = 4
+Debug: creatChart: inputArray[3] = 9
+Debug: creatChart: inputArray[4] = 1
+Debug: creatChart: inputArray[5] = 10
+Debug: creatChart: inputArray[6] = 7
+Debug: creatChart: inputArray[7] = -1
+Debug: creatChart: inputArray[8] = 5
+Debug: creatChart: inputArray[9] = 0
+Debug: creatChart: inputArray[10] = 3
+Debug: creatChart: inputArray[11] = 8
+Debug: creatChart: inputArray[12] = -1
+Debug: creatChart: inputArray[13] = -1
+Debug: creatChart: inputArray[14] = -1
+Debug: creatChart: inputArray[15] = -1
+Debug: creatChart: start: 8
+Debug: creatChart: ending: 15
+Debug: creatChart: player need to handle: 4
+Debug: creatChart: array Lenght: 8
+Debug: creatChart: arrat init success
+Debug: creatChart: wall set, value: 4
+Debug: creatChart: number of seed need to handle: 2
+Debug: creatChart: handling seed 8
+Debug: creatChart: handling seed 9
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: creatChart: handling: 10
+Debug: creatChart: current pointer: 1
+Debug: creatChart: pointer on left side
+Debug: creatChart: check same school: checking: 0
+Debug: creatChart: same school not detected
+Debug: creatChart: passInArray[0] = 5
+Debug: creatChart: passInArray[1] = 3
+Debug: creatChart: passInArray[2] = -1
+Debug: creatChart: passInArray[3] = -1
+Debug: creatChart: passInArray[4] = 0
+Debug: creatChart: passInArray[5] = -1
+Debug: creatChart: passInArray[6] = -1
+Debug: creatChart: passInArray[7] = -1
+Debug: creatChart: handling: 11
+Debug: creatChart: current pointer: 1
+Debug: creatChart: pointer on left side
+Debug: creatChart: check same school: checking: 0
+Debug: creatChart: check same school: checking: 1
+Debug: creatChart: same school not detected
+Debug: 2
+Debug: creatChart: passInArray[0] = 5
+Debug: creatChart: passInArray[1] = 3
+Debug: creatChart: passInArray[2] = 8
+Debug: creatChart: passInArray[3] = -1
+Debug: creatChart: passInArray[4] = 0
+Debug: creatChart: passInArray[5] = -1
+Debug: creatChart: passInArray[6] = -1
+Debug: creatChart: passInArray[7] = -1
+Debug: creatChart: leftPlayer : 3
+Debug: creatChart: not smallest group, looping
+Debug: creatChart: inputArray[0] = 5
+Debug: creatChart: inputArray[1] = 3
+Debug: creatChart: inputArray[2] = 8
+Debug: creatChart: inputArray[3] = -1
+Debug: creatChart: inputArray[4] = 0
+Debug: creatChart: inputArray[5] = -1
+Debug: creatChart: inputArray[6] = -1
+Debug: creatChart: inputArray[7] = -1
+Debug: creatChart: start: 0
+Debug: creatChart: ending: 3
+Debug: creatChart: player need to handle: 3
+Debug: creatChart: array Lenght: 4
+Debug: creatChart: arrat init success
+Debug: creatChart: wall set, value: 2
+Debug: creatChart: number of seed need to handle: 1
+Debug: creatChart: handling seed 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: creatChart: handling: 1
+Debug: creatChart: current pointer: 2
+Debug: creatChart: pointer on right side
+Debug: creatChart: same school not detected
+Debug: done
+Debug: creatChart: passInArray[0] = 5
+Debug: creatChart: passInArray[1] = -1
+Debug: creatChart: passInArray[2] = 3
+Debug: creatChart: passInArray[3] = -1
+Debug: creatChart: handling: 2
+Debug: creatChart: current pointer: 2
+Debug: creatChart: pointer on right side
+Debug: creatChart: check same school: checking: 2
+Debug: creatChart: same school not detected
+Debug: 3
+Debug: done
+Debug: creatChart: passInArray[0] = 5
+Debug: creatChart: passInArray[1] = -1
+Debug: creatChart: passInArray[2] = 3
+Debug: creatChart: passInArray[3] = 8
+Debug: creatChart: leftPlayer : 1
+Debug: creatChart: not smallest group, looping
+Debug: creatChart: inputArray[0] = 5
+Debug: creatChart: inputArray[1] = -1
+Debug: creatChart: inputArray[2] = 3
+Debug: creatChart: inputArray[3] = 8
+Debug: creatChart: start: 0
+Debug: creatChart: ending: 1
+Debug: creatChart: player need to handle: 1
+Debug: creatChart: array Lenght: 2
+Debug: creatChart: arrat init success
+Debug: creatChart: wall set, value: 1
+Debug: creatChart: number of seed need to handle: 1
+Debug: creatChart: handling seed 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: creatChart: leftPlayer : 1
+Debug: creatChart: adding 5 to competitionRecord[8]
+Debug: creatChart: adding -1 to competitionRecord[9]
+Debug: creatChart: smallest group, imported, array now is in size of: 10
+Debug: debug array: competitionRecord[0] = 6
+Debug: debug array: competitionRecord[1] = 1
+Debug: debug array: competitionRecord[2] = 4
+Debug: debug array: competitionRecord[3] = 9
+Debug: debug array: competitionRecord[4] = 2
+Debug: debug array: competitionRecord[5] = -1
+Debug: debug array: competitionRecord[6] = 10
+Debug: debug array: competitionRecord[7] = 7
+Debug: debug array: competitionRecord[8] = 5
+Debug: debug array: competitionRecord[9] = -1
+Debug: creatChart: inputArray[0] = 5
+Debug: creatChart: inputArray[1] = -1
+Debug: creatChart: inputArray[2] = 3
+Debug: creatChart: inputArray[3] = 8
+Debug: creatChart: start: 2
+Debug: creatChart: ending: 3
+Debug: creatChart: player need to handle: 2
+Debug: creatChart: array Lenght: 2
+Debug: creatChart: arrat init success
+Debug: creatChart: wall set, value: 1
+Debug: creatChart: number of seed need to handle: 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: creatChart: handling: 2
+Debug: creatChart: current pointer: 0
+Debug: creatChart: pointer on left side
+Debug: creatChart: same school not detected
+Debug: creatChart: passInArray[0] = 3
+Debug: creatChart: passInArray[1] = -1
+Debug: creatChart: handling: 3
+Debug: creatChart: current pointer: 0
+Debug: creatChart: pointer on left side
+Debug: creatChart: check same school: checking: 0
+Debug: creatChart: same school not detected
+Debug: 1
+Debug: creatChart: passInArray[0] = 3
+Debug: creatChart: passInArray[1] = 8
+Debug: creatChart: leftPlayer : 1
+Debug: creatChart: adding 3 to competitionRecord[10]
+Debug: creatChart: adding 8 to competitionRecord[11]
+Debug: creatChart: smallest group, imported, array now is in size of: 12
+Debug: debug array: competitionRecord[0] = 6
+Debug: debug array: competitionRecord[1] = 1
+Debug: debug array: competitionRecord[2] = 4
+Debug: debug array: competitionRecord[3] = 9
+Debug: debug array: competitionRecord[4] = 2
+Debug: debug array: competitionRecord[5] = -1
+Debug: debug array: competitionRecord[6] = 10
+Debug: debug array: competitionRecord[7] = 7
+Debug: debug array: competitionRecord[8] = 5
+Debug: debug array: competitionRecord[9] = -1
+Debug: debug array: competitionRecord[10] = 3
+Debug: debug array: competitionRecord[11] = 8
+Debug: creatChart: inputArray[0] = 5
+Debug: creatChart: inputArray[1] = 3
+Debug: creatChart: inputArray[2] = 8
+Debug: creatChart: inputArray[3] = -1
+Debug: creatChart: inputArray[4] = 0
+Debug: creatChart: inputArray[5] = -1
+Debug: creatChart: inputArray[6] = -1
+Debug: creatChart: inputArray[7] = -1
+Debug: creatChart: start: 4
+Debug: creatChart: ending: 7
+Debug: creatChart: player need to handle: 1
+Debug: creatChart: array Lenght: 4
+Debug: creatChart: arrat init success
+Debug: creatChart: wall set, value: 2
+Debug: creatChart: number of seed need to handle: 1
+Debug: creatChart: handling seed 4
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: creatChart: leftPlayer : 1
+Debug: creatChart: not smallest group, looping
+Debug: creatChart: inputArray[0] = 0
+Debug: creatChart: inputArray[1] = -1
+Debug: creatChart: inputArray[2] = -1
+Debug: creatChart: inputArray[3] = -1
+Debug: creatChart: start: 0
+Debug: creatChart: ending: 1
+Debug: creatChart: player need to handle: 1
+Debug: creatChart: array Lenght: 2
+Debug: creatChart: arrat init success
+Debug: creatChart: wall set, value: 1
+Debug: creatChart: number of seed need to handle: 1
+Debug: creatChart: handling seed 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: creatChart: leftPlayer : 1
+Debug: creatChart: adding 0 to competitionRecord[12]
+Debug: creatChart: adding -1 to competitionRecord[13]
+Debug: creatChart: smallest group, imported, array now is in size of: 14
+Debug: debug array: competitionRecord[0] = 6
+Debug: debug array: competitionRecord[1] = 1
+Debug: debug array: competitionRecord[2] = 4
+Debug: debug array: competitionRecord[3] = 9
+Debug: debug array: competitionRecord[4] = 2
+Debug: debug array: competitionRecord[5] = -1
+Debug: debug array: competitionRecord[6] = 10
+Debug: debug array: competitionRecord[7] = 7
+Debug: debug array: competitionRecord[8] = 5
+Debug: debug array: competitionRecord[9] = -1
+Debug: debug array: competitionRecord[10] = 3
+Debug: debug array: competitionRecord[11] = 8
+Debug: debug array: competitionRecord[12] = 0
+Debug: debug array: competitionRecord[13] = -1
+Debug: creatChart: inputArray[0] = 0
+Debug: creatChart: inputArray[1] = -1
+Debug: creatChart: inputArray[2] = -1
+Debug: creatChart: inputArray[3] = -1
+Debug: creatChart: start: 2
+Debug: creatChart: ending: 3
+Debug: creatChart: player need to handle: 0
+Debug: creatChart: array Lenght: 2
+Debug: creatChart: arrat init success
+Debug: creatChart: wall set, value: 1
+Debug: creatChart: number of seed need to handle: 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: creatChart: leftPlayer : 0
+Debug: creatChart: adding -1 to competitionRecord[14]
+Debug: creatChart: adding -1 to competitionRecord[15]
+Debug: creatChart: smallest group, imported, array now is in size of: 16
+Debug: debug array: competitionRecord[0] = 6
+Debug: debug array: competitionRecord[1] = 1
+Debug: debug array: competitionRecord[2] = 4
+Debug: debug array: competitionRecord[3] = 9
+Debug: debug array: competitionRecord[4] = 2
+Debug: debug array: competitionRecord[5] = -1
+Debug: debug array: competitionRecord[6] = 10
+Debug: debug array: competitionRecord[7] = 7
+Debug: debug array: competitionRecord[8] = 5
+Debug: debug array: competitionRecord[9] = -1
+Debug: debug array: competitionRecord[10] = 3
+Debug: debug array: competitionRecord[11] = 8
+Debug: debug array: competitionRecord[12] = 0
+Debug: debug array: competitionRecord[13] = -1
+Debug: debug array: competitionRecord[14] = -1
+Debug: debug array: competitionRecord[15] = -1
 Debug: Chart gen: creat chart successfully
 Debug: quicksort started
 Debug: quicksort change position
-Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
 Debug: quicksort started
 Debug: quicksort change position
-Debug: competitonRecord[0] = 0
-Debug: competitonRecord[1] = -1
-Debug: competitonRecord[2] = 3
-Debug: competitonRecord[3] = -1
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[5].ID = 6
+Debug: data[6].ID = 7
+Debug: data[7].ID = 8
+Debug: data[8].ID = 9
+Debug: data[9].ID = 10
+Debug: data[10].ID = 11
+Debug: competitonRecord[0] = 6
+Debug: competitonRecord[1] = 1
+Debug: competitonRecord[2] = 4
+Debug: competitonRecord[3] = 9
 Debug: competitonRecord[4] = 2
-Debug: competitonRecord[5] = 1
-Debug: competitonRecord[6] = 4
-Debug: competitonRecord[7] = -1
-Debug: Choice entered
-Debug: User Choice : 6
-Debug: quicksort started
-Debug: quicksort change position
-Debug: quicksort change position
-Debug: quicksort change position
-Debug: quicksort change position
-Debug: quicksort started
-Debug: quicksort change position
-Debug: quicksort change position
-Debug: quicksort change position
-Debug: quicksort started
-Debug: quicksort change position
-Debug: quicksort change position
-Debug: quicksort started
-Debug: quicksort change position
-Debug: competitonRecord[0] = 0
-Debug: competitonRecord[1] = -1
-Debug: competitonRecord[2] = 3
-Debug: competitonRecord[3] = -1
-Debug: competitonRecord[4] = 2
-Debug: competitonRecord[5] = 1
-Debug: competitonRecord[6] = 4
-Debug: competitonRecord[7] = -1
-Debug: Choice entered
-Debug: User Choice : 1
-Debug: Started Data Encryption
-Debug: Enncryption Successful
-Debug: 21232f297a57a5a743894a0e4a801fc3
-Debug: Checking Ac
-Debug: Decryption Started
-Debug: decryption successful
-Debug: Decryption Started
-Debug: decryption successful
-Debug: loged in
+Debug: competitonRecord[5] = -1
+Debug: competitonRecord[6] = 10
+Debug: competitonRecord[7] = 7
+Debug: competitonRecord[8] = 5
+Debug: competitonRecord[9] = -1
+Debug: competitonRecord[10] = 3
+Debug: competitonRecord[11] = 8
+Debug: competitonRecord[12] = 0
+Debug: competitonRecord[13] = -1
+Debug: competitonRecord[14] = -1
+Debug: competitonRecord[15] = -1
