@@ -265,7 +265,7 @@ procedure quickSortParticipant(start, ending : Integer ; accrodingTo : Integer =
                 temp3 := data[privot].competitionRecordPosition;
                 data[privot].competitionRecordPosition := data[wall].competitionRecordPosition;
                 data[wall].competitionRecordPosition := temp3;
-                for debugLoop := 0 to participantArraySize - 1 do debugLog('data[' + IntToStr(debugLoop) + '].ID = ' + data[debugLoop].ID);
+                // for debugLoop := 0 to participantArraySize - 1 do debugLog('data[' + IntToStr(debugLoop) + '].ID = ' + data[debugLoop].ID);
                 quickSortParticipant(start, wall - 1, accrodingTo);
                 quickSortParticipant(wall + 1, ending, accrodingTo);
             end;
@@ -390,7 +390,7 @@ function SearchForUser(Name : String = ''; ID : String = ''; School : String = '
                     if (kmpCounter = Length(Name)) then
                         begin
                             resultExist := False;
-                            for tempForCheckResultExist := 0 to Length(SearchResult) - 1 do
+                            for tempForCheckResultExist := 0 to Length(matchCount) - 1 do
                                 begin
                                     if temp = SearchResult[tempForCheckResultExist] then
                                         begin
@@ -462,7 +462,7 @@ function SearchForUser(Name : String = ''; ID : String = ''; School : String = '
                     if (kmpCounter = Length(School)) then
                         begin
                             resultExist := False;
-                            for tempForCheckResultExist := 0 to Length(SearchResult) - 1 do
+                            for tempForCheckResultExist := 0 to Length(matchCount) - 1 do
                                 begin
                                     if temp = SearchResult[tempForCheckResultExist] then
                                         begin
@@ -484,7 +484,7 @@ function SearchForUser(Name : String = ''; ID : String = ''; School : String = '
                 until temp + 1 = participantArraySize;
             end;
         debugLog('search complete, number of result = ' + IntToStr(legnthOfArray), 3);
-        if legnthOfArray > 0 then
+        if legnthOfArray > -1 then
             begin
                 debugLog('Checking mathcing count');
                 debugLog('Lenght of SearchResult : ' + IntToStr(Length(SearchResult)));
@@ -527,10 +527,15 @@ procedure inputDataToFile();
                 else
                     seedText := 'False';
                 ID := dataEncryption(ID);
+                debugLog('inputDataToFile: Id encryption successful');
                 Name := dataEncryption(Name);
+                debugLog('inputDataToFile: Name encryption successful');
                 School := dataEncryption(School);
+                debugLog('inputDataToFile: School encryption successful');
                 location := dataEncryption(IntToStr(data[loop].competitionRecordPosition));
+                debugLog('inputDataToFile: competitionRecordPosition encryption successful');
                 seedText := dataEncryption(seedText);
+                debugLog('inputDataToFile: seed encryption successful');
                 Assign(sourceFile, '/Users/samuel/Documents/SelfProgramming/SBA/Programming/File/Competitors.epd');
                 Append(sourceFile);
                 WriteLn(sourceFile, ID);
@@ -814,6 +819,7 @@ procedure addParticipantData();
                 data[participantArraySize -1].competitionRecordPosition := -1;
                 quickSortParticipant(0, participantArraySize - 1);
                 inputDataToFile();
+                debugLog('add participant successful');
                 // creatAccount(False, False, temp2);
             end else WriteLn('This school already have 2 participant.');
     end;
@@ -941,7 +947,6 @@ procedure creatChart(start, ending ,noOfSeed ,noOfPlayer : Integer; inputArray :
                                     end;
                                 passInArray[passInArrayPointer] := inputArray[tempForLoop];
                                 passInArrayPointer := (passInArrayPointer + wall + (passInArrayPointer div wall) - 2) mod Length(passInArray);
-                                debugLog('done');
                             end
                         else
                             begin
@@ -952,7 +957,7 @@ procedure creatChart(start, ending ,noOfSeed ,noOfPlayer : Integer; inputArray :
                                         debugLog(IntToStr(passInArrayPointer));
                                     end;
                                 passInArray[passInArrayPointer] := inputArray[tempForLoop];
-                                debugLog('done');
+                                passInArrayPointer := (passInArrayPointer + wall + (passInArrayPointer div wall)) mod Length(passInArray);
                             end;
                     end
                 else
@@ -965,7 +970,6 @@ procedure creatChart(start, ending ,noOfSeed ,noOfPlayer : Integer; inputArray :
                                 debugLog('creatChart: check same school: checking: '  + IntToStr(tempForCheckSchool));
                                 if data[passInArray[tempForCheckSchool]].School = data[inputArray[tempForLoop]].School then
                                     begin
-                                        debugLog('hi');
                                         sameSchool := True;
                                         Break
                                     end;
@@ -996,6 +1000,7 @@ procedure creatChart(start, ending ,noOfSeed ,noOfPlayer : Integer; inputArray :
                                         debugLog(IntToStr(passInArrayPointer));
                                     end;
                                 passInArray[passInArrayPointer] := inputArray[tempForLoop];
+                                passInArrayPointer := (passInArrayPointer + wall + (passInArrayPointer div wall)) mod Length(passInArray);
                             end;
                     end;
                 for tempForDebug := 0 to Length(passInArray) - 1 do debugLog('creatChart: passInArray[' + IntToStr(tempForDebug) + '] = ' + IntToStr(passInArray[tempForDebug]));
@@ -1235,7 +1240,7 @@ begin
     except
         debugLog('quick sort error', 1);
     end;
-    logedIn := False;
+    logedIn := True;
     admin := True;
     // addParticipantData;
     debugMode := False;
