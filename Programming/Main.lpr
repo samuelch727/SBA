@@ -17,6 +17,7 @@ var
     participantArraySize, competitonRecordPointer, numberOfRound : Integer;
     debugMode, logedIn, admin, finalized, temp, createdChart : Boolean;
     competitonRecord : array of chartData;
+    version : String;
 procedure ClearDebugLog();
     var
         DebugFile : Text;
@@ -1183,6 +1184,14 @@ procedure addCompetitonResult();
         ReadLn(School);
         SetLength(tempArray, participantArraySize);
     end;
+procedure aboutProgram();
+    begin
+        writeln('This program is developed by Samuel Chan Sze Nok.');
+        writeln('This is a open source project, you may download the code from here: https://github.com/samuelch727/SBA');
+        writeln('If you find any bug, plese report to me through the above link.');
+        WriteLn('Status: In development');
+        Writeln('Version: ' + version);
+    end;
 procedure Mainmenu();
     var
         choice : Integer;
@@ -1191,6 +1200,7 @@ procedure Mainmenu();
         repeat
             ClrScr;
             temp := '';
+            if debugMode then WriteLn('In debug mode');
             if logedIn then WriteLn('1. Logout AC') else WriteLn('1. Login AC');
             WriteLn('2. View Competitors');
             if logedIn and not createdChart then WriteLn ('3. Enter Data');
@@ -1215,6 +1225,7 @@ procedure Mainmenu();
                 5 : SearchMenu();
                 6 : if admin then ShowChart else WriteLn('Invalid choice');
                 7 : addCompetitonResult;
+                8 : aboutProgram;
                 9 : begin debugLog('Program ended', 3); Break; end;
                 3223 : debugMode := not debugMode;
             else
@@ -1234,6 +1245,7 @@ begin
     ClearDebugLog;
     debugMode := True;
     createdChart := False;
+    version := '1.0.0-dev';
     LoadParticipant;
     try
         quickSortParticipant(0, participantArraySize - 1);
