@@ -1,1 +1,2030 @@
-hi
+Debug: Start Load Participant Data
+Debug: Loaded File
+Debug: Counting Participators
+Debug: Counting Participators
+Debug: Counting Participators
+Debug: Counting Participators
+Debug: Counting Participators
+Debug: Array Length Set
+Debug: Loading Data
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded ID
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Name
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded School
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded location
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Seed
+Debug: Loading Data
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded ID
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Name
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded School
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded location
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Seed
+Debug: Loading Data
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded ID
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Name
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded School
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded location
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Seed
+Debug: Loading Data
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded ID
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Name
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded School
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded location
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Seed
+Debug: Loading Data
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded ID
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Name
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded School
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded location
+Debug: Decryption Started
+Debug: decryption successful
+Debug: Loaded Seed
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: Choice entered
+Debug: User Choice : 7
+Debug: Chart gen: Start init
+Debug: Number of round = 3
+Debug: Chart gen: create output array success
+Debug: Chart gen: passIn array set lenght and init success, lenght set to: 8
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 3
+Debug: data[2].ID = 5
+Debug: data[3].ID = 4
+Debug: data[4].ID = 2
+Debug: competitionRecord[0].ID = -1inGame = 0
+Debug: competitionRecord[1].ID = -1inGame = 0
+Debug: competitionRecord[2].ID = -1inGame = 0
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: data[0].ID = 3
+Debug: data[1].ID = 1
+Debug: data[2].ID = 5
+Debug: data[3].ID = 4
+Debug: data[4].ID = 2
+Debug: competitionRecord[0].ID = -1inGame = 0
+Debug: competitionRecord[1].ID = -1inGame = 0
+Debug: competitionRecord[2].ID = -1inGame = 0
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: data[0].ID = 3
+Debug: data[1].ID = 1
+Debug: data[2].ID = 5
+Debug: data[3].ID = 2
+Debug: data[4].ID = 4
+Debug: competitionRecord[0].ID = -1inGame = 0
+Debug: competitionRecord[1].ID = -1inGame = 0
+Debug: competitionRecord[2].ID = -1inGame = 0
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: Chart gen: quickSort success
+Debug: data[0].ID = 3
+Debug: data[1].ID = 1
+Debug: data[2].ID = 5
+Debug: data[3].ID = 2
+Debug: data[4].ID = 4
+Debug: competitionRecord[0].ID = -1inGame = 0
+Debug: competitionRecord[1].ID = -1inGame = 0
+Debug: competitionRecord[2].ID = -1inGame = 0
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: looping: 0
+Debug: looping: 1
+Debug: looping: 2
+Debug: looping: 3
+Debug: looping: 4
+Debug: Chart gen: imported raw data to passIn array
+Debug: Chart gen: counted number of seed as: 2
+Debug: Chart gen: creating chart
+Debug: creatChart: inputArray[0] = 2
+Debug: creatChart: inputArray[1] = 0
+Debug: creatChart: inputArray[2] = 4
+Debug: creatChart: inputArray[3] = 1
+Debug: creatChart: inputArray[4] = 3
+Debug: creatChart: inputArray[5] = -1
+Debug: creatChart: inputArray[6] = -1
+Debug: creatChart: inputArray[7] = -1
+Debug: creatChart: start: 0
+Debug: creatChart: ending: 7
+Debug: creatChart: player need to handle: 5
+Debug: creatChart: array Lenght: 8
+Debug: creatChart: arrat init success
+Debug: creatChart: wall set, value: 4
+Debug: creatChart: number of seed need to handle: 2
+Debug: creatChart: handling seed 0
+Debug: creatChart: handling seed 1
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 3
+Debug: data[1].ID = 1
+Debug: data[2].ID = 2
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = -1inGame = 0
+Debug: competitionRecord[1].ID = -1inGame = 0
+Debug: competitionRecord[2].ID = -1inGame = 0
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = -1inGame = 0
+Debug: competitionRecord[1].ID = -1inGame = 0
+Debug: competitionRecord[2].ID = -1inGame = 0
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: creatChart: handling: 2
+Debug: creatChart: current pointer: 1
+Debug: creatChart: pointer on left side
+Debug: creatChart: check same school: checking: 0
+Debug: creatChart: same school not detected
+Debug: creatChart: passInArray[0] = 2
+Debug: creatChart: passInArray[1] = 4
+Debug: creatChart: passInArray[2] = -1
+Debug: creatChart: passInArray[3] = -1
+Debug: creatChart: passInArray[4] = 0
+Debug: creatChart: passInArray[5] = -1
+Debug: creatChart: passInArray[6] = -1
+Debug: creatChart: passInArray[7] = -1
+Debug: creatChart: handling: 3
+Debug: creatChart: current pointer: 5
+Debug: creatChart: pointer on right side
+Debug: creatChart: check same school: checking: 4
+Debug: creatChart: same school detected
+Debug: 1
+Debug: 2
+Debug: creatChart: passInArray[0] = 2
+Debug: creatChart: passInArray[1] = 4
+Debug: creatChart: passInArray[2] = 1
+Debug: creatChart: passInArray[3] = -1
+Debug: creatChart: passInArray[4] = 0
+Debug: creatChart: passInArray[5] = -1
+Debug: creatChart: passInArray[6] = -1
+Debug: creatChart: passInArray[7] = -1
+Debug: creatChart: handling: 4
+Debug: creatChart: current pointer: 4
+Debug: creatChart: pointer on right side
+Debug: creatChart: check same school: checking: 4
+Debug: creatChart: same school not detected
+Debug: 5
+Debug: creatChart: passInArray[0] = 2
+Debug: creatChart: passInArray[1] = 4
+Debug: creatChart: passInArray[2] = 1
+Debug: creatChart: passInArray[3] = -1
+Debug: creatChart: passInArray[4] = 0
+Debug: creatChart: passInArray[5] = 3
+Debug: creatChart: passInArray[6] = -1
+Debug: creatChart: passInArray[7] = -1
+Debug: creatChart: leftPlayer : 3
+Debug: creatChart: not smallest group, looping
+Debug: creatChart: inputArray[0] = 2
+Debug: creatChart: inputArray[1] = 4
+Debug: creatChart: inputArray[2] = 1
+Debug: creatChart: inputArray[3] = -1
+Debug: creatChart: inputArray[4] = 0
+Debug: creatChart: inputArray[5] = 3
+Debug: creatChart: inputArray[6] = -1
+Debug: creatChart: inputArray[7] = -1
+Debug: creatChart: start: 0
+Debug: creatChart: ending: 3
+Debug: creatChart: player need to handle: 3
+Debug: creatChart: array Lenght: 4
+Debug: creatChart: arrat init success
+Debug: creatChart: wall set, value: 2
+Debug: creatChart: number of seed need to handle: 1
+Debug: creatChart: handling seed 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = -1inGame = 0
+Debug: competitionRecord[1].ID = -1inGame = 0
+Debug: competitionRecord[2].ID = -1inGame = 0
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = -1inGame = 0
+Debug: competitionRecord[1].ID = -1inGame = 0
+Debug: competitionRecord[2].ID = -1inGame = 0
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = -1inGame = 0
+Debug: competitionRecord[1].ID = -1inGame = 0
+Debug: competitionRecord[2].ID = -1inGame = 0
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = -1inGame = 0
+Debug: competitionRecord[1].ID = -1inGame = 0
+Debug: competitionRecord[2].ID = -1inGame = 0
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: creatChart: handling: 1
+Debug: creatChart: current pointer: 2
+Debug: creatChart: pointer on right side
+Debug: creatChart: same school not detected
+Debug: creatChart: passInArray[0] = 2
+Debug: creatChart: passInArray[1] = -1
+Debug: creatChart: passInArray[2] = 4
+Debug: creatChart: passInArray[3] = -1
+Debug: creatChart: handling: 2
+Debug: creatChart: current pointer: 1
+Debug: creatChart: pointer on left side
+Debug: creatChart: check same school: checking: 0
+Debug: creatChart: same school not detected
+Debug: creatChart: passInArray[0] = 2
+Debug: creatChart: passInArray[1] = 1
+Debug: creatChart: passInArray[2] = 4
+Debug: creatChart: passInArray[3] = -1
+Debug: creatChart: leftPlayer : 2
+Debug: creatChart: not smallest group, looping
+Debug: creatChart: inputArray[0] = 2
+Debug: creatChart: inputArray[1] = 1
+Debug: creatChart: inputArray[2] = 4
+Debug: creatChart: inputArray[3] = -1
+Debug: creatChart: start: 0
+Debug: creatChart: ending: 1
+Debug: creatChart: player need to handle: 2
+Debug: creatChart: array Lenght: 2
+Debug: creatChart: arrat init success
+Debug: creatChart: wall set, value: 1
+Debug: creatChart: number of seed need to handle: 1
+Debug: creatChart: handling seed 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = -1inGame = 0
+Debug: competitionRecord[1].ID = -1inGame = 0
+Debug: competitionRecord[2].ID = -1inGame = 0
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = -1inGame = 0
+Debug: competitionRecord[1].ID = -1inGame = 0
+Debug: competitionRecord[2].ID = -1inGame = 0
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = -1inGame = 0
+Debug: competitionRecord[1].ID = -1inGame = 0
+Debug: competitionRecord[2].ID = -1inGame = 0
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = -1inGame = 0
+Debug: competitionRecord[1].ID = -1inGame = 0
+Debug: competitionRecord[2].ID = -1inGame = 0
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: creatChart: handling: 1
+Debug: creatChart: current pointer: 1
+Debug: creatChart: pointer on right side
+Debug: creatChart: same school not detected
+Debug: creatChart: passInArray[0] = 2
+Debug: creatChart: passInArray[1] = 1
+Debug: creatChart: leftPlayer : 1
+Debug: creatChart: adding 2 to competitionRecord[0]
+Debug: creatChart: adding 1 to competitionRecord[1]
+Debug: creatChart: smallest group, imported, array now is in size of: 2
+Debug: debug array: competitionRecord.ID[0] = 2
+Debug: debug array: competitionRecord.ID[1] = 1
+Debug: creatChart: inputArray[0] = 2
+Debug: creatChart: inputArray[1] = 1
+Debug: creatChart: inputArray[2] = 4
+Debug: creatChart: inputArray[3] = -1
+Debug: creatChart: start: 2
+Debug: creatChart: ending: 3
+Debug: creatChart: player need to handle: 1
+Debug: creatChart: array Lenght: 2
+Debug: creatChart: arrat init success
+Debug: creatChart: wall set, value: 1
+Debug: creatChart: number of seed need to handle: 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = -1inGame = 0
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = -1inGame = 0
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = -1inGame = 0
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = -1inGame = 0
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: creatChart: handling: 2
+Debug: creatChart: current pointer: 0
+Debug: creatChart: pointer on left side
+Debug: creatChart: same school not detected
+Debug: creatChart: passInArray[0] = 4
+Debug: creatChart: passInArray[1] = -1
+Debug: creatChart: leftPlayer : 1
+Debug: creatChart: adding 4 to competitionRecord[2]
+Debug: creatChart: adding -1 to competitionRecord[3]
+Debug: creatChart: smallest group, imported, array now is in size of: 4
+Debug: debug array: competitionRecord.ID[0] = 2
+Debug: debug array: competitionRecord.ID[1] = 1
+Debug: debug array: competitionRecord.ID[2] = 4
+Debug: debug array: competitionRecord.ID[3] = -1
+Debug: creatChart: inputArray[0] = 2
+Debug: creatChart: inputArray[1] = 4
+Debug: creatChart: inputArray[2] = 1
+Debug: creatChart: inputArray[3] = -1
+Debug: creatChart: inputArray[4] = 0
+Debug: creatChart: inputArray[5] = 3
+Debug: creatChart: inputArray[6] = -1
+Debug: creatChart: inputArray[7] = -1
+Debug: creatChart: start: 4
+Debug: creatChart: ending: 7
+Debug: creatChart: player need to handle: 2
+Debug: creatChart: array Lenght: 4
+Debug: creatChart: arrat init success
+Debug: creatChart: wall set, value: 2
+Debug: creatChart: number of seed need to handle: 1
+Debug: creatChart: handling seed 4
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: creatChart: handling: 5
+Debug: creatChart: current pointer: 2
+Debug: creatChart: pointer on right side
+Debug: creatChart: same school not detected
+Debug: creatChart: passInArray[0] = 0
+Debug: creatChart: passInArray[1] = -1
+Debug: creatChart: passInArray[2] = 3
+Debug: creatChart: passInArray[3] = -1
+Debug: creatChart: leftPlayer : 1
+Debug: creatChart: not smallest group, looping
+Debug: creatChart: inputArray[0] = 0
+Debug: creatChart: inputArray[1] = -1
+Debug: creatChart: inputArray[2] = 3
+Debug: creatChart: inputArray[3] = -1
+Debug: creatChart: start: 0
+Debug: creatChart: ending: 1
+Debug: creatChart: player need to handle: 1
+Debug: creatChart: array Lenght: 2
+Debug: creatChart: arrat init success
+Debug: creatChart: wall set, value: 1
+Debug: creatChart: number of seed need to handle: 1
+Debug: creatChart: handling seed 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = -1inGame = 0
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: creatChart: leftPlayer : 1
+Debug: creatChart: adding 0 to competitionRecord[4]
+Debug: creatChart: adding -1 to competitionRecord[5]
+Debug: creatChart: smallest group, imported, array now is in size of: 6
+Debug: debug array: competitionRecord.ID[0] = 2
+Debug: debug array: competitionRecord.ID[1] = 1
+Debug: debug array: competitionRecord.ID[2] = 4
+Debug: debug array: competitionRecord.ID[3] = -1
+Debug: debug array: competitionRecord.ID[4] = 0
+Debug: debug array: competitionRecord.ID[5] = -1
+Debug: creatChart: inputArray[0] = 0
+Debug: creatChart: inputArray[1] = -1
+Debug: creatChart: inputArray[2] = 3
+Debug: creatChart: inputArray[3] = -1
+Debug: creatChart: start: 2
+Debug: creatChart: ending: 3
+Debug: creatChart: player need to handle: 1
+Debug: creatChart: array Lenght: 2
+Debug: creatChart: arrat init success
+Debug: creatChart: wall set, value: 1
+Debug: creatChart: number of seed need to handle: 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = -1inGame = 0
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: creatChart: handling: 2
+Debug: creatChart: current pointer: 0
+Debug: creatChart: pointer on left side
+Debug: creatChart: same school not detected
+Debug: creatChart: passInArray[0] = 3
+Debug: creatChart: passInArray[1] = -1
+Debug: creatChart: leftPlayer : 1
+Debug: creatChart: adding 3 to competitionRecord[6]
+Debug: creatChart: adding -1 to competitionRecord[7]
+Debug: creatChart: smallest group, imported, array now is in size of: 8
+Debug: debug array: competitionRecord.ID[0] = 2
+Debug: debug array: competitionRecord.ID[1] = 1
+Debug: debug array: competitionRecord.ID[2] = 4
+Debug: debug array: competitionRecord.ID[3] = -1
+Debug: debug array: competitionRecord.ID[4] = 0
+Debug: debug array: competitionRecord.ID[5] = -1
+Debug: debug array: competitionRecord.ID[6] = 3
+Debug: debug array: competitionRecord.ID[7] = -1
+Debug: Chart gen: creat chart successfully
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: ShowChart: wall = 1
+Debug: ShowChart: groupSize = 2
+Debug: ShowChart: currentRound: 3
+Debug: ShowChart: 1
+Debug: ShowChart: groupPointer: 1
+Debug: ShowChart: compair: 0
+Debug: finish loop
+Debug: ShowChart: nextPointer smaller then wall. nextPointer = 0 wall = 1 groupPointer = 1
+Debug: found opp, participant ID = 1
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: ShowChart: nextPointer: 1
+Debug: ShowChart: groupPointer: 1
+Debug: ShowChart: compair: 1
+Debug: finish loop
+Debug: ShowChart: nextPointer bigger then wall. nextPointer = 1 wall = 1 groupPointer = 1
+Debug: found participant, participant 
+Debug: ShowChart: nextPointer: 2
+Debug: ShowChart: groupPointer: 1
+Debug: ShowChart: compair: 2
+Debug: finish loop
+Debug: ShowChart: nextPointer smaller then wall. nextPointer = 2 wall = 3 groupPointer = 3
+Debug: found opp, participant ID = -1
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: ShowChart: nextPointer: 3
+Debug: ShowChart: groupPointer: 3
+Debug: ShowChart: compair: 3
+Debug: finish loop
+Debug: ShowChart: nextPointer bigger then wall. nextPointer = 3 wall = 3 groupPointer = 3
+Debug: found participant, participant 
+Debug: ShowChart: nextPointer: 4
+Debug: ShowChart: groupPointer: 3
+Debug: ShowChart: compair: 4
+Debug: finish loop
+Debug: ShowChart: nextPointer smaller then wall. nextPointer = 4 wall = 5 groupPointer = 5
+Debug: found opp, participant ID = -1
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: ShowChart: nextPointer: 5
+Debug: ShowChart: groupPointer: 5
+Debug: ShowChart: compair: 5
+Debug: finish loop
+Debug: ShowChart: nextPointer bigger then wall. nextPointer = 5 wall = 5 groupPointer = 5
+Debug: found participant, participant 
+Debug: ShowChart: nextPointer: 6
+Debug: ShowChart: groupPointer: 5
+Debug: ShowChart: compair: 6
+Debug: finish loop
+Debug: ShowChart: nextPointer smaller then wall. nextPointer = 6 wall = 7 groupPointer = 7
+Debug: found opp, participant ID = -1
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: ShowChart: nextPointer: 7
+Debug: ShowChart: groupPointer: 7
+Debug: ShowChart: compair: 7
+Debug: finish loop
+Debug: ShowChart: nextPointer bigger then wall. nextPointer = 7 wall = 7 groupPointer = 7
+Debug: found participant, participant 
+Debug: ShowChart: nextPointer: 8
+Debug: addCompetitionResult: wall = 1
+Debug: addCompetitionResult: groupSize = 2
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: searching for : daniel
+Debug: kmp for name started
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp check complete
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp check complete
+Debug: kmp search : Found Target, saving to array
+Debug: kmp save complete
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp check complete
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp check complete
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp check complete
+Debug: searchForUser: search name complete
+Debug: search complete, number of result = 0
+Debug: searching complete
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = -1
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: addCompetitionResult: Search complete
+Debug: target id = 1
+Debug: competitonRecord[0].ID = 2
+Debug: competitonRecord[1].ID = 1
+Debug: addCompetitionResult: Traget group is 1
+Debug: addCompetitionResult: groupPointer = 1
+Debug: addCompetitionResult: wall = 1
+Debug: target is larger than wall
+Debug: loopFrom: 0 to: 0
+Debug: addCompetitionResult: Same group particiapnt is 0
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: Choice entered
+Debug: User Choice : 6
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: ShowChart: wall = 1
+Debug: ShowChart: groupSize = 2
+Debug: ShowChart: currentRound: 3
+Debug: ShowChart: 1
+Debug: ShowChart: groupPointer: 1
+Debug: ShowChart: compair: 0
+Debug: finish loop
+Debug: ShowChart: nextPointer smaller then wall. nextPointer = 0 wall = 1 groupPointer = 1
+Debug: found opp, participant ID = 1
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: ShowChart: nextPointer: 1
+Debug: ShowChart: groupPointer: 1
+Debug: ShowChart: compair: 1
+Debug: finish loop
+Debug: ShowChart: nextPointer bigger then wall. nextPointer = 1 wall = 1 groupPointer = 1
+Debug: found participant, participant 
+Debug: ShowChart: nextPointer: 2
+Debug: ShowChart: groupPointer: 1
+Debug: ShowChart: compair: 2
+Debug: finish loop
+Debug: ShowChart: nextPointer smaller then wall. nextPointer = 2 wall = 3 groupPointer = 3
+Debug: found opp, participant ID = -1
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: ShowChart: nextPointer: 3
+Debug: ShowChart: groupPointer: 3
+Debug: ShowChart: compair: 3
+Debug: finish loop
+Debug: ShowChart: nextPointer bigger then wall. nextPointer = 3 wall = 3 groupPointer = 3
+Debug: found participant, participant 
+Debug: ShowChart: nextPointer: 4
+Debug: ShowChart: groupPointer: 3
+Debug: ShowChart: compair: 4
+Debug: finish loop
+Debug: ShowChart: nextPointer smaller then wall. nextPointer = 4 wall = 5 groupPointer = 5
+Debug: found opp, participant ID = -1
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: ShowChart: nextPointer: 5
+Debug: ShowChart: groupPointer: 5
+Debug: ShowChart: compair: 5
+Debug: finish loop
+Debug: ShowChart: nextPointer bigger then wall. nextPointer = 5 wall = 5 groupPointer = 5
+Debug: found participant, participant 
+Debug: ShowChart: nextPointer: 6
+Debug: ShowChart: groupPointer: 5
+Debug: ShowChart: compair: 6
+Debug: finish loop
+Debug: ShowChart: nextPointer smaller then wall. nextPointer = 6 wall = 7 groupPointer = 7
+Debug: found opp, participant ID = -1
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: ShowChart: nextPointer: 7
+Debug: ShowChart: groupPointer: 7
+Debug: ShowChart: compair: 7
+Debug: finish loop
+Debug: ShowChart: nextPointer bigger then wall. nextPointer = 7 wall = 7 groupPointer = 7
+Debug: found participant, participant 
+Debug: ShowChart: nextPointer: 8
+Debug: ShowChart: wall = 2
+Debug: ShowChart: groupSize = 4
+Debug: ShowChart: currentRound: 2
+Debug: ShowChart: 2
+Debug: ShowChart: groupPointer: 3
+Debug: ShowChart: compair: 0
+Debug: finish loop
+Debug: ShowChart: nextPointer smaller then wall. nextPointer = 0 wall = 2 groupPointer = 3
+Debug: found opp, participant ID = 4
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: ShowChart: nextPointer: 2
+Debug: ShowChart: groupPointer: 3
+Debug: ShowChart: compair: 1
+Debug: finish loop
+Debug: ShowChart: nextPointer bigger then wall. nextPointer = 2 wall = 2 groupPointer = 3
+Debug: found participant, participant 
+Debug: ShowChart: nextPointer: 4
+Debug: ShowChart: groupPointer: 3
+Debug: ShowChart: compair: 2
+Debug: finish loop
+Debug: ShowChart: nextPointer smaller then wall. nextPointer = 4 wall = 6 groupPointer = 7
+Debug: found opp, participant ID = 3
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: ShowChart: nextPointer: 6
+Debug: ShowChart: groupPointer: 7
+Debug: ShowChart: compair: 3
+Debug: finish loop
+Debug: ShowChart: nextPointer bigger then wall. nextPointer = 6 wall = 6 groupPointer = 7
+Debug: found participant, participant 
+Debug: ShowChart: nextPointer: 8
+Debug: Choice entered
+Debug: User Choice : 7
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: ShowChart: wall = 1
+Debug: ShowChart: groupSize = 2
+Debug: ShowChart: currentRound: 3
+Debug: ShowChart: 1
+Debug: ShowChart: groupPointer: 1
+Debug: ShowChart: compair: 0
+Debug: finish loop
+Debug: ShowChart: nextPointer smaller then wall. nextPointer = 0 wall = 1 groupPointer = 1
+Debug: found opp, participant ID = 1
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: ShowChart: nextPointer: 1
+Debug: ShowChart: groupPointer: 1
+Debug: ShowChart: compair: 1
+Debug: finish loop
+Debug: ShowChart: nextPointer bigger then wall. nextPointer = 1 wall = 1 groupPointer = 1
+Debug: found participant, participant 
+Debug: ShowChart: nextPointer: 2
+Debug: ShowChart: groupPointer: 1
+Debug: ShowChart: compair: 2
+Debug: finish loop
+Debug: ShowChart: nextPointer smaller then wall. nextPointer = 2 wall = 3 groupPointer = 3
+Debug: found opp, participant ID = -1
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: ShowChart: nextPointer: 3
+Debug: ShowChart: groupPointer: 3
+Debug: ShowChart: compair: 3
+Debug: finish loop
+Debug: ShowChart: nextPointer bigger then wall. nextPointer = 3 wall = 3 groupPointer = 3
+Debug: found participant, participant 
+Debug: ShowChart: nextPointer: 4
+Debug: ShowChart: groupPointer: 3
+Debug: ShowChart: compair: 4
+Debug: finish loop
+Debug: ShowChart: nextPointer smaller then wall. nextPointer = 4 wall = 5 groupPointer = 5
+Debug: found opp, participant ID = -1
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: ShowChart: nextPointer: 5
+Debug: ShowChart: groupPointer: 5
+Debug: ShowChart: compair: 5
+Debug: finish loop
+Debug: ShowChart: nextPointer bigger then wall. nextPointer = 5 wall = 5 groupPointer = 5
+Debug: found participant, participant 
+Debug: ShowChart: nextPointer: 6
+Debug: ShowChart: groupPointer: 5
+Debug: ShowChart: compair: 6
+Debug: finish loop
+Debug: ShowChart: nextPointer smaller then wall. nextPointer = 6 wall = 7 groupPointer = 7
+Debug: found opp, participant ID = -1
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: ShowChart: nextPointer: 7
+Debug: ShowChart: groupPointer: 7
+Debug: ShowChart: compair: 7
+Debug: finish loop
+Debug: ShowChart: nextPointer bigger then wall. nextPointer = 7 wall = 7 groupPointer = 7
+Debug: found participant, participant 
+Debug: ShowChart: nextPointer: 8
+Debug: ShowChart: wall = 2
+Debug: ShowChart: groupSize = 4
+Debug: ShowChart: currentRound: 2
+Debug: ShowChart: 2
+Debug: ShowChart: groupPointer: 3
+Debug: ShowChart: compair: 0
+Debug: finish loop
+Debug: ShowChart: nextPointer smaller then wall. nextPointer = 0 wall = 2 groupPointer = 3
+Debug: found opp, participant ID = 4
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: ShowChart: nextPointer: 2
+Debug: ShowChart: groupPointer: 3
+Debug: ShowChart: compair: 1
+Debug: finish loop
+Debug: ShowChart: nextPointer bigger then wall. nextPointer = 2 wall = 2 groupPointer = 3
+Debug: found participant, participant 
+Debug: ShowChart: nextPointer: 4
+Debug: ShowChart: groupPointer: 3
+Debug: ShowChart: compair: 2
+Debug: finish loop
+Debug: ShowChart: nextPointer smaller then wall. nextPointer = 4 wall = 6 groupPointer = 7
+Debug: found opp, participant ID = 3
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: ShowChart: nextPointer: 6
+Debug: ShowChart: groupPointer: 7
+Debug: ShowChart: compair: 3
+Debug: finish loop
+Debug: ShowChart: nextPointer bigger then wall. nextPointer = 6 wall = 6 groupPointer = 7
+Debug: found participant, participant 
+Debug: ShowChart: nextPointer: 8
+Debug: addCompetitionResult: wall = 2
+Debug: addCompetitionResult: groupSize = 4
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: searching for : daniel
+Debug: kmp for name started
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp check complete
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp check complete
+Debug: kmp search : Found Target, saving to array
+Debug: kmp save complete
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp check complete
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp check complete
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp looping
+Debug: kmp target not found, resetting
+Debug: kmp check complete
+Debug: searchForUser: search name complete
+Debug: search complete, number of result = 0
+Debug: searching complete
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = -1
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: addCompetitionResult: Search complete
+Debug: target id = 1
+Debug: competitonRecord[0].ID = 2
+Debug: competitonRecord[1].ID = 1
+Debug: addCompetitionResult: Traget group is 1
+Debug: addCompetitionResult: groupPointer = 3
+Debug: addCompetitionResult: wall = 2
+Debug: target is smaller than wall
+Debug: addCompetitionResult: Same group particiapnt is 2
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = 0
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: Choice entered
+Debug: User Choice : 6
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = 0
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = 0
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = 0
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: quicksort started
+Debug: quicksort change position
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = 0
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = 0
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: ShowChart: wall = 1
+Debug: ShowChart: groupSize = 2
+Debug: ShowChart: currentRound: 3
+Debug: ShowChart: 1
+Debug: ShowChart: groupPointer: 1
+Debug: ShowChart: compair: 0
+Debug: finish loop
+Debug: ShowChart: nextPointer smaller then wall. nextPointer = 0 wall = 1 groupPointer = 1
+Debug: found opp, participant ID = 1
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = 0
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: ShowChart: nextPointer: 1
+Debug: ShowChart: groupPointer: 1
+Debug: ShowChart: compair: 1
+Debug: finish loop
+Debug: ShowChart: nextPointer bigger then wall. nextPointer = 1 wall = 1 groupPointer = 1
+Debug: found participant, participant 
+Debug: ShowChart: nextPointer: 2
+Debug: ShowChart: groupPointer: 1
+Debug: ShowChart: compair: 2
+Debug: finish loop
+Debug: ShowChart: nextPointer smaller then wall. nextPointer = 2 wall = 3 groupPointer = 3
+Debug: found opp, participant ID = -1
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = 0
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: ShowChart: nextPointer: 3
+Debug: ShowChart: groupPointer: 3
+Debug: ShowChart: compair: 3
+Debug: finish loop
+Debug: ShowChart: nextPointer bigger then wall. nextPointer = 3 wall = 3 groupPointer = 3
+Debug: found participant, participant 
+Debug: ShowChart: nextPointer: 4
+Debug: ShowChart: groupPointer: 3
+Debug: ShowChart: compair: 4
+Debug: finish loop
+Debug: ShowChart: nextPointer smaller then wall. nextPointer = 4 wall = 5 groupPointer = 5
+Debug: found opp, participant ID = -1
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = 0
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: ShowChart: nextPointer: 5
+Debug: ShowChart: groupPointer: 5
+Debug: ShowChart: compair: 5
+Debug: finish loop
+Debug: ShowChart: nextPointer bigger then wall. nextPointer = 5 wall = 5 groupPointer = 5
+Debug: found participant, participant 
+Debug: ShowChart: nextPointer: 6
+Debug: ShowChart: groupPointer: 5
+Debug: ShowChart: compair: 6
+Debug: finish loop
+Debug: ShowChart: nextPointer smaller then wall. nextPointer = 6 wall = 7 groupPointer = 7
+Debug: found opp, participant ID = -1
+Debug: data[0].ID = 1
+Debug: data[1].ID = 2
+Debug: data[2].ID = 3
+Debug: data[3].ID = 4
+Debug: data[4].ID = 5
+Debug: competitionRecord[0].ID = 2inGame = 0
+Debug: competitionRecord[1].ID = 1inGame = 0
+Debug: competitionRecord[2].ID = 4inGame = -1
+Debug: competitionRecord[3].ID = -1inGame = 0
+Debug: competitionRecord[4].ID = 0inGame = -1
+Debug: competitionRecord[5].ID = -1inGame = 0
+Debug: competitionRecord[6].ID = 3inGame = -1
+Debug: competitionRecord[7].ID = -1inGame = 0
+Debug: ShowChart: nextPointer: 7
+Debug: ShowChart: groupPointer: 7
+Debug: ShowChart: compair: 7
+Debug: finish loop
+Debug: ShowChart: nextPointer bigger then wall. nextPointer = 7 wall = 7 groupPointer = 7
+Debug: found participant, participant 
+Debug: ShowChart: nextPointer: 8
+Debug: Choice entered
+Debug: User Choice : 9
+Debug: Program ended

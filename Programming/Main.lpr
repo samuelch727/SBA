@@ -14,10 +14,20 @@ type
     End;
 var
     data : array of userData;
-    participantArraySize, competitonRecordPointer, numberOfRound : Integer;
+    participantArraySize, competitonRecordPointer, totalNumberOfRound, currentRound, nextPointer : Integer;
     debugMode, logedIn, admin, finalized, temp, createdChart : Boolean;
     competitonRecord : array of chartData;
     version : String;
+function CheckOtherProgramRunning() : Boolean; //for testing
+    var 
+        DebugFile : Text;
+    begin
+        Assign(DebugFile, '/Users/samuel/Documents/SelfProgramming/SBA/Programming/File/debugLog.txt');
+        Reset(DebugFile);
+        CheckOtherProgramRunning := False;
+        if not Eof(DebugFile) then CheckOtherProgramRunning := True;
+        Close(DebugFile);
+    end;
 procedure ClearDebugLog();
     var
         DebugFile : Text;
@@ -77,6 +87,13 @@ procedure debugLog(message : String ; level : Integer = 3); //Level 1: Fatal Err
             end;
         end;
         Close(DebugFile);
+    end;
+procedure debugPrintDataID();
+    var
+        loop : Integer;
+    begin
+        for loop := 0 to participantArraySize - 1 do debugLog('data[' + IntToStr(loop) + '].ID = ' + data[loop].ID);
+        for loop := 0 to Length(competitonRecord) - 1 do debugLog('competitionRecord[' + IntToStr(loop) + '].ID = ' + IntToStr(competitonRecord[loop].ID) + 'inGame = ' + BoolToStr(competitonRecord[loop].inGame));
     end;
 function passwordEncryption(password : String):String;
     begin
@@ -145,7 +162,7 @@ function dataDecryption(data : String):String;
         debugLog('decryption successful', 3);
         dataDecryption := encryptedMessage;
     end;
-procedure quickSortParticipant(start, ending : Integer ; accrodingTo : Integer = 2); // 1 = Name, 2 = School, 3 = ID, 4 = seed
+procedure quickSortParticipant(start, ending : Integer ; accrodingTo : Integer = 3); // 1 = Name, 2 = School, 3 = ID, 4 = seed
     var
         privot, wall, loop, debugLoop, temp3 : Integer;
         temp : String;
@@ -266,7 +283,7 @@ procedure quickSortParticipant(start, ending : Integer ; accrodingTo : Integer =
                 temp3 := data[privot].competitionRecordPosition;
                 data[privot].competitionRecordPosition := data[wall].competitionRecordPosition;
                 data[wall].competitionRecordPosition := temp3;
-                // for debugLoop := 0 to participantArraySize - 1 do debugLog('data[' + IntToStr(debugLoop) + '].ID = ' + data[debugLoop].ID);
+                debugPrintDataID;
                 quickSortParticipant(start, wall - 1, accrodingTo);
                 quickSortParticipant(wall + 1, ending, accrodingTo);
             end;
@@ -411,6 +428,7 @@ function SearchForUser(Name : String = ''; ID : String = ''; School : String = '
                                 end;
                         end;
                 until temp + 1 = participantArraySize;
+                debugLog('searchForUser: search name complete');
             end;
         if School <> '' then
             begin
@@ -485,7 +503,7 @@ function SearchForUser(Name : String = ''; ID : String = ''; School : String = '
                 until temp + 1 = participantArraySize;
             end;
         debugLog('search complete, number of result = ' + IntToStr(legnthOfArray), 3);
-        if legnthOfArray > -1 then
+        if legnthOfArray > 0 then
             begin
                 debugLog('Checking mathcing count');
                 debugLog('Lenght of SearchResult : ' + IntToStr(Length(SearchResult)));
@@ -506,6 +524,7 @@ function SearchForUser(Name : String = ''; ID : String = ''; School : String = '
             end;
         SearchForUser := legnthOfArray;
         debugLog('searching complete');
+        debugPrintDataID;
     end;
 procedure inputDataToFile();
     var
@@ -788,9 +807,9 @@ procedure addParticipantData();
                     WriteLn('Seed? [Y/N]');
                     ReadLn(temp);
                     inputSuccess := True;
-                    case temp of
-                        'Y' : temp4 := True;
-                        'N' : temp4 := False;
+                    case LowerCase(temp) of
+                        'y' : temp4 := True;
+                        'n' : temp4 := False;
                     else
                         begin
                             TextColor(Red);
@@ -1027,11 +1046,11 @@ procedure creatChart(start, ending ,noOfSeed ,noOfPlayer : Integer; inputArray :
                     begin
                         debugLog('creatChart: adding ' + IntToStr(passInArray[passInArrayPointer]) + ' to competitionRecord[' + IntToStr(competitonRecordPointer) + ']');
                         competitonRecord[competitonRecordPointer].ID := passInArray[passInArrayPointer];
-                        competitonRecord[competitonRecordPointer].inGame := True;
+                        if passInArray[passInArrayPointer] <> -1 then competitonRecord[competitonRecordPointer].inGame := True;
                         competitonRecordPointer := competitonRecordPointer + 1;
                     end;
                 debugLog('creatChart: smallest group, imported, array now is in size of: ' + IntToStr(competitonRecordPointer));
-                for wall := 0 to competitonRecordPointer - 1 do debugLog('debug array: competitionRecord[' + IntToStr(wall) + '] = ' + IntToStr(competitonRecord[wall].ID));
+                for wall := 0 to competitonRecordPointer - 1 do debugLog('debug array: competitionRecord.ID[' + IntToStr(wall) + '] = ' + IntToStr(competitonRecord[wall].ID));
             end;
     end;
 procedure startCreatingChart();
@@ -1043,6 +1062,8 @@ procedure startCreatingChart();
         createdChart := True;
         debugLog('Chart gen: Start init');
         SetLength(competitonRecord, ceil(power(2, ceil(log2(participantArraySize)))));
+        totalNumberOfRound := ceil(log2(participantArraySize));
+        debugLog('Number of round = ' + IntToStr(totalNumberOfRound));
         debugLog('Chart gen: create output array success');
         SetLength(passInArray, Length(competitonRecord));
         for tempForLoop := 0 to Length(passInArray) - 1 do passInArray[tempForLoop] := -1;
@@ -1051,6 +1072,7 @@ procedure startCreatingChart();
         debugLog('Chart gen: passIn array set lenght and init success, lenght set to: ' + IntToStr(Length(passInArray)));
         quickSortParticipant(0, participantArraySize - 1, 4);
         debugLog('Chart gen: quickSort success');
+        debugPrintDataID;
         for tempForLoop := 0 to Length(data) - 1 do
             begin
                 debugLog('looping: ' + IntToStr(tempForLoop));
@@ -1071,10 +1093,13 @@ procedure startCreatingChart();
 
 procedure ShowChart();
     var
-        temp : Integer;
+        temp, finishedGroupCount, wall, groupSize, groupPointer, tempForLoop, nextPointer, printPaticipent, currentParticipant : Integer;
         validation : String;
-        correctInput, valiBoolean : Boolean;   
+        correctInput, valiBoolean, startNextRound : Boolean;   
     begin
+        finishedGroupCount := 0;
+        nextPointer := 0;
+        startNextRound := True;
         if Length(data) < 4 then
             begin
                 debugLog('Cant generate chart, competitors not enough');
@@ -1090,41 +1115,109 @@ procedure ShowChart();
                         repeat
                             ReadLn(validation);
                             correctInput := True;
-                            case validation of 
-                                'Y' : valiBoolean := True;
-                                'N' : valiBoolean := False;
+                            case LowerCase(validation) of 
+                                'y' : valiBoolean := True;
+                                'n' : exit;
                             else
                                 correctInput := False;
                                 WriteLn('Invalid Choice');
                             end;
                         until correctInput;
                     end;
-                if valiBoolean then
-                    begin
                         if not createdChart then startCreatingChart;
                         quickSortParticipant(0, Length(data) - 1, 3);
-                        for temp := 0 to Length(competitonRecord) - 1 do debugLog('competitonRecord[' + IntToStr(temp) + '] = ' + IntToStr(competitonRecord[temp].ID));
-                        for temp := 0 to Length(competitonRecord) - 1 do
-                            begin
-                                if competitonRecord[temp].ID <> -1 then
-                                    begin
-                                        Write(data[competitonRecord[temp].ID].Name);
-                                        if data[competitonRecord[temp].ID].Seed then Write('*');
-                                        WriteLn('(' + data[competitonRecord[temp].ID].School + ')' :10);
-                                    end
-                                else
-                                    Writeln('Bye');
-                                if not Odd(temp) then
-                                    begin
-                                        Write('V.S');
-                                        Write('|-' : 15);
-                                        Writeln('Samuel' : 8);
-                                    end
-                                else
-                                    Writeln()
-                            end;
-                    end;
-            end;
+                        debugPrintDataID;
+                        currentRound := totalNumberOfRound + 1;
+                        repeat
+                            currentRound := currentRound - 1;
+                            startNextRound := False;
+                            WriteLn;
+                            WriteLn('-------------------------------------------------');
+                            WriteLn;
+                            nextPointer := 0;
+                            wall := Length(competitonRecord);
+                            for tempForLoop := 1 to currentRound do wall := wall div 2;
+                            debugLog('ShowChart: wall = ' + IntToStr(wall));
+                            groupSize := ceil(power(2, ceil(log2(Length(competitonRecord))) - currentRound + 1));
+                            debugLog('ShowChart: groupSize = ' + IntToStr(groupSize));
+                            groupPointer := groupSize - 1;
+                            debugLog('ShowChart: currentRound: ' + IntToStr(currentRound));
+                            debugLog('ShowChart: ' + IntToStr(ceil(log2(participantArraySize)) - currentRound + 1));
+                            for temp := 0 to (Length(competitonRecord) div (ceil(log2(Length(competitonRecord))) - currentRound + 1)) - 1 do
+                                begin
+                                    debugLog('ShowChart: groupPointer: ' + IntToStr(groupPointer));
+                                    debugLog('ShowChart: compair: ' + IntToStr(temp));
+                                    while groupPointer < nextPointer do
+                                        begin
+                                            groupPointer := groupPointer + groupSize;
+                                            wall := wall + groupSize;
+                                        end;
+                                    debugLog('finish loop');
+                                    if nextPointer < wall then
+                                        begin
+                                            debugLog('ShowChart: nextPointer smaller then wall. nextPointer = ' + IntToStr(nextPointer) + ' wall = ' + IntToStr(wall) + ' groupPointer = ' + IntToStr(groupPointer));
+                                            for tempForLoop := nextPointer to wall - 1 do
+                                                begin
+                                                    printPaticipent := tempForLoop;
+                                                    if competitonRecord[printPaticipent].inGame then break;
+                                                end;
+                                        end
+                                    else
+                                        begin
+                                            debugLog('ShowChart: nextPointer bigger then wall. nextPointer = ' + IntToStr(nextPointer) + ' wall = ' + IntToStr(wall) + ' groupPointer = ' + IntToStr(groupPointer));
+                                            for tempForLoop := wall to groupPointer do
+                                                begin
+                                                    printPaticipent := tempForLoop;
+                                                    if competitonRecord[printPaticipent].inGame then break;
+                                                end;
+                                            debugLog('found participant, participant ');
+                                        end;
+                                    currentParticipant := printPaticipent;
+                                    if competitonRecord[printPaticipent].ID <> -1 then
+                                        begin
+                                            Write(data[competitonRecord[printPaticipent].ID].Name);
+                                            if data[competitonRecord[printPaticipent].ID].Seed then Write('*');
+                                            WriteLn('(' + data[competitonRecord[printPaticipent].ID].School + ')' :10);
+                                        end
+                                    else
+                                        Writeln('Bye');
+                                    if not Odd(temp) then
+                                        begin
+                                            Write('V.S');
+                                            Write('|-' : 20);
+                                            for tempForLoop := wall to groupPointer do
+                                                begin
+                                                    printPaticipent := tempForLoop;
+                                                    if competitonRecord[printPaticipent].inGame then break;
+                                                end;
+                                                debugLog('found opp, participant ID = ' + IntToStr(competitonRecord[printPaticipent].ID));
+                                                debugPrintDataID;
+                                            if not (competitonRecord[currentParticipant].inGame = competitonRecord[printPaticipent].inGame) then
+                                            begin
+                                                finishedGroupCount := finishedGroupCount + 1;
+                                                if competitonRecord[currentParticipant].inGame then
+                                                    begin
+                                                        Write(data[competitonRecord[currentParticipant].ID].Name);
+                                                        if data[competitonRecord[currentParticipant].ID].Seed then Write('*');
+                                                        Write('(' + data[competitonRecord[currentParticipant].ID].School + ')' :10);
+                                                    end
+                                                else
+                                                    begin
+                                                        Write(data[competitonRecord[printPaticipent].ID].Name);
+                                                        if data[competitonRecord[printPaticipent].ID].Seed then Write('*');
+                                                        Write('(' + data[competitonRecord[printPaticipent].ID].School + ')' :10);
+                                                    end;
+                                            end;
+                                            WriteLn
+                                        end
+                                    else
+                                        WriteLn;
+                                    if nextPointer < wall then nextPointer := wall else nextPointer := groupPointer + 1;
+                                    if finishedGroupCount = (Length(competitonRecord) div (ceil(log2(participantArraySize)) - currentRound + 2)) then startNextRound := True else startNextRound := False;
+                                    debugLog('ShowChart: nextPointer: ' + IntToStr(nextPointer));
+                                end;
+                        until not startNextRound;
+        end;
     end;
 procedure AccountManagementMenu();
     var
@@ -1171,9 +1264,24 @@ procedure SearchMenu();
     end;
 procedure addCompetitonResult();
     var
-        ID, Name, School : String;
+        ID, Name, School, input : String;
         tempArray : Array of Integer;
+        temp2, temp, targetParticipant, findTargetParticipantGroup, sameGroupParticipant, wall, tempForLoop, groupSize, groupPointer : Integer;
+        inputOfContinue, inputCorrect, inputResult : Boolean;
     begin
+        ShowChart();
+        ClrScr;
+        if not createdChart then
+            begin
+                WriteLn('Please create chart first');
+                exit;
+            end;
+        wall := Length(competitonRecord);
+        for tempForLoop := 1 to currentRound do wall := wall div 2;
+        debugLog('addCompetitionResult: wall = ' + IntToStr(wall));
+        groupSize := ceil(power(2, ceil(log2(Length(competitonRecord))) - currentRound + 1));
+        debugLog('addCompetitionResult: groupSize = ' + IntToStr(groupSize));
+        groupPointer := groupSize - 1;
         WriteLn('Please enter the following information of the participants: ');
         writeln('Leave it blank if you dont know');
         write('ID : ');
@@ -1183,6 +1291,106 @@ procedure addCompetitonResult();
         Write('School : ');
         ReadLn(School);
         SetLength(tempArray, participantArraySize);
+        temp2 := SearchForUser(Name, ID, School, tempArray);
+        debugLog('addCompetitionResult: Search complete');
+        if temp2 < 0 then
+        begin
+            writeln('No User Found.');
+            exit;
+        end;
+        for temp := 0 to temp2 do
+            begin
+                Write(' ID: ');
+                Write(data[tempArray[temp]].ID :8);
+                Write(' Name: ');
+                Write(data[tempArray[temp]].Name :8);
+                Write(' School: ');
+                Write(data[tempArray[temp]].School :8);
+                Write(' Seed: ');
+                WriteLn(data[tempArray[temp]].seed :8);
+            end;
+        if temp2 > 0 then
+            begin
+                debugLog('addCompetitionResult: multiple search result');
+                Write('Please enter the ID of the correct participant: ');
+                Readln(targetParticipant);
+                targetParticipant := targetParticipant - 1;
+                quickSortParticipant(0,participantArraySize - 1, 3);
+                Write(' ID: ');
+                Write(data[targetParticipant].ID :8);
+                Write(' Name: ');
+                Write(data[targetParticipant].Name :8);
+                Write(' School: ');
+                Write(data[targetParticipant].School :8);
+                Write(' Seed: ');
+                WriteLn(data[targetParticipant].seed :8);
+            end else targetParticipant := StrToInt(data[tempArray[0]].ID) - 1;
+        debugLog('target id = ' + IntToStr(targetParticipant));
+        for findTargetParticipantGroup := 0 to Length(competitonRecord) - 1 do
+            begin
+                debugLog('competitonRecord[' + IntToStr(findTargetParticipantGroup) + '].ID = ' + IntToStr(competitonRecord[findTargetParticipantGroup].ID));
+                if competitonRecord[findTargetParticipantGroup].ID = targetParticipant then Break;
+            end;
+        debugLog('addCompetitionResult: Traget group is ' + IntToStr(findTargetParticipantGroup));
+        while groupPointer < findTargetParticipantGroup do
+            begin
+                groupPointer := groupPointer + groupSize;
+                wall := wall + groupSize;
+            end;
+        debugLog('addCompetitionResult: groupPointer = ' + IntToStr(groupPointer));
+        debugLog('addCompetitionResult: wall = ' + IntToStr(wall));
+        if findTargetParticipantGroup < wall then
+            begin
+                debugLog('target is smaller than wall');
+                for tempForLoop := wall to groupPointer do 
+                    begin
+                        sameGroupParticipant := tempForLoop;
+                        if competitonRecord[sameGroupParticipant].inGame then Break;
+                    end;
+            end
+        else
+            begin
+                debugLog('target is larger than wall');
+                debugLog('loopFrom: ' + IntToStr(groupPointer - groupSize + 1) + ' to: ' + IntToStr(wall-1));
+                for tempForLoop := groupPointer - groupSize + 1 to wall - 1 do
+                begin
+                    sameGroupParticipant := tempForLoop;
+                    if competitonRecord[sameGroupParticipant].inGame then Break;
+                end;
+            end;
+        debugLog('addCompetitionResult: Same group particiapnt is ' + IntToStr(sameGroupParticipant));
+        if competitonRecord[sameGroupParticipant].inGame <> competitonRecord[findTargetParticipantGroup].inGame then
+            begin
+                repeat
+                inputCorrect := True;
+                WriteLn('This participant already have the latest record. Are you sure to overwrite it?(If the participant leave the game, please overwrite.)[Y/N]');
+                ReadLn(input);
+                case LowerCase(input) of 
+                    'y' : inputOfContinue := True;
+                    'n' : inputOfContinue := False;
+                else
+                    WriteLn('Invalid input!');
+                    inputCorrect := False;
+                end;
+                until inputCorrect;
+            end else inputOfContinue := True;
+        if not inputOfContinue then exit;
+        repeat
+            inputCorrect := True;
+            WriteLn('Does this participant win the previous game? [Y/N] ');
+            ReadLn(input);
+            case LowerCase(input) of 
+                'y' : inputResult := True;
+                'n' : inputResult := False;
+            else
+                WriteLn('Invalid input!');
+                inputCorrect := False;
+            end;
+        until inputCorrect;
+        competitonRecord[sameGroupParticipant].inGame := not inputResult;
+        competitonRecord[findTargetParticipantGroup].inGame := inputResult;
+        Writeln('Input Success');
+        debugPrintDataID;
     end;
 procedure aboutProgram();
     begin
@@ -1217,6 +1425,7 @@ procedure Mainmenu();
             debugLog('Choice entered', 3);
             Str(choice, temp);
             debugLog('User Choice : ' + temp, 3);
+            ClrScr;
             case choice of
                 1 : if logedIn then logOut else logIn;
                 2 : showParticipant();
@@ -1243,6 +1452,7 @@ procedure Mainmenu();
     end;
 begin
     ClearDebugLog;
+    totalNumberOfRound := 0;
     debugMode := True;
     createdChart := False;
     version := '1.0.0-dev';
@@ -1252,6 +1462,7 @@ begin
     except
         debugLog('quick sort error', 1);
     end;
+    debugPrintDataID;
     logedIn := True;
     admin := True;
     // addParticipantData;
