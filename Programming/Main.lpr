@@ -1,3 +1,6 @@
+//© 2018 SAMUEL CHAN SZE NOK ALL RIGHTS RESERVED
+// Redistribution and use in source and binary forms, with or without
+// modification are permitted.
 program Main;
 uses Crt, md5, math, sysutils;
 type
@@ -32,7 +35,7 @@ procedure ClearDebugLog();
     var
         DebugFile : Text;
     begin
-        Assign(DebugFile, '/Users/samuel/Documents/SelfProgramming/SBA/Programming/File/debugLog.txt');
+        Assign(DebugFile, fileLocation + 'debugLog.txt');
         Rewrite(DebugFile);
         Close(DebugFile);
     end;
@@ -45,7 +48,7 @@ procedure debugLog(message : String ; level : Integer = 3); //Level 1: Fatal Err
                 TextColor(Red);
                 Writeln('Oops. I have detected an error in my program. Try restart me :(');
                 Writeln('Please also contact administrator');
-                TextColor(Black);
+                TextColor(White);
             end;
         if debugMode then
             begin
@@ -54,19 +57,19 @@ procedure debugLog(message : String ; level : Integer = 3); //Level 1: Fatal Err
                         TextColor(Red);
                         Write('Fatal Error: ');
                         WriteLn(message);
-                        TextColor(Black);
+                        TextColor(White);
                     end;
                     2 : begin
                         TextColor(Yellow);
                         Write('Warnning: ');
                         WriteLn(message);
-                        TextColor(Black);
+                        TextColor(White);
                     end;
                     3 : begin
                         TextColor(Green);
                         Write('Debug:');
                         WriteLn(message);
-                        TextColor(Black);
+                        TextColor(White);
                     end;
                 end;
             end;
@@ -672,8 +675,10 @@ function numberOfUser() : Integer;
         sourceFile : Text;
         temp : String;
     begin
-        Assign(sourceFile, fileLocation + 'user.epd');
-        Reset(sourceFile);
+        AssignFile(sourceFile, 'C:\Users\samue\Desktop\SBA\Programming\File\user.epd');
+        debugLog('numberOfUser: assign successful');
+        reset(sourceFile);
+        debugLog('numberOfUser: reset succe');
         numberOfUser := 0;
         while not Eof(sourceFile) do
             begin
@@ -687,19 +692,26 @@ function numberOfUser() : Integer;
 function checkUserExist(usrName : String):Boolean; //Return false if user does exist
     var
         userName : array of String;
-        tempForLoop : Integer;
+        tempForLoop, tempSetArray : Integer;
         temp : String;
     begin
         checkUserExist := True;
         debugLog('checking',3);
-        SetLength(userName, numberOfUser);
-        debugLog('checking',3);
-        loadUserName(userName);
-        for tempForLoop := 1 to numberOfUser do
+        tempSetArray := numberOfUser;
+        if numberOfUser < 2 then
             begin
-                if  userName[tempForLoop] = usrName then
-                    checkUserExist := False;
-            end;  
+                SetLength(userName, numberOfUser);
+                debugLog('set userName array success',3);
+                debugLog('loading user name');
+                loadUserName(userName);
+                for tempForLoop := 0 to numberOfUser - 1 do
+                    begin
+                        if  userName[tempForLoop] = usrName then
+                            checkUserExist := False;
+                    end;  
+            end
+        else
+            checkUserExist := False;
     end;
 procedure creatAccount(isAdmin, ask : Boolean; fixedUserName : String = '');
     var
@@ -722,15 +734,13 @@ procedure creatAccount(isAdmin, ask : Boolean; fixedUserName : String = '');
                     begin
                         TextColor(Red);
                         WriteLn('Invaild Data');
-                        TextColor(Black);
+                        TextColor(White);
                         inputSuccess := False
                     end;
                 end;
                 until inputSuccess;
             end;
         debugLog('loading File', 3);
-        Assign(acFile, fileLocation + 'user.epd');
-        Append(acFile);
         repeat
             if fixedUserName <> '' then userName := fixedUserName else
                 begin
@@ -742,6 +752,8 @@ procedure creatAccount(isAdmin, ask : Boolean; fixedUserName : String = '');
             if not checkUserExist(userName) then
                 WriteLn('User Already Exist');
         until temp;
+        Assign(acFile, fileLocation + 'user.epd');
+        Append(acFile);
         WriteLn(acFile, dataEncryption(userName));
         debugLog('User Name Saved', 3);
         repeat
@@ -754,7 +766,7 @@ procedure creatAccount(isAdmin, ask : Boolean; fixedUserName : String = '');
                 begin
                     TextColor(Red);
                     WriteLn('Both Password Are Not The Same. Please Reenter');
-                    TextColor(Black);
+                    TextColor(White);
                 end;
         until password = valiPassword;
         debugLog('Password Validation Success', 3);
@@ -782,7 +794,7 @@ procedure addParticipantData();
         except
             TextColor(Red);
             WriteLn('Invaild Data');
-            TextColor(Black);
+            TextColor(White);
         end;
         WriteLn('input School:');
         try
@@ -790,7 +802,7 @@ procedure addParticipantData();
         except
             TextColor(Red);
             WriteLn('Invaild Data');
-            TextColor(Black);
+            TextColor(White);
         end;
         inputSuccess := False;
         tempForLoop := 0;
@@ -814,7 +826,7 @@ procedure addParticipantData();
                         begin
                             TextColor(Red);
                             WriteLn('Invaild Data');
-                            TextColor(Black);
+                            TextColor(White);
                             inputSuccess := False
                         end;
                     end;
@@ -911,7 +923,7 @@ procedure resetCompetitionRecordFile();
     var
         competitionRecordFile : Text;
     begin
-        Assign(competitionRecordFile, '/Users/samuel/Documents/SelfProgramming/SBA/Programming/File/competitionRecord.epd');
+        Assign(competitionRecordFile, fileLocation + 'competitionRecord.epd');
         Rewrite(competitionRecordFile);
         Close(competitionRecordFile);
     end;
@@ -950,7 +962,7 @@ procedure resetCurrentCompetitionFile();
     var
         competitionRecordFile : Text;
     begin
-        Assign(competitionRecordFile, '/Users/samuel/Documents/SelfProgramming/SBA/Programming/File/currentCompetition.epd');
+        Assign(competitionRecordFile, fileLocation + 'currentCompetition.epd');
         Rewrite(competitionRecordFile);
         Close(competitionRecordFile);
     end;
@@ -1185,7 +1197,7 @@ procedure ShowChart();
                         TextColor(Red);
                         WriteLn('Notice: After creating the chart, you can not add participant anymore.');
                         WriteLn('Are you sure to continue? [Y/N]');
-                        TextColor(Black);
+                        TextColor(White);
                         repeat
                             ReadLn(validation);
                             correctInput := True;
@@ -1198,7 +1210,11 @@ procedure ShowChart();
                             end;
                         until correctInput;
                     end;
-                        if not createdChart then startCreatingChart;
+                        if not createdChart then 
+                            begin
+                                startCreatingChart;
+                                saveCurrentCompetition();
+                            end;
                         quickSortParticipant(0, Length(data) - 1, 3);
                         debugPrintDataID;
                         loopingRound := totalNumberOfRound + 1;
@@ -1288,10 +1304,13 @@ procedure ShowChart();
                                                         Write('(' + data[competitonRecord[printPaticipent].ID].School + ')' :10);
                                                     end;
                                             end;
-                                            WriteLn
+                                            WriteLn();
                                         end
                                     else
-                                        WriteLn;
+                                        begin
+                                            Writeln();
+                                            ReadLn
+                                        end;
                                     if nextPointer < wall then nextPointer := wall else nextPointer := groupPointer + 1;
                                     if (numOfFinishedGroup = (Length(competitonRecord) div (2 * (totalNumberOfRound - loopingRound + 1)))) or (currentRound < loopingRound) then startNextRound := True else startNextRound := False;
                                     debugLog('ShowChart: nextPointer: ' + IntToStr(nextPointer));
@@ -1494,6 +1513,8 @@ procedure aboutProgram();
         writeln('If you find any bug, plese report to me through the above link.');
         WriteLn('Status: In development');
         Writeln('Version: ' + version);
+        WriteLn('COPYRIGHT 2018-2019 SAMUEL CHAN SZE NOK ALL RIGHTS RESERVED');
+        WriteLn
     end;
 procedure Mainmenu();
     var
@@ -1509,7 +1530,9 @@ procedure Mainmenu();
             if logedIn and not createdChart then WriteLn ('3. Enter Data');
             if admin then WriteLn('4. Add Account');
             WriteLn('5. Search for user');
-            if admin then WriteLn('6. Create / View chart (Under testing🙇🏻‍)');
+            if admin then WriteLn('6. Create / View chart');
+            if admin then WriteLn('7. Enter result');
+            WriteLn('8. About Program');
             WriteLn('9. Quit');
             Writeln;
             Write('Your Choice: ');
@@ -1528,7 +1551,7 @@ procedure Mainmenu();
                 4 : if admin then creatAccount(False, True) else WriteLn('Invalid choice');
                 5 : SearchMenu();
                 6 : if admin then ShowChart else WriteLn('Invalid choice');
-                7 : addCompetitonResult;
+                7 : if admin then addCompetitonResult else WriteLn('Invalid choice');
                 8 : aboutProgram;
                 9 : begin debugLog('Program ended', 3); Break; end;
                 3223 : debugMode := not debugMode;
@@ -1541,21 +1564,25 @@ procedure Mainmenu();
             end;
             TextColor(Green);
             WriteLn('press enter to continue');
-            TextColor(Black);
+            TextColor(White);
             ReadLn;
         until choice = 9;
     end;
 begin
     ClearDebugLog;
+    debugMode := True;
+    debugLog('Start initalization');
+    debugMode := False;
+    // Window(0,0,100,100);
     resetCompetitionRecordFile;
     resetCurrentCompetitionFile;
-    fileLocation := ParamStr(0);
-    Delete(fileLocation, Length(fileLocation) - 3, 4);
-    fileLocation := fileLocation + 'File/';
-    debugLog('current dir: ' + fileLocation);
+    // fileLocation := ParamStr(0);
+    // Delete(fileLocation, Length(fileLocation) - 3, 4);
+    // fileLocation := fileLocation + 'File\';
+    // debugLog('file location : ' + fileLocation);
+    fileLocation := 'C:\Users\samue\Desktop\SBA\Programming\File\';
     totalNumberOfRound := 0;
     currentRound := 0;
-    debugMode := True;
     createdChart := False;
     version := '1.0.0-dev';
     LoadParticipant;
@@ -1565,10 +1592,9 @@ begin
         debugLog('quick sort error', 1);
     end;
     debugPrintDataID;
-    logedIn := True;
-    admin := True;
+    logedIn := False;
+    admin := False;
     // addParticipantData;
-    debugMode := False;
     ClrScr;
     if numberOfUser = 0 then 
         begin

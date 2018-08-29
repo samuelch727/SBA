@@ -7,41 +7,38 @@
       <Unit0>
         <Filename Value="Main.lpr"/>
         <IsPartOfProject Value="True"/>
-        <TopLine Value="851"/>
-        <CursorPos X="65" Y="861"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="860"/>
+        <CursorPos X="57" Y="885"/>
         <UsageCount Value="120"/>
         <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="/Developer/lazarus/components/todolist/todolist.pas"/>
         <UnitName Value="TodoList"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="43"/>
         <CursorPos X="3" Y="68"/>
         <UsageCount Value="16"/>
-        <Loaded Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="/Developer/lazarus/ide/lazarus.pp"/>
         <UnitName Value="Lazarus"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="113"/>
         <CursorPos Y="124"/>
         <UsageCount Value="16"/>
-        <Loaded Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="/Developer/lazarus/lcl/interfaces/carbon/carbonproc.pp"/>
         <UnitName Value="CarbonProc"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="729"/>
         <CursorPos X="86" Y="743"/>
         <UsageCount Value="13"/>
-        <Loaded Value="True"/>
       </Unit3>
     </Units>
-    <JumpHistory Count="30" HistoryIndex="29">
+    <JumpHistory Count="27" HistoryIndex="26">
       <Position1>
         <Filename Value="Main.lpr"/>
         <Caret Line="15" Column="17"/>
@@ -147,21 +144,9 @@
         <Caret Line="864" Column="88" TopLine="850"/>
       </Position26>
       <Position27>
-        <Filename Value="/Developer/lazarus/components/todolist/todolist.pas"/>
-        <Caret Line="68" Column="3" TopLine="43"/>
-      </Position27>
-      <Position28>
-        <Filename Value="/Developer/lazarus/ide/lazarus.pp"/>
-        <Caret Line="162" TopLine="113"/>
-      </Position28>
-      <Position29>
         <Filename Value="Main.lpr"/>
         <Caret Line="861" Column="65" TopLine="851"/>
-      </Position29>
-      <Position30>
-        <Filename Value="/Developer/lazarus/lcl/interfaces/carbon/carbonproc.pp"/>
-        <Caret Line="538" Column="13" TopLine="513"/>
-      </Position30>
+      </Position27>
     </JumpHistory>
   </ProjectSession>
 </CONFIG>
