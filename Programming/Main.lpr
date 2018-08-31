@@ -1,4 +1,4 @@
-//© 2018 SAMUEL CHAN SZE NOK ALL RIGHTS RESERVED
+// © 2018 SAMUEL CHAN SZE NOK ALL RIGHTS RESERVED
 // Redistribution and use in source and binary forms, with or without
 // modification are permitted.
 program Main;
@@ -95,8 +95,8 @@ procedure debugPrintDataID();
     var
         loop : Integer;
     begin
-        // for loop := 0 to participantArraySize - 1 do debugLog('data[' + IntToStr(loop) + '].ID = ' + data[loop].ID);
-        // for loop := 0 to Length(competitonRecord) - 1 do debugLog('competitionRecord[' + IntToStr(loop) + '].ID = ' + IntToStr(competitonRecord[loop].ID) + 'inGame = ' + BoolToStr(competitonRecord[loop].inGame));
+        for loop := 0 to participantArraySize - 1 do debugLog('data[' + IntToStr(loop) + '].ID = ' + data[loop].ID);
+        for loop := 0 to Length(competitonRecord) - 1 do debugLog('competitionRecord[' + IntToStr(loop) + '].ID = ' + IntToStr(competitonRecord[loop].ID) + 'inGame = ' + BoolToStr(competitonRecord[loop].inGame));
     end;
 function passwordEncryption(password : String):String;
     begin
@@ -334,6 +334,8 @@ function SearchForUser(Name : String = ''; ID : String = ''; School : String = '
         found, same, resultExist : Boolean;
         KMP, matchCount: array of Integer;
     begin
+        Name := LowerCase(Name);
+        School := LowerCase(School);
         legnthOfArray := -1;
         bottom := 0;
         top := participantArraySize - 1;
@@ -396,7 +398,7 @@ function SearchForUser(Name : String = ''; ID : String = ''; School : String = '
                     kmpCounter := 0;
                     repeat
                         kmpLoop := kmpLoop + 1;
-                        if data[temp].Name[kmpLoop] = Name[kmpTargetLoop + 1] then
+                        if LowerCase(data[temp].Name[kmpLoop]) = Name[kmpTargetLoop + 1] then
                             begin
                                 kmpTargetLoop := kmpTargetLoop + 1;
                                 kmpCounter := kmpCounter + 1;
@@ -469,7 +471,7 @@ function SearchForUser(Name : String = ''; ID : String = ''; School : String = '
                         kmpLoop := kmpLoop + 1;
                         debugLog(data[temp].School[kmpLoop], 3);
                         debugLog(School[kmpTargetLoop + 1], 3);
-                        if data[temp].School[kmpLoop] = School[kmpTargetLoop + 1] then
+                        if LowerCase(data[temp].School[kmpLoop]) = School[kmpTargetLoop + 1] then
                             begin
                                 kmpTargetLoop := kmpTargetLoop + 1;
                                 kmpCounter := kmpCounter + 1;
@@ -650,25 +652,21 @@ procedure loadUserName(var usrData : array of String);
         numberOfUser : Integer;
         temp : String;
     begin
-        debugLog('Loading User File', 3);
-        Assign(sourceFile, fileLocation + 'user.epd');
+        debugLog('loadUserName: Loading User File', 3);
+        Assign(sourceFile, 'C:\Users\samue\Desktop\SBA\Programming\File\user.epd');
         Reset(sourceFile);
         numberOfUser := 0;
         while not Eof(sourceFile) do
             begin
                 numberOfUser := numberOfUser + 1;
-                try
                     begin
-                        ReadLn(sourceFile, temp);
-                        usrData[numberOfUser] := dataDecryption(temp);
+                        ReadLn(sourceFile, usrData[numberOfUser]);
                         ReadLn(sourceFile, temp);
                         ReadLn(sourceFile, temp);
                     end;
-                except
-                    debugLog('Error: Cant Read File', 1);
-                end;
             end;
         Close(sourceFile);
+        debugLog('loadUserName: execut success');
     end;
 function numberOfUser() : Integer;
     var
@@ -676,9 +674,9 @@ function numberOfUser() : Integer;
         temp : String;
     begin
         AssignFile(sourceFile, 'C:\Users\samue\Desktop\SBA\Programming\File\user.epd');
-        debugLog('numberOfUser: assign successful');
+        debugLog('numberOfUser: Load file successful');
         reset(sourceFile);
-        debugLog('numberOfUser: reset succe');
+        debugLog('numberOfUser: reset success');
         numberOfUser := 0;
         while not Eof(sourceFile) do
             begin
@@ -688,6 +686,7 @@ function numberOfUser() : Integer;
               ReadLn(sourceFile, temp);
             end;
         Close(sourceFile);
+        debugLog('numberOfUser: execute success');
     end;
 function checkUserExist(usrName : String):Boolean; //Return false if user does exist
     var
@@ -696,17 +695,17 @@ function checkUserExist(usrName : String):Boolean; //Return false if user does e
         temp : String;
     begin
         checkUserExist := True;
-        debugLog('checking',3);
+        debugLog('checkUserExist: checking',3);
         tempSetArray := numberOfUser;
         if numberOfUser < 2 then
             begin
-                SetLength(userName, numberOfUser);
+                SetLength(userName, numberOfUser + 1);
                 debugLog('set userName array success',3);
                 debugLog('loading user name');
                 loadUserName(userName);
                 for tempForLoop := 0 to numberOfUser - 1 do
                     begin
-                        if  userName[tempForLoop] = usrName then
+                        if  userName[tempForLoop] = dataEncryption(usrName) then
                             checkUserExist := False;
                     end;  
             end
@@ -878,12 +877,13 @@ procedure logIn();
         until (fileUserName = UserName) or Eof(acFile);
         if fileUserName <> UserName then
             begin
-                writeln('Username  incorrect');
+                writeln('Username or Password incorrect');
+                debugLog('login fail, username incorrect', 2)
             end
         else if Password <> filePassword then
             begin
                 writeln('Username or Password incorrect');
-                debugLog('login fail, username/password incorrect', 2)
+                debugLog('login fail, password incorrect', 2)
             end
             else begin
               logedIn := True;
@@ -1179,7 +1179,7 @@ procedure startCreatingChart();
         debugLog('Chart gen: creat chart successfully');
     end;
 
-procedure ShowChart();
+procedure ShowChart(print : Boolean = True);
     var
         temp, wall, groupSize, groupPointer, tempForLoop, nextPointer, printPaticipent, currentParticipant, loopingRound : Integer;
         validation : String;
@@ -1194,6 +1194,11 @@ procedure ShowChart();
             begin
                 if not createdChart then
                     begin
+                        if not admin then 
+                            begin
+                                WriteLn('Invalid Input (Permission Denied)');
+                                exit;
+                            end;
                         TextColor(Red);
                         WriteLn('Notice: After creating the chart, you can not add participant anymore.');
                         WriteLn('Are you sure to continue? [Y/N]');
@@ -1209,6 +1214,7 @@ procedure ShowChart();
                                 WriteLn('Invalid Choice');
                             end;
                         until correctInput;
+                    WriteLn('loading...');
                     end;
                         if not createdChart then 
                             begin
@@ -1224,11 +1230,13 @@ procedure ShowChart();
                             nextPointer := 0;
                             loopingRound := loopingRound - 1;
                             if (loopingRound > currentRound) and (currentRound <> 0) then loadCompetitionRecord(loopingRound);
-                            if (loopingRound = currentRound) and (currentRound <> 0) then loadCurrentCompetition;
+                            if ((loopingRound = currentRound) and (currentRound <> 0)) and (currentRound <> totalNumberOfRound) then loadCurrentCompetition;
+                            debugLog('ShowChart: load success');
+                            debugPrintDataID;
                             startNextRound := False;
-                            WriteLn;
-                            WriteLn('----------------------Round ' + IntToStr(totalNumberOfRound - loopingRound) + '---------------------------');
-                            WriteLn;
+                            if print then WriteLn;
+                            if print then WriteLn('----------------------Round ' + IntToStr(totalNumberOfRound - loopingRound + 1) + '---------------------------');
+                            if print then WriteLn;
                             wall := Length(competitonRecord);
                             for tempForLoop := 1 to loopingRound do wall := wall div 2;
                             debugLog('ShowChart: wall = ' + IntToStr(wall));
@@ -1263,19 +1271,21 @@ procedure ShowChart();
                                             for tempForLoop := wall to groupPointer do
                                                 begin
                                                     printPaticipent := tempForLoop;
+                                                    debugPrintDataID;
+                                                    debugLog('ShowChart: Checking participant ID ' + IntToStr(competitonRecord[printPaticipent].ID) + ' is in game or not.');
                                                     if competitonRecord[printPaticipent].inGame then break;
                                                 end;
-                                            debugLog('found participant, participant ');
+                                            debugLog('found participant, participant ID = ' + IntToStr(competitonRecord[printPaticipent].ID));
                                         end;
                                     currentParticipant := printPaticipent;
                                     if competitonRecord[printPaticipent].ID <> -1 then
                                         begin
                                             Write(data[competitonRecord[printPaticipent].ID].Name);
                                             if data[competitonRecord[printPaticipent].ID].Seed then Write('*');
-                                            WriteLn('(' + data[competitonRecord[printPaticipent].ID].School + ')' :10);
+                                            if print then WriteLn('(' + data[competitonRecord[printPaticipent].ID].School + ')' :10);
                                         end
                                     else
-                                        Writeln('Bye');
+                                        if print then Writeln('Bye');
                                     if loopingRound <> totalNumberOfRound then loadCurrentCompetition;
                                     if not Odd(temp) then
                                         begin
@@ -1293,23 +1303,31 @@ procedure ShowChart();
                                                 numOfFinishedGroup := numOfFinishedGroup + 1;
                                                 if competitonRecord[currentParticipant].inGame then
                                                     begin
-                                                        Write(data[competitonRecord[currentParticipant].ID].Name);
-                                                        if data[competitonRecord[currentParticipant].ID].Seed then Write('*');
-                                                        Write('(' + data[competitonRecord[currentParticipant].ID].School + ')' :10);
+                                                        if competitonRecord[currentParticipant].ID <> -1 then 
+                                                        begin
+                                                            Write(data[competitonRecord[currentParticipant].ID].Name);
+                                                            if data[competitonRecord[currentParticipant].ID].Seed then Write('*');
+                                                            Write('(' + data[competitonRecord[currentParticipant].ID].School + ')' :10);
+                                                        end
+                                                        else Write('bye');  
                                                     end
                                                 else
                                                     begin
-                                                        Write(data[competitonRecord[printPaticipent].ID].Name);
-                                                        if data[competitonRecord[printPaticipent].ID].Seed then Write('*');
-                                                        Write('(' + data[competitonRecord[printPaticipent].ID].School + ')' :10);
-                                                    end;
+                                                        if competitonRecord[printPaticipent].ID <> -1 then 
+                                                        begin
+                                                            Write(data[competitonRecord[printPaticipent].ID].Name);
+                                                            if data[competitonRecord[printPaticipent].ID].Seed then Write('*');
+                                                            Write('(' + data[competitonRecord[printPaticipent].ID].School + ')' :10);
+                                                        end
+                                                        else Write('bye');  
+                                                    end
                                             end;
-                                            WriteLn();
+                                            if print then WriteLn();
                                         end
                                     else
                                         begin
-                                            Writeln();
-                                            ReadLn
+                                            if print then Writeln();
+                                            if print then ReadLn
                                         end;
                                     if nextPointer < wall then nextPointer := wall else nextPointer := groupPointer + 1;
                                     if (numOfFinishedGroup = (Length(competitonRecord) div (2 * (totalNumberOfRound - loopingRound + 1)))) or (currentRound < loopingRound) then startNextRound := True else startNextRound := False;
@@ -1320,18 +1338,120 @@ procedure ShowChart();
                         begin
                             currentRound := loopingRound;
                             saveCompetitionRecord(currentRound);
+                            for tempForLoop := 0 to Length(competitonRecord) - 1 do
+                                begin
+                                    if competitonRecord[tempForLoop].ID = -1 then competitonRecord[tempForLoop].inGame := False;
+                                end;
                         end;
         end;
     end;
-procedure AccountManagementMenu();
+function SearchMenu2(var passInArray : Array of Integer) : Integer;
+    var
+        ID, Name, School : String;
+        temp, temp2 : Integer;
+        tempArray : Array of Integer;
+    begin
+        for temp2 := 1 to Length(passInArray) - 1 do
+            begin
+                passInArray[temp2] := -1;
+            end;
+        writeln('Leave it blank if you dont know');
+        write('ID : ');
+        ReadLn(ID);
+        Write('Name : ');
+        ReadLn(Name);
+        Write('School : ');
+        ReadLn(School);
+        temp2 := SearchForUser(Name, ID, School, passInArray);
+        SearchMenu2 := temp2;
+        debugLog('Search complete', 3);
+        WriteLn(passInArray[0]);
+        for temp := 0 to temp2 do
+            begin
+                Write(' ID: ');
+                Write(data[passInArray[temp]].ID :8);
+                Write(' Name: ');
+                Write(data[passInArray[temp]].Name :8);
+                Write(' School: ');
+                Write(data[passInArray[temp]].School :8);
+                Write(' Seed: ');
+                WriteLn(data[passInArray[temp]].seed :8);
+            end;
+    end;
+procedure DeleteCompetitor();
+    var
+        serachResultArray : Array of Integer;
+        searchResultNumber, targetID, tempForLoop : Integer;
+        correctInput, comfirmInput : Boolean;
+        comfirmInputText : String;
+    begin
+        SetLength(serachResultArray, participantArraySize);
+        searchResultNumber := SearchMenu2(serachResultArray);
+        debugLog('DeleteCompetitor: search result number = ' + IntToStr(searchResultNumber));
+        writeln(serachResultArray[1]);
+        if searchResultNumber >= 0 then
+            begin
+                if searchResultNumber = 0 then targetID := serachResultArray[0]
+                else
+                    begin
+                        Write('Please enter the ID of the correct participant: ');
+                        repeat
+                            correctInput := True;
+                            ReadLn(targetID);
+                            if (targetID < 0) or (targetID >= participantArraySize) then
+                                begin
+                                    WriteLn('Input error!');
+                                    Write('Please enter the ID of the correct participant: ');
+                                end;  
+                        until correctInput;
+                        targetID := targetID - 1;
+                    end;
+                repeat
+                    Write('Are You Sure To Delete This Participant? [Y/N] : ');
+                    correctInput := True;
+                    ReadLn(comfirmInputText);
+                    comfirmInput := False;
+                    case LowerCase(comfirmInputText) of
+                        'y' : comfirmInput := True;
+                        'n' : exit;
+                    else
+                        correctInput := False;
+                        WriteLn('Invalid input');
+                    end;
+                until correctInput;
+                quickSortParticipant(0, participantArraySize - 1);
+                if comfirmInput then
+                    begin
+                        debugLog('DeleteCompetitor: start deleting competitor ID: ' + IntToStr(targetID));
+                        if targetID <> participantArraySize then 
+                            begin
+                                for tempForLoop := targetID + 1 to participantArraySize - 1 do
+                                begin
+                                    data[tempForLoop - 1] := data[tempForLoop];
+                                    data[tempForLoop - 1].ID := IntToStr(tempForLoop);
+                                end;
+                            end;
+                        participantArraySize := participantArraySize - 1;
+                        SetLength(data, participantArraySize);
+                        debugLog('delete user success');
+                        writeln('Deleted user');
+                        inputDataToFile;
+                    end;
+            end
+            else WriteLn('No Competitor Found');
+    end;
+procedure EditCompetitorMenu();
+    begin
+    end;
+procedure CompetitorManagementMenu();
     var
         choice : Integer;
         temp : String;
     begin
         ClrScr;
-        Writeln('1. Change Password');
-        Writeln('2. Change Username');
-        Writeln('3. Delete Account');
+        Writeln('1. Change Competitor Name');
+        Writeln('2. Change Competitor Seed Status');
+        Writeln('3. Delete Competitor');
         Writeln('9. Back To Main Screen');
     end;
 procedure SearchMenu();
@@ -1373,7 +1493,8 @@ procedure addCompetitonResult();
         temp2, temp, targetParticipant, findTargetParticipantGroup, sameGroupParticipant, wall, tempForLoop, groupSize, groupPointer : Integer;
         inputOfContinue, inputCorrect, inputResult : Boolean;
     begin
-        if Round(power(2, currentRound - 1)) = numOfFinishedGroup then ShowChart();
+        if Round(power(2, currentRound - 1)) = numOfFinishedGroup then ShowChart(False);
+        WriteLn('Loading...');
         ClrScr;
         debugLog('currentRound = ' + IntToStr(currentRound));
         if (currentRound = 1) and (numOfFinishedGroup <> 0) then
@@ -1404,28 +1525,29 @@ procedure addCompetitonResult();
             exit;
         end;
         for temp := 0 to temp2 do
-            for tempForLoop := 0 to Length(competitonRecord) - 1 do
-                begin
-                    if competitonRecord[tempForLoop].ID = tempArray[temp] then Break;
-                end;
-            if competitonRecord[tempForLoop].inGame then
-                begin
-                    begin
-                    Write(' ID: ');
-                    Write(data[tempArray[temp]].ID :8);
-                    Write(' Name: ');
-                    Write(data[tempArray[temp]].Name :8);
-                    Write(' School: ');
-                    Write(data[tempArray[temp]].School :8);
-                    Write(' Seed: ');
-                    WriteLn(data[tempArray[temp]].seed :8);
+            begin
+                Write(' ID: ');
+                Write(data[tempArray[temp]].ID :8);
+                Write(' Name: ');
+                Write(data[tempArray[temp]].Name :8);
+                Write(' School: ');
+                Write(data[tempArray[temp]].School :8);
+                Write(' Seed: ');
+                WriteLn(data[tempArray[temp]].seed :8);
             end;
-                end;
         if temp2 > 0 then
             begin
                 debugLog('addCompetitionResult: multiple search result');
-                Write('Please enter the ID of the correct participant: ');
-                Readln(targetParticipant);
+                Write('Please enter the ID of the correct participant: '); 
+                repeat
+                    inputCorrect := True;
+                    Readln(targetParticipant);
+                    if (targetParticipant < 1) or (targetParticipant > Length(data)) then
+                    begin
+                        inputCorrect := False;
+                        WriteLn('invalid input!');
+                    end;
+                until inputCorrect;
                 targetParticipant := targetParticipant - 1;
                 quickSortParticipant(0,participantArraySize - 1, 3);
                 Write(' ID: ');
@@ -1501,7 +1623,8 @@ procedure addCompetitonResult();
         until inputCorrect;
         competitonRecord[sameGroupParticipant].inGame := not inputResult;
         competitonRecord[findTargetParticipantGroup].inGame := inputResult;
-        numOfFinishedGroup := numOfFinishedGroup + 1;
+        saveCurrentCompetition();
+        if competitonRecord[sameGroupParticipant].inGame <> competitonRecord[findTargetParticipantGroup].inGame then numOfFinishedGroup := numOfFinishedGroup + 1;
         Writeln('Input Success');
         debugPrintDataID;
         saveCurrentCompetition;
@@ -1530,7 +1653,7 @@ procedure Mainmenu();
             if logedIn and not createdChart then WriteLn ('3. Enter Data');
             if admin then WriteLn('4. Add Account');
             WriteLn('5. Search for user');
-            if admin then WriteLn('6. Create / View chart');
+            if admin or createdChart then WriteLn('6. Create / View chart');
             if admin then WriteLn('7. Enter result');
             WriteLn('8. About Program');
             WriteLn('9. Quit');
@@ -1550,10 +1673,11 @@ procedure Mainmenu();
                 3 : if logedIn and not createdChart then addParticipantData else WriteLn('Invalid choice');
                 4 : if admin then creatAccount(False, True) else WriteLn('Invalid choice');
                 5 : SearchMenu();
-                6 : if admin then ShowChart else WriteLn('Invalid choice');
+                6 : ShowChart;
                 7 : if admin then addCompetitonResult else WriteLn('Invalid choice');
                 8 : aboutProgram;
                 9 : begin debugLog('Program ended', 3); Break; end;
+                10 : DeleteCompetitor;
                 3223 : debugMode := not debugMode;
             else
                 begin
@@ -1569,18 +1693,18 @@ procedure Mainmenu();
         until choice = 9;
     end;
 begin
+    fileLocation := ParamStr(0);
+    WriteLn(fileLocation);
+    Delete(fileLocation, Length(fileLocation) - 7, 8);
+    fileLocation := fileLocation + 'File\';
+    WriteLn(fileLocation);
+    
     ClearDebugLog;
     debugMode := True;
     debugLog('Start initalization');
     debugMode := False;
-    // Window(0,0,100,100);
     resetCompetitionRecordFile;
     resetCurrentCompetitionFile;
-    // fileLocation := ParamStr(0);
-    // Delete(fileLocation, Length(fileLocation) - 3, 4);
-    // fileLocation := fileLocation + 'File\';
-    // debugLog('file location : ' + fileLocation);
-    fileLocation := 'C:\Users\samue\Desktop\SBA\Programming\File\';
     totalNumberOfRound := 0;
     currentRound := 0;
     createdChart := False;
@@ -1594,8 +1718,6 @@ begin
     debugPrintDataID;
     logedIn := False;
     admin := False;
-    // addParticipantData;
-    ClrScr;
     if numberOfUser = 0 then 
         begin
             debugLog('No user account found, creating account');
