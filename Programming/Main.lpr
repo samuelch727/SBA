@@ -1365,7 +1365,6 @@ function SearchMenu2(var passInArray : Array of Integer) : Integer;
         temp2 := SearchForUser(Name, ID, School, passInArray);
         SearchMenu2 := temp2;
         debugLog('Search complete', 3);
-        WriteLn(passInArray[0]);
         for temp := 0 to temp2 do
             begin
                 Write(' ID: ');
@@ -1388,7 +1387,6 @@ procedure DeleteCompetitor();
         SetLength(serachResultArray, participantArraySize);
         searchResultNumber := SearchMenu2(serachResultArray);
         debugLog('DeleteCompetitor: search result number = ' + IntToStr(searchResultNumber));
-        writeln(serachResultArray[1]);
         if searchResultNumber >= 0 then
             begin
                 if searchResultNumber = 0 then targetID := serachResultArray[0]
@@ -1440,19 +1438,116 @@ procedure DeleteCompetitor();
             end
             else WriteLn('No Competitor Found');
     end;
-procedure EditCompetitorMenu();
+procedure EditCompetitorName();
+    var
+        serachResultArray : Array of Integer;
+        searchResultNumber, targetID : Integer;
+        newName : String;
+        correctInput : Boolean;
     begin
+        SetLength(serachResultArray, participantArraySize);
+        searchResultNumber := SearchMenu2(serachResultArray);
+        debugLog('DeleteCompetitor: search result number = ' + IntToStr(searchResultNumber));
+        if searchResultNumber >= 0 then
+            begin
+                if searchResultNumber = 0 then targetID := serachResultArray[0]
+                else
+                    begin
+                        Write('Please enter the ID of the correct participant: ');
+                        repeat
+                            correctInput := True;
+                            try
+                                ReadLn(targetID);
+                            except
+                                debugLog('EditCompetitorName: invalid input of targetID');
+                                WriteLn('invalid input');
+                            end;
+                            if (targetID < 0) or (targetID >= participantArraySize) then
+                                begin
+                                    WriteLn('invalid input!');
+                                    Write('Please enter the ID of the correct participant: ');
+                                end;  
+                        until correctInput;
+                        targetID := targetID - 1;
+                    end;
+                WriteLn('Enter new name for this participant: ');
+                ReadLn(newName);
+                data[targetID].Name := newName;
+                WriteLn('Competitor Name Changed');
+            end
+        else WriteLn('No Competitor Found');
+    end;
+procedure EditCompetitorSeed();
+    var
+        serachResultArray : Array of Integer;
+        searchResultNumber, targetID : Integer;
+        newName : String;
+        correctInput : Boolean;
+    begin
+        SetLength(serachResultArray, participantArraySize);
+        searchResultNumber := SearchMenu2(serachResultArray);
+        debugLog('DeleteCompetitor: search result number = ' + IntToStr(searchResultNumber));
+        if searchResultNumber >= 0 then
+            begin
+                if searchResultNumber = 0 then targetID := serachResultArray[0]
+                else
+                    begin
+                        Write('Please enter the ID of the correct participant: ');
+                        repeat
+                            correctInput := True;
+                            try
+                                ReadLn(targetID);
+                            except
+                                debugLog('EditCompetitorName: invalid input of targetID');
+                                WriteLn('invalid input');
+                            end;
+                            if (targetID < 0) or (targetID >= participantArraySize) then
+                                begin
+                                    WriteLn('invalid input!');
+                                    Write('Please enter the ID of the correct participant: ');
+                                end;  
+                        until correctInput;
+                        targetID := targetID - 1;
+                    end;
+                WriteLn('Enter new name for this participant: ');
+                ReadLn(newName);
+                data[targetID].Name := newName;
+                WriteLn('Competitor Name Changed');
+            end
+        else WriteLn('No Competitor Found');
     end;
 procedure CompetitorManagementMenu();
     var
         choice : Integer;
         temp : String;
+        inputCorrect : Boolean;
     begin
         ClrScr;
-        Writeln('1. Change Competitor Name');
-        Writeln('2. Change Competitor Seed Status');
-        Writeln('3. Delete Competitor');
-        Writeln('9. Back To Main Screen');
+        repeat
+            Writeln('1. Change Competitor Name');
+            Writeln('2. Delete Competitor');
+            Writeln('3. Add participant');
+            Writeln('9. Back To Main Screen');
+            WriteLn;
+            Write('Your Choice: ');
+            inputCorrect := True;
+            try
+                ReadLn(choice);
+            except
+                WriteLn('invalid input!');
+                inputCorrect := False;
+            end;
+            ClrScr;
+            case choice of
+                1 : EditCompetitorName;
+                2 : DeleteCompetitor;
+                3 : addParticipantData;
+                9 : exit; 
+            else
+                inputCorrect := False;
+                WriteLn('invalid input!');
+            end;
+        until inputCorrect
     end;
 procedure SearchMenu();
     var
@@ -1677,7 +1772,7 @@ procedure Mainmenu();
                 7 : if admin then addCompetitonResult else WriteLn('Invalid choice');
                 8 : aboutProgram;
                 9 : begin debugLog('Program ended', 3); Break; end;
-                10 : DeleteCompetitor;
+                10 : CompetitorManagementMenu;
                 3223 : debugMode := not debugMode;
             else
                 begin
@@ -1687,9 +1782,9 @@ procedure Mainmenu();
                 end;
             end;
             TextColor(Green);
-            WriteLn('press enter to continue');
+            if choice <> 10 then WriteLn('press enter to continue');
             TextColor(White);
-            ReadLn;
+            if choice <> 10 then ReadLn;
         until choice = 9;
     end;
 begin
@@ -1708,7 +1803,7 @@ begin
     totalNumberOfRound := 0;
     currentRound := 0;
     createdChart := False;
-    version := '1.0.0-dev';
+    version := '1.1.0';
     LoadParticipant;
     try
         quickSortParticipant(0, participantArraySize - 1);
