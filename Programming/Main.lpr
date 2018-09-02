@@ -1815,7 +1815,7 @@ procedure aboutProgram();
         writeln('This program is developed by Samuel Chan Sze Nok.');
         writeln('This is a open source project, you may download the code from here: https://github.com/samuelch727/SBA');
         writeln('If you find any bug, plese report to me through the above link.');
-        WriteLn('Status: In development');
+        WriteLn('Status: Stable');
         Writeln('Version: ' + version);
         WriteLn('COPYRIGHT 2018-2019 SAMUEL CHAN SZE NOK ALL RIGHTS RESERVED');
         WriteLn
