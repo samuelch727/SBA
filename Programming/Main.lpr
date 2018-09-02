@@ -18,7 +18,7 @@ type
 var
     data : array of userData;
     participantArraySize, competitonRecordPointer, totalNumberOfRound, currentRound, nextPointer, numOfFinishedGroup : Integer;
-    debugMode, logedIn, admin, finalized, temp, createdChart : Boolean;
+    debugMode, logedIn, admin, finalized, temp, createdChart, programErrorBreak : Boolean;
     competitonRecord : array of chartData;
     version, fileLocation : String;
 function CheckOtherProgramRunning() : Boolean; //for testing
@@ -49,6 +49,15 @@ procedure debugLog(message : String ; level : Integer = 3); //Level 1: Fatal Err
                 Writeln('Oops. I have detected an error in my program. Try restart me :(');
                 Writeln('Please also contact administrator');
                 TextColor(White);
+                Delay(500);
+                Write('Exiting Program');
+                Write('.');
+                Delay(200);
+                Write('.');
+                Delay(200);
+                Write('.');
+                Delay(100);
+                programErrorBreak := True;
             end;
         if debugMode then
             begin
@@ -576,12 +585,12 @@ function numberOfParticipant() : Integer;
         sourceFile : Text;
         temp : String;
     begin
+        debugLog('numberOfParticipant: Counting Participators', 3);
         Assign(sourceFile, fileLocation + 'Competitors.epd');
         Reset(sourceFile);
         participantArraySize := 0;
         while not Eof(sourceFile) do
             begin
-                debugLog('Counting Participators', 3);
                 participantArraySize := participantArraySize + 1;
                 ReadLn(sourceFile, temp);
                 ReadLn(sourceFile, temp);
@@ -589,6 +598,7 @@ function numberOfParticipant() : Integer;
                 ReadLn(sourceFile, temp);
                 ReadLn(sourceFile, temp);
             end;
+        debugLog('numberOfParticipant: number of competitors: ' + IntToStr(participantArraySize));
         Close(sourceFile);
     end;
 procedure LoadParticipant();
@@ -1473,6 +1483,7 @@ procedure EditCompetitorName();
                 WriteLn('Enter new name for this participant: ');
                 ReadLn(newName);
                 data[targetID].Name := newName;
+                inputDataToFile;
                 WriteLn('Competitor Name Changed');
             end
         else WriteLn('No Competitor Found');
@@ -1480,9 +1491,68 @@ procedure EditCompetitorName();
 procedure EditCompetitorSeed();
     var
         serachResultArray : Array of Integer;
-        searchResultNumber, targetID : Integer;
-        newName : String;
-        correctInput : Boolean;
+        searchResultNumber, targetID, numberOfSeed : Integer;
+        newSeed : String;
+        correctInput, newSeedStat : Boolean;
+    begin
+        quickSortParticipant(0, participantArraySize - 1, 4);
+        numberOfSeed := 0;
+        while data[numberOfSeed].seed do numberOfSeed := numberOfSeed + 1;
+        quickSortParticipant(0, participantArraySize - 1);
+        SetLength(serachResultArray, participantArraySize);
+        searchResultNumber := SearchMenu2(serachResultArray);
+        debugLog('DeleteCompetitor: search result number = ' + IntToStr(searchResultNumber));
+        if searchResultNumber >= 0 then
+            begin
+                if searchResultNumber = 0 then targetID := serachResultArray[0]
+                else
+                    begin
+                        Write('Please enter the ID of the correct participant: ');
+                        repeat
+                            correctInput := True;
+                            try
+                                ReadLn(targetID);
+                            except
+                                debugLog('EditCompetitorName: invalid input of targetID');
+                                WriteLn('invalid input');
+                            end;
+                            if (targetID < 0) or (targetID >= participantArraySize) then
+                                begin
+                                    WriteLn('invalid input!');
+                                    Write('Please enter the ID of the correct participant: ');
+                                end;  
+                        until correctInput;
+                        targetID := targetID - 1;
+                    end;
+                repeat
+                    WriteLn('Enter new seed for this participant[Y/N] : ');
+                    correctInput := True;
+                    ReadLn(newSeed);
+                    case LowerCase(newSeed) of
+                        'y' : newSeedStat := True;
+                        'n' : newSeedStat := False;
+                    else
+                        WriteLn('invalid input');
+                        correctInput := False;
+                    end;
+                until correctInput;
+                if (newSeedStat = True) and (numberOfSeed >= 4) then
+                    begin
+                        Writeln('Number of seed already reaches maximum number.');
+                        Exit;
+                    end;
+                data[targetID].seed := newSeedStat;
+                inputDataToFile;
+                WriteLn('Competitor Seed Changed');
+            end
+        else WriteLn('No Competitor Found');
+    end;
+procedure EditCompetitorSchool();
+    var
+        serachResultArray : Array of Integer;
+        searchResultNumber, targetID, numberOfSeed : Integer;
+        newSchool : String;
+        correctInput, newSeedStat : Boolean;
     begin
         SetLength(serachResultArray, participantArraySize);
         searchResultNumber := SearchMenu2(serachResultArray);
@@ -1509,10 +1579,18 @@ procedure EditCompetitorSeed();
                         until correctInput;
                         targetID := targetID - 1;
                     end;
-                WriteLn('Enter new name for this participant: ');
-                ReadLn(newName);
-                data[targetID].Name := newName;
-                WriteLn('Competitor Name Changed');
+                WriteLn('Please enter the new school name : ');
+                ReadLn(newSchool);
+                searchResultNumber := SearchForUser('', '', newSchool, serachResultArray);
+                if searchResultNumber >= 1 then
+                    begin
+                        WriteLn('This school already have 2 participants');
+                        Exit;
+                    end;
+                data[targetID].School := newSchool;
+                inputDataToFile;
+                WriteLn('Competitor School Changed');
+                
             end
         else WriteLn('No Competitor Found');
     end;
@@ -1525,8 +1603,10 @@ procedure CompetitorManagementMenu();
         ClrScr;
         repeat
             Writeln('1. Change Competitor Name');
-            Writeln('2. Delete Competitor');
-            Writeln('3. Add participant');
+            WriteLn('2. Change Competitor School');
+            WriteLn('3. Change Competitor Seed Status');
+            Writeln('4. Delete Competitor');
+            Writeln('5. Add participant');
             Writeln('9. Back To Main Screen');
             WriteLn;
             Write('Your Choice: ');
@@ -1540,14 +1620,20 @@ procedure CompetitorManagementMenu();
             ClrScr;
             case choice of
                 1 : EditCompetitorName;
-                2 : DeleteCompetitor;
-                3 : addParticipantData;
+                2 : EditCompetitorSchool;
+                3 : EditCompetitorSeed;
+                4 : DeleteCompetitor;
+                5 : addParticipantData;
                 9 : exit; 
             else
                 inputCorrect := False;
                 WriteLn('invalid input!');
             end;
-        until inputCorrect
+        until inputCorrect;
+        TextColor(Green);
+        if choice <> 9 then WriteLn('press enter to continue');
+        TextColor(White);
+        if choice <> 9 then ReadLn;
     end;
 procedure SearchMenu();
     var
@@ -1745,7 +1831,7 @@ procedure Mainmenu();
             if debugMode then WriteLn('In debug mode');
             if logedIn then WriteLn('1. Logout AC') else WriteLn('1. Login AC');
             WriteLn('2. View Competitors');
-            if logedIn and not createdChart then WriteLn ('3. Enter Data');
+            if logedIn then WriteLn ('3. Manage Competitor');
             if admin then WriteLn('4. Add Account');
             WriteLn('5. Search for user');
             if admin or createdChart then WriteLn('6. Create / View chart');
@@ -1765,14 +1851,13 @@ procedure Mainmenu();
             case choice of
                 1 : if logedIn then logOut else logIn;
                 2 : showParticipant();
-                3 : if logedIn and not createdChart then addParticipantData else WriteLn('Invalid choice');
+                3 : if logedIn then CompetitorManagementMenu else WriteLn('Invalid choice');
                 4 : if admin then creatAccount(False, True) else WriteLn('Invalid choice');
                 5 : SearchMenu();
                 6 : ShowChart;
                 7 : if admin then addCompetitonResult else WriteLn('Invalid choice');
                 8 : aboutProgram;
                 9 : begin debugLog('Program ended', 3); Break; end;
-                10 : CompetitorManagementMenu;
                 3223 : debugMode := not debugMode;
             else
                 begin
@@ -1781,19 +1866,19 @@ procedure Mainmenu();
                     WriteLn('Invalid choice');
                 end;
             end;
+            if programErrorBreak then exit;
             TextColor(Green);
-            if choice <> 10 then WriteLn('press enter to continue');
+            if choice <> 3 then WriteLn('press enter to continue');
             TextColor(White);
-            if choice <> 10 then ReadLn;
+            if choice <> 3 then ReadLn;
         until choice = 9;
     end;
 begin
+    programErrorBreak := False;
     fileLocation := ParamStr(0);
-    WriteLn(fileLocation);
     Delete(fileLocation, Length(fileLocation) - 7, 8);
     fileLocation := fileLocation + 'File\';
     WriteLn(fileLocation);
-    
     ClearDebugLog;
     debugMode := True;
     debugLog('Start initalization');
@@ -1803,7 +1888,7 @@ begin
     totalNumberOfRound := 0;
     currentRound := 0;
     createdChart := False;
-    version := '1.1.0';
+    version := '1.2.0';
     LoadParticipant;
     try
         quickSortParticipant(0, participantArraySize - 1);
