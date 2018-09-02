@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Compiler Value="/usr/local/bin/ppc386" Date="1511735943"/>
-  <Params Value=" -MObjFPC -Scghi -O1 -gw -gl -l -vewnhibq -Fi/Users/samuel/Documents/SelfProgramming/SBA/Programming/Encryption/lib/i386-darwin -Fu/Users/samuel/Documents/SelfProgramming/SBA/Programming/Encryption/ -FU/Users/samuel/Documents/SelfProgramming/SBA/Programming/Encryption/lib/i386-darwin/ dataEncryption.lpr"/>
-</CONFIG>
