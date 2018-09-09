@@ -1810,7 +1810,7 @@ begin
     totalNumberOfRound := 0;
     currentRound := 0;
     createdChart := False;
-    version := '1.2.1-Alpha';
+    version := '1.2.1';
     LoadParticipant;
     try
         quickSortParticipant(0, participantArraySize - 1);
