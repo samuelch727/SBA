@@ -17,20 +17,10 @@ type
     End;
 var
     data : array of userData;
-    participantArraySize, competitonRecordPointer, totalNumberOfRound, currentRound, nextPointer, numOfFinishedGroup : Integer;
-    debugMode, logedIn, admin, finalized, temp, createdChart, programErrorBreak : Boolean;
+    participantArraySize, competitonRecordPointer, totalNumberOfRound, currentRound, numOfFinishedGroup : Integer;
+    debugMode, logedIn, admin, createdChart, programErrorBreak : Boolean;
     competitonRecord : array of chartData;
     version, fileLocation : String;
-function CheckOtherProgramRunning() : Boolean; //for testing
-    var 
-        DebugFile : Text;
-    begin
-        Assign(DebugFile, fileLocation + 'debugLog.txt');
-        Reset(DebugFile);
-        CheckOtherProgramRunning := False;
-        if not Eof(DebugFile) then CheckOtherProgramRunning := True;
-        Close(DebugFile);
-    end;
 procedure ClearDebugLog();
     var
         DebugFile : Text;
@@ -176,9 +166,8 @@ function dataDecryption(data : String):String;
     end;
 procedure quickSortParticipant(start, ending : Integer ; accrodingTo : Integer = 3); // 1 = Name, 2 = School, 3 = ID, 4 = seed
     var
-        privot, wall, loop, debugLoop, temp3 : Integer;
-        temp : String;
-        temp2 : Boolean;
+        privot, wall, loop : Integer;
+        temp : userData;
     begin
         wall := start;
         privot := ending;
@@ -192,21 +181,9 @@ procedure quickSortParticipant(start, ending : Integer ; accrodingTo : Integer =
                                 if data[privot].Name > data[loop].Name then
                                     begin
                                     debugLog('quicksort change position', 3);
-                                    temp := data[loop].School;
-                                    data[loop].School := data[wall].School;
-                                    data[wall].School := temp;
-                                    temp := data[loop].Name;
-                                    data[loop].Name := data[wall].Name;
-                                    data[wall].Name := temp;
-                                    temp := data[loop].ID;
-                                    data[loop].ID := data[wall].ID;
-                                    data[wall].ID := temp;
-                                    temp2 := data[loop].seed;
-                                    data[loop].seed := data[wall].seed;
-                                    data[wall].seed := temp2;
-                                    temp3 := data[loop].competitionRecordPosition;
-                                    data[loop].competitionRecordPosition := data[wall].competitionRecordPosition;
-                                    data[wall].competitionRecordPosition := temp3;
+                                    temp := data[loop];
+                                    data[loop] := data[wall];
+                                    data[wall] := temp;
                                     wall := wall + 1;
                                     end;
                             end;
@@ -215,21 +192,9 @@ procedure quickSortParticipant(start, ending : Integer ; accrodingTo : Integer =
                                 if data[privot].School > data[loop].School then
                                     begin
                                     debugLog('quicksort change position', 3);
-                                    temp := data[loop].School;
-                                    data[loop].School := data[wall].School;
-                                    data[wall].School := temp;
-                                    temp := data[loop].Name;
-                                    data[loop].Name := data[wall].Name;
-                                    data[wall].Name := temp;
-                                    temp := data[loop].ID;
-                                    data[loop].ID := data[wall].ID;
-                                    data[wall].ID := temp;
-                                    temp2 := data[loop].seed;
-                                    data[loop].seed := data[wall].seed;
-                                    data[wall].seed := temp2;
-                                    temp3 := data[loop].competitionRecordPosition;
-                                    data[loop].competitionRecordPosition := data[wall].competitionRecordPosition;
-                                    data[wall].competitionRecordPosition := temp3;
+                                    temp := data[loop];
+                                    data[loop] := data[wall];
+                                    data[wall] := temp;
                                     wall := wall + 1;
                                     end;
                             end;
@@ -238,21 +203,9 @@ procedure quickSortParticipant(start, ending : Integer ; accrodingTo : Integer =
                                 if StrToInt(data[privot].ID) > StrToInt(data[loop].ID) then
                                     begin
                                     debugLog('quicksort change position', 3);
-                                    temp := data[loop].School;
-                                    data[loop].School := data[wall].School;
-                                    data[wall].School := temp;
-                                    temp := data[loop].Name;
-                                    data[loop].Name := data[wall].Name;
-                                    data[wall].Name := temp;
-                                    temp := data[loop].ID;
-                                    data[loop].ID := data[wall].ID;
-                                    data[wall].ID := temp;
-                                    temp2 := data[loop].seed;
-                                    data[loop].seed := data[wall].seed;
-                                    data[wall].seed := temp2;
-                                    temp3 := data[loop].competitionRecordPosition;
-                                    data[loop].competitionRecordPosition := data[wall].competitionRecordPosition;
-                                    data[wall].competitionRecordPosition := temp3;
+                                    temp := data[loop];
+                                    data[loop] := data[wall];
+                                    data[wall] := temp;
                                     wall := wall + 1;
                                     end;
                             end;
@@ -261,40 +214,16 @@ procedure quickSortParticipant(start, ending : Integer ; accrodingTo : Integer =
                                 if data[privot].seed < data[loop].seed then
                                     begin
                                     debugLog('quicksort change position', 3);
-                                    temp := data[loop].School;
-                                    data[loop].School := data[wall].School;
-                                    data[wall].School := temp;
-                                    temp := data[loop].Name;
-                                    data[loop].Name := data[wall].Name;
-                                    data[wall].Name := temp;
-                                    temp := data[loop].ID;
-                                    data[loop].ID := data[wall].ID;
-                                    data[wall].ID := temp;
-                                    temp2 := data[loop].seed;
-                                    data[loop].seed := data[wall].seed;
-                                    data[wall].seed := temp2;
-                                    temp3 := data[loop].competitionRecordPosition;
-                                    data[loop].competitionRecordPosition := data[wall].competitionRecordPosition;
-                                    data[wall].competitionRecordPosition := temp3;
+                                    temp := data[loop];
+                                    data[loop] := data[wall];
+                                    data[wall] := temp;
                                     wall := wall + 1;
                                     end;
                             end;
                     end;
-                temp := data[privot].School;
-                data[privot].School := data[wall].School;
-                data[wall].School := temp;
-                temp := data[privot].Name;
-                data[privot].Name := data[wall].Name;
-                data[wall].Name := temp;
-                temp := data[privot].ID;
-                data[privot].ID := data[wall].ID;
-                data[wall].ID := temp;
-                temp2 := data[privot].seed;
-                data[privot].seed := data[wall].seed;
-                data[wall].seed := temp2;
-                temp3 := data[privot].competitionRecordPosition;
-                data[privot].competitionRecordPosition := data[wall].competitionRecordPosition;
-                data[wall].competitionRecordPosition := temp3;
+                temp := data[privot];
+                data[privot] := data[wall];
+                data[wall] := temp;
                 debugPrintDataID;
                 quickSortParticipant(start, wall - 1, accrodingTo);
                 quickSortParticipant(wall + 1, ending, accrodingTo);
@@ -303,7 +232,6 @@ procedure quickSortParticipant(start, ending : Integer ; accrodingTo : Integer =
 procedure quickSortParallelArray(start, ending : Integer ; targetArray, prallelArray : Array of Integer); 
     var
         privot, wall, loop, debugLoop, temp : Integer;
-        temp2 : Boolean;
     begin
         wall := start;
         privot := ending;
@@ -340,7 +268,7 @@ procedure quickSortParallelArray(start, ending : Integer ; targetArray, prallelA
 function SearchForUser(Name : String = ''; ID : String = ''; School : String = '' ; var SearchResult : array of Integer) : Integer;
     var
         legnthOfArray, middle, top, bottom, temp, kmpLoop, kmpTargetLoop, kmpTempForTargetPointer, kmpCounter, tempForCheckResultExist : Integer;
-        found, same, resultExist : Boolean;
+        found, resultExist : Boolean;
         KMP, matchCount: array of Integer;
     begin
         Name := LowerCase(Name);
@@ -588,6 +516,7 @@ function numberOfParticipant() : Integer;
         debugLog('numberOfParticipant: Counting Participators', 3);
         Assign(sourceFile, fileLocation + 'Competitors.epd');
         Reset(sourceFile);
+        numberOfParticipant := 0;
         participantArraySize := 0;
         while not Eof(sourceFile) do
             begin
@@ -663,7 +592,7 @@ procedure loadUserName(var usrData : array of String);
         temp : String;
     begin
         debugLog('loadUserName: Loading User File', 3);
-        Assign(sourceFile, 'C:\Users\samue\Desktop\SBA\Programming\File\user.epd');
+        Assign(sourceFile, fileLocation + 'user.epd');
         Reset(sourceFile);
         numberOfUser := 0;
         while not Eof(sourceFile) do
@@ -683,7 +612,7 @@ function numberOfUser() : Integer;
         sourceFile : Text;
         temp : String;
     begin
-        AssignFile(sourceFile, 'C:\Users\samue\Desktop\SBA\Programming\File\user.epd');
+        AssignFile(sourceFile, fileLocation + 'user.epd');
         debugLog('numberOfUser: Load file successful');
         reset(sourceFile);
         debugLog('numberOfUser: reset success');
@@ -701,12 +630,10 @@ function numberOfUser() : Integer;
 function checkUserExist(usrName : String):Boolean; //Return false if user does exist
     var
         userName : array of String;
-        tempForLoop, tempSetArray : Integer;
-        temp : String;
+        tempForLoop : Integer;
     begin
         checkUserExist := True;
         debugLog('checkUserExist: checking',3);
-        tempSetArray := numberOfUser;
         if numberOfUser < 2 then
             begin
                 SetLength(userName, numberOfUser + 1);
@@ -819,6 +746,7 @@ procedure addParticipantData();
         if participantArraySize <> 0 then 
             begin
                 quickSortParticipant(0, participantArraySize - 1, 4);
+                debugPrintDataID;
                 while data[tempForLoop].seed do tempForLoop := tempForLoop + 1; 
             end;
         debugLog('Number of seed : ' + IntToStr(tempForLoop));
@@ -907,10 +835,6 @@ procedure logOut();
       logedIn := False;
       admin := False;
     end;
-procedure ChangePassword();
-    begin
-        
-    end;
 procedure showParticipant();
     var
         temp : Integer;
@@ -955,7 +879,7 @@ procedure loadCompetitionRecord(round : Integer);
             end;
         Close(competitionRecordFile);
     end;
-procedure saveCompetitionRecord(round : Integer);
+procedure saveCompetitionRecord();
     var
         competitionRecordFile : Text;
         tempForLoop : Integer;
@@ -979,15 +903,15 @@ procedure resetCurrentCompetitionFile();
 procedure loadCurrentCompetition();
     var
         competitionRecordFile : Text;
-        tempForLoop, tempForLoop2 : Integer;
+        tempForLoop : Integer;
         fileText : String;
     begin
         Assign(competitionRecordFile, fileLocation + 'currentCompetition.epd');
         Reset(competitionRecordFile);
-        for tempForLoop2 := 0 to Length(competitonRecord) - 1 do
+        for tempForLoop := 0 to Length(competitonRecord) - 1 do
             begin
                 ReadLn(competitionRecordFile, fileText);
-                TryStrToBool(dataDecryption(fileText), competitonRecord[tempForLoop2].inGame);
+                TryStrToBool(dataDecryption(fileText), competitonRecord[tempForLoop].inGame);
             end;
         Close(competitionRecordFile);
     end;
@@ -1193,7 +1117,7 @@ procedure ShowChart(print : Boolean = True);
     var
         temp, wall, groupSize, groupPointer, tempForLoop, nextPointer, printPaticipent, currentParticipant, loopingRound : Integer;
         validation : String;
-        correctInput, valiBoolean, startNextRound : Boolean;   
+        correctInput, startNextRound : Boolean;   
     begin
         if Length(data) < 4 then
             begin
@@ -1217,7 +1141,7 @@ procedure ShowChart(print : Boolean = True);
                             ReadLn(validation);
                             correctInput := True;
                             case LowerCase(validation) of 
-                                'y' : valiBoolean := True;
+                                'y' : ;
                                 'n' : exit;
                             else
                                 correctInput := False;
@@ -1347,7 +1271,7 @@ procedure ShowChart(print : Boolean = True);
                         if loopingRound < currentRound then 
                         begin
                             currentRound := loopingRound;
-                            saveCompetitionRecord(currentRound);
+                            saveCompetitionRecord();
                             for tempForLoop := 0 to Length(competitonRecord) - 1 do
                                 begin
                                     if competitonRecord[tempForLoop].ID = -1 then competitonRecord[tempForLoop].inGame := False;
@@ -1359,7 +1283,6 @@ function SearchMenu2(var passInArray : Array of Integer) : Integer;
     var
         ID, Name, School : String;
         temp, temp2 : Integer;
-        tempArray : Array of Integer;
     begin
         for temp2 := 1 to Length(passInArray) - 1 do
             begin
@@ -1550,9 +1473,9 @@ procedure EditCompetitorSeed();
 procedure EditCompetitorSchool();
     var
         serachResultArray : Array of Integer;
-        searchResultNumber, targetID, numberOfSeed : Integer;
+        searchResultNumber, targetID : Integer;
         newSchool : String;
-        correctInput, newSeedStat : Boolean;
+        correctInput : Boolean;
     begin
         SetLength(serachResultArray, participantArraySize);
         searchResultNumber := SearchMenu2(serachResultArray);
@@ -1597,7 +1520,6 @@ procedure EditCompetitorSchool();
 procedure CompetitorManagementMenu();
     var
         choice : Integer;
-        temp : String;
         inputCorrect : Boolean;
     begin
         ClrScr;
@@ -1888,7 +1810,7 @@ begin
     totalNumberOfRound := 0;
     currentRound := 0;
     createdChart := False;
-    version := '1.2.0';
+    version := '1.2.1-Alpha';
     LoadParticipant;
     try
         quickSortParticipant(0, participantArraySize - 1);

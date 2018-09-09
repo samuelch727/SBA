@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<CONFIG>
-  <Compiler Value="/usr/local/bin/fpc" Date="1504631646"/>
-  <Params Value=" -MObjFPC -Scghi -O1 -gw -gl -l -vewnhibq -Fi/Users/samuel/Documents/SelfProgramming/SBA/Programming/lib/x86_64-darwin -Fu/Users/samuel/Documents/SelfProgramming/SBA/Programming/ -FU/Users/samuel/Documents/SelfProgramming/SBA/Programming/lib/x86_64-darwin/ Main.lpr"/>
-  <Complete Value="False"/>
-</CONFIG>
