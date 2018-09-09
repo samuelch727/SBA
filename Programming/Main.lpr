@@ -592,7 +592,7 @@ procedure loadUserName(var usrData : array of String);
         temp : String;
     begin
         debugLog('loadUserName: Loading User File', 3);
-        Assign(sourceFile, 'C:\Users\samue\Desktop\SBA\Programming\File\user.epd');
+        Assign(sourceFile, fileLocation + 'user.epd');
         Reset(sourceFile);
         numberOfUser := 0;
         while not Eof(sourceFile) do
@@ -612,7 +612,7 @@ function numberOfUser() : Integer;
         sourceFile : Text;
         temp : String;
     begin
-        AssignFile(sourceFile, 'C:\Users\samue\Desktop\SBA\Programming\File\user.epd');
+        AssignFile(sourceFile, fileLocation + 'user.epd');
         debugLog('numberOfUser: Load file successful');
         reset(sourceFile);
         debugLog('numberOfUser: reset success');
