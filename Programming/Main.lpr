@@ -292,9 +292,6 @@ function SearchForUser(Name : String = ''; ID : String = ''; School : String = '
                     else if ID < data[middle].ID then top := middle - 1
                     else found := True;
                 until found or (bottom > top);
-                writeln(top);
-                writeln(bottom);
-                WriteLn(found);
                 if found then
                     begin
                         legnthOfArray := legnthOfArray + 1;
@@ -628,16 +625,19 @@ function numberOfUser() : Integer;
         debugLog('numberOfUser: have ' + IntToStr(numberOfUser) + ' user');
         debugLog('numberOfUser: execute success');
     end;
-function checkUserExist(usrName : String):Boolean; //Return false if user does exist
+function checkUserExist(usrName : String):Boolean; //Return true if user does exist
     var
         userName : array of String;
         tempForLoop : Integer;
     begin
         checkUserExist := False;
+        SetLength(userName, numberOfUser + 1);
         loadUserName(userName);
         debugLog('checkUserExist: checking',3);
+        if numberOfUser <= 0 then Exit;
         for tempForLoop := 0 to numberOfUser do
             begin
+                debugLog('checkUserExist: checking user ' + IntToStr(tempForLoop));
                 if usrName = dataDecryption(userName[tempForLoop]) then
                     begin
                         checkUserExist := True;
@@ -681,9 +681,9 @@ procedure creatAccount(isAdmin, ask : Boolean; fixedUserName : String = '');
                 end;
             debugLog('username entered', 3);
             temp := checkUserExist(userName);
-            if not checkUserExist(userName) then
+            if temp then
                 WriteLn('User Already Exist');
-        until temp;
+        until not temp;
         Assign(acFile, fileLocation + 'user.epd');
         Append(acFile);
         WriteLn(acFile, dataEncryption(userName));
@@ -1294,6 +1294,8 @@ function SearchMenu2(var passInArray : Array of Integer) : Integer;
         temp2 := SearchForUser(Name, ID, School, passInArray);
         SearchMenu2 := temp2;
         debugLog('Search complete', 3);
+        if temp2 = -1 then WriteLn('No player founded');
+        debugLog('searchMenu2: number of result: ' + IntToStr(temp2));
         for temp := 0 to temp2 do
             begin
                 Write(' ID: ');
@@ -1573,6 +1575,7 @@ procedure SearchMenu();
         SetLength(tempArray, participantArraySize);
         temp2 := SearchForUser(Name, ID, School, tempArray);
         debugLog('Search complete', 3);
+        if temp2 = -1 then WriteLn('No Player Found');
         for temp := 0 to temp2 do
             begin
                 Write(' ID: ');
