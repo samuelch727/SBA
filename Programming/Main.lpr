@@ -594,7 +594,7 @@ procedure loadUserName(var usrData : array of String);
         debugLog('loadUserName: Loading User File', 3);
         Assign(sourceFile, fileLocation + 'user.epd');
         Reset(sourceFile);
-        numberOfUser := 0;
+        numberOfUser := -1;
         while not Eof(sourceFile) do
             begin
                 numberOfUser := numberOfUser + 1;
@@ -625,6 +625,7 @@ function numberOfUser() : Integer;
               ReadLn(sourceFile, temp);
             end;
         Close(sourceFile);
+        debugLog('numberOfUser: have ' + IntToStr(numberOfUser) + ' user');
         debugLog('numberOfUser: execute success');
     end;
 function checkUserExist(usrName : String):Boolean; //Return false if user does exist
@@ -632,22 +633,17 @@ function checkUserExist(usrName : String):Boolean; //Return false if user does e
         userName : array of String;
         tempForLoop : Integer;
     begin
-        checkUserExist := True;
+        checkUserExist := False;
+        loadUserName(userName);
         debugLog('checkUserExist: checking',3);
-        if numberOfUser < 2 then
+        for tempForLoop := 0 to numberOfUser do
             begin
-                SetLength(userName, numberOfUser + 1);
-                debugLog('set userName array success',3);
-                debugLog('loading user name');
-                loadUserName(userName);
-                for tempForLoop := 0 to numberOfUser - 1 do
+                if usrName = dataDecryption(userName[tempForLoop]) then
                     begin
-                        if  userName[tempForLoop] = dataEncryption(usrName) then
-                            checkUserExist := False;
-                    end;  
-            end
-        else
-            checkUserExist := False;
+                        checkUserExist := True;
+                        Exit;
+                    end;
+            end;
     end;
 procedure creatAccount(isAdmin, ask : Boolean; fixedUserName : String = '');
     var
