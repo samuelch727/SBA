@@ -166,11 +166,11 @@ function dataDecryption(data : String):String;
     end;
 procedure quickSortParticipant(start, ending : Integer ; accrodingTo : Integer = 3); // 1 = Name, 2 = School, 3 = ID, 4 = seed
     var
-        privot, wall, loop : Integer;
+        pivot, wall, loop : Integer;
         temp : userData;
     begin
         wall := start;
-        privot := ending;
+        pivot := ending;
         if start < ending then
             begin
                 debugLog('quicksort started', 3);
@@ -178,7 +178,7 @@ procedure quickSortParticipant(start, ending : Integer ; accrodingTo : Integer =
                     begin
                         if accrodingTo = 1 then
                             begin
-                                if data[privot].Name > data[loop].Name then
+                                if data[pivot].Name > data[loop].Name then
                                     begin
                                     debugLog('quicksort change position', 3);
                                     temp := data[loop];
@@ -189,7 +189,7 @@ procedure quickSortParticipant(start, ending : Integer ; accrodingTo : Integer =
                             end;
                         if accrodingTo = 2 then
                             begin
-                                if data[privot].School > data[loop].School then
+                                if data[pivot].School > data[loop].School then
                                     begin
                                     debugLog('quicksort change position', 3);
                                     temp := data[loop];
@@ -200,7 +200,7 @@ procedure quickSortParticipant(start, ending : Integer ; accrodingTo : Integer =
                             end;
                         if accrodingTo = 3 then
                             begin
-                                if StrToInt(data[privot].ID) > StrToInt(data[loop].ID) then
+                                if StrToInt(data[pivot].ID) > StrToInt(data[loop].ID) then
                                     begin
                                     debugLog('quicksort change position', 3);
                                     temp := data[loop];
@@ -211,7 +211,7 @@ procedure quickSortParticipant(start, ending : Integer ; accrodingTo : Integer =
                             end;
                         if accrodingTo = 4 then
                             begin
-                                if data[privot].seed < data[loop].seed then
+                                if data[pivot].seed < data[loop].seed then
                                     begin
                                     debugLog('quicksort change position', 3);
                                     temp := data[loop];
@@ -221,8 +221,8 @@ procedure quickSortParticipant(start, ending : Integer ; accrodingTo : Integer =
                                     end;
                             end;
                     end;
-                temp := data[privot];
-                data[privot] := data[wall];
+                temp := data[pivot];
+                data[pivot] := data[wall];
                 data[wall] := temp;
                 debugPrintDataID;
                 quickSortParticipant(start, wall - 1, accrodingTo);
@@ -231,16 +231,16 @@ procedure quickSortParticipant(start, ending : Integer ; accrodingTo : Integer =
     end;
 procedure quickSortParallelArray(start, ending : Integer ; targetArray, prallelArray : Array of Integer); 
     var
-        privot, wall, loop, debugLoop, temp : Integer;
+        pivot, wall, loop, debugLoop, temp : Integer;
     begin
         wall := start;
-        privot := ending;
+        pivot := ending;
         if start < ending then
             begin
                 debugLog('quicksort for other array started', 3);
                 for loop := start to ending - 1 do
                     begin
-                        if targetArray[privot] < targetArray[loop] then
+                        if targetArray[pivot] < targetArray[loop] then
                             begin
                             debugLog('quicksort change position', 3);
                             temp := targetArray[loop];
@@ -252,11 +252,11 @@ procedure quickSortParallelArray(start, ending : Integer ; targetArray, prallelA
                             wall := wall + 1;
                             end;
                     end;
-                temp := targetArray[privot];
-                targetArray[privot] := targetArray[wall];
+                temp := targetArray[pivot];
+                targetArray[pivot] := targetArray[wall];
                 targetArray[wall] := temp;
-                temp := prallelArray[privot];
-                prallelArray[privot] := prallelArray[wall];
+                temp := prallelArray[pivot];
+                prallelArray[pivot] := prallelArray[wall];
                 prallelArray[wall] := temp;
                 debugLog('wall = ' + IntToStr(wall));
                 for debugLoop := 0 to Length(targetArray) - 1 do debugLog('inputarray[' + IntToStr(debugLoop) + '] = ' + IntToStr(targetArray[debugLoop]));
@@ -267,13 +267,13 @@ procedure quickSortParallelArray(start, ending : Integer ; targetArray, prallelA
     end;
 function SearchForUser(Name : String = ''; ID : String = ''; School : String = '' ; var SearchResult : array of Integer) : Integer;
     var
-        legnthOfArray, middle, top, bottom, temp, kmpLoop, kmpTargetLoop, kmpTempForTargetPointer, kmpCounter, tempForCheckResultExist : Integer;
+        lengthOfArray, middle, top, bottom, temp, kmpLoop, kmpTargetLoop, kmpTempForTargetPointer, kmpCounter, tempForCheckResultExist : Integer;
         found, resultExist : Boolean;
         KMP, matchCount: array of Integer;
     begin
         Name := LowerCase(Name);
         School := LowerCase(School);
-        legnthOfArray := -1;
+        lengthOfArray := -1;
         bottom := 0;
         top := participantArraySize - 1;
         found := False;
@@ -294,10 +294,10 @@ function SearchForUser(Name : String = ''; ID : String = ''; School : String = '
                 until found or (bottom > top);
                 if found then
                     begin
-                        legnthOfArray := legnthOfArray + 1;
-                        SetLength(matchCount, legnthOfArray + 1);
-                        matchCount[legnthOfArray] := 1;
-                        SearchResult[legnthOfArray] := middle;
+                        lengthOfArray := lengthOfArray + 1;
+                        SetLength(matchCount, lengthOfArray + 1);
+                        matchCount[lengthOfArray] := 1;
+                        SearchResult[lengthOfArray] := middle;
                     end;
             end;
         if Name <> '' then
@@ -359,10 +359,10 @@ function SearchForUser(Name : String = ''; ID : String = ''; School : String = '
                             if not resultExist then
                                 begin
                                     debugLog('kmp search : Found Target, saving to array', 3);
-                                    legnthOfArray := legnthOfArray + 1;
-                                    SetLength(matchCount, legnthOfArray + 1);
-                                    matchCount[legnthOfArray] := 1;
-                                    SearchResult[legnthOfArray] := temp;
+                                    lengthOfArray := lengthOfArray + 1;
+                                    SetLength(matchCount, lengthOfArray + 1);
+                                    matchCount[lengthOfArray] := 1;
+                                    SearchResult[lengthOfArray] := temp;
                                     debugLog('kmp save complete', 3);
                                 end;
                         end;
@@ -432,17 +432,17 @@ function SearchForUser(Name : String = ''; ID : String = ''; School : String = '
                             if not resultExist then
                                 begin
                                     debugLog('kmp search : Found Target, saving to array', 3);
-                                    legnthOfArray := legnthOfArray + 1;
-                                    SetLength(matchCount, legnthOfArray + 1);
-                                    matchCount[legnthOfArray] := 1;
-                                    SearchResult[legnthOfArray] := temp;
+                                    lengthOfArray := lengthOfArray + 1;
+                                    SetLength(matchCount, lengthOfArray + 1);
+                                    matchCount[lengthOfArray] := 1;
+                                    SearchResult[lengthOfArray] := temp;
                                     debugLog('kmp save complete', 3);
                                 end;
                         end;
                 until temp + 1 = participantArraySize;
             end;
-        debugLog('search complete, number of result = ' + IntToStr(legnthOfArray), 3);
-        if legnthOfArray > 0 then
+        debugLog('search complete, number of result = ' + IntToStr(lengthOfArray), 3);
+        if lengthOfArray > 0 then
             begin
                 debugLog('Checking mathcing count');
                 debugLog('Lenght of SearchResult : ' + IntToStr(Length(SearchResult)));
@@ -452,16 +452,16 @@ function SearchForUser(Name : String = ''; ID : String = ''; School : String = '
                   debugLog('Searching check matching: i dont know why it fail... ', 2);
                 end;
                 debugLog('quicksort done');
-                legnthOfArray := 0;
+                lengthOfArray := 0;
                 debugLog('Start loop');
-                while matchCount[legnthOfArray] = matchCount[0] do
+                while matchCount[lengthOfArray] = matchCount[0] do
                     begin
-                        legnthOfArray := legnthOfArray + 1;
-                        debugLog('looping: ' + IntToStr(legnthOfArray));
+                        lengthOfArray := lengthOfArray + 1;
+                        debugLog('looping: ' + IntToStr(lengthOfArray));
                     end;
-                legnthOfArray := legnthOfArray - 1;
+                lengthOfArray := lengthOfArray - 1;
             end;
-        SearchForUser := legnthOfArray;
+        SearchForUser := lengthOfArray;
         debugLog('searching complete');
         debugPrintDataID;
     end;
