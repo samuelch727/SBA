@@ -714,28 +714,38 @@ procedure addParticipantData();
     var
         inputSuccess : Boolean;
         temp, temp1, temp2, temp3 : String;
-        temp4 : Boolean;
+        temp4, validInput : Boolean;
         tempForLoop : Integer;
     begin
         debugLog('Loading for adding participant', 3);
         debugLog('append array success', 3);
         Str(participantArraySize + 1, temp1);        
         WriteLn('input Name:');
-        try
-            Readln(temp2);
-        except
-            TextColor(Red);
-            WriteLn('Invaild Data');
-            TextColor(White);
-        end;
+        validInput := True;
+        repeat
+            try
+                Readln(temp2);
+                if temp2 = '' then validInput := False;
+            except
+                TextColor(Red);
+                WriteLn('Invaild Data');
+                TextColor(White);
+                validInput := False;
+            end;
+        until validInput;
         WriteLn('input School:');
-        try
-            Readln(temp3);
-        except
-            TextColor(Red);
-            WriteLn('Invaild Data');
-            TextColor(White);
-        end;
+        validInput := True;
+        repeat
+            try
+                Readln(temp3);
+                if temp3 = '' then validInput := False;
+            except
+                TextColor(Red);
+                WriteLn('Invaild Data');
+                TextColor(White);
+                validInput := False;
+            end;
+        until validInput;
         inputSuccess := False;
         tempForLoop := 0;
         temp4 := False;
@@ -785,7 +795,7 @@ procedure addParticipantData();
                 quickSortParticipant(0, participantArraySize - 1);
                 inputDataToFile();
                 debugLog('add participant successful');
-                // creatAccount(False, False, temp2);
+                // creatAccount(False, False, temp2); Function in dev.
             end else WriteLn('This school already have 2 participant.');
     end;
 procedure logIn();
