@@ -18,7 +18,7 @@ type
 var
     data : array of userData;
     participantArraySize, competitonRecordPointer, totalNumberOfRound, currentRound, numOfFinishedGroup : Integer;
-    debugMode, loggedIn, admin, createdChart, programErrorBreak : Boolean;
+    debugMode, loggedIn, admin, createdChart, programErrorBreak, WinPlat : Boolean;
     competitonRecord : array of chartData;
     version, fileLocation : String;
 procedure ClearDebugLog();
@@ -38,7 +38,7 @@ procedure debugLog(message : String ; level : Integer = 3); //Level 1: Fatal Err
                 TextColor(Red);
                 Writeln('Oops. I have detected an error in my program. Try restart me :(');
                 Writeln('Please also contact administrator');
-                TextColor(White);
+                if WinPlat then TextColor(White) else TextColor(Black);
                 Delay(500);
                 Write('Exiting Program');
                 Write('.');
@@ -56,19 +56,19 @@ procedure debugLog(message : String ; level : Integer = 3); //Level 1: Fatal Err
                         TextColor(Red);
                         Write('Fatal Error: ');
                         WriteLn(message);
-                        TextColor(White);
+                        if WinPlat then TextColor(White) else TextColor(Black);
                     end;
                     2 : begin
                         TextColor(Yellow);
                         Write('Warnning: ');
                         WriteLn(message);
-                        TextColor(White);
+                        if WinPlat then TextColor(White) else TextColor(Black);
                     end;
                     3 : begin
                         TextColor(Green);
                         Write('Debug:');
                         WriteLn(message);
-                        TextColor(White);
+                        if WinPlat then TextColor(White) else TextColor(Black);
                     end;
                 end;
             end;
@@ -666,7 +666,7 @@ procedure creatAccount(isAdmin, ask : Boolean; fixedUserName : String = '');
                     begin
                         TextColor(Red);
                         WriteLn('Invaild Data');
-                        TextColor(White);
+                        if WinPlat then TextColor(White) else TextColor(Black);
                         inputSuccess := False
                     end;
                 end;
@@ -698,7 +698,7 @@ procedure creatAccount(isAdmin, ask : Boolean; fixedUserName : String = '');
                 begin
                     TextColor(Red);
                     WriteLn('Both Password Are Not The Same. Please Reenter');
-                    TextColor(White);
+                    if WinPlat then TextColor(White) else TextColor(Black);
                 end;
         until password = valiPassword;
         debugLog('Password Validation Success', 3);
@@ -729,7 +729,7 @@ procedure addParticipantData();
             except
                 TextColor(Red);
                 WriteLn('Invaild Data');
-                TextColor(White);
+                if WinPlat then TextColor(White) else TextColor(Black);
                 validInput := False;
             end;
         until validInput;
@@ -742,7 +742,7 @@ procedure addParticipantData();
             except
                 TextColor(Red);
                 WriteLn('Invaild Data');
-                TextColor(White);
+                if WinPlat then TextColor(White) else TextColor(Black);
                 validInput := False;
             end;
         until validInput;
@@ -769,7 +769,7 @@ procedure addParticipantData();
                         begin
                             TextColor(Red);
                             WriteLn('Invaild Data');
-                            TextColor(White);
+                            if WinPlat then TextColor(White) else TextColor(Black);
                             inputSuccess := False
                         end;
                     end;
@@ -1142,7 +1142,7 @@ procedure ShowChart(print : Boolean = True);
                         TextColor(Red);
                         WriteLn('Notice: After creating the chart, you can not add participant anymore.');
                         WriteLn('Are you sure to continue? [Y/N]');
-                        TextColor(White);
+                        if WinPlat then TextColor(White) else TextColor(Black);
                         repeat
                             ReadLn(validation);
                             correctInput := True;
@@ -1562,7 +1562,7 @@ procedure CompetitorManagementMenu();
         until inputCorrect;
         TextColor(Green);
         if choice <> 9 then WriteLn('press enter to continue');
-        TextColor(White);
+        if WinPlat then TextColor(White) else TextColor(Black);
         if choice <> 9 then ReadLn;
     end;
 procedure SearchMenu();
@@ -1800,7 +1800,7 @@ procedure Mainmenu();
             if programErrorBreak then exit;
             TextColor(Green);
             if choice <> 3 then WriteLn('press enter to continue');
-            TextColor(White);
+            if WinPlat then TextColor(White) else TextColor(Black);
             if choice <> 3 then ReadLn;
         until choice = 9;
     end;
@@ -1820,6 +1820,7 @@ begin
     currentRound := 0;
     createdChart := False;
     version := '1.2.1-Alpha';
+    WinPlat := False;
     LoadParticipant;
     try
         quickSortParticipant(0, participantArraySize - 1);
