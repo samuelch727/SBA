@@ -115,8 +115,7 @@ function dataEncryption(data : String):String;
             ReadLn(keyFile, key);
             Close(keyFile);
         except
-            debugLog('Fail to load key file', 1);
-            WriteLn('Error when encryption');         // Handle unexpected error
+            debugLog('Fail to load key file', 1);         // Handle unexpected error
         end;
         keyLength := Length(key);
         counter := 1;
@@ -533,7 +532,7 @@ procedure LoadParticipant();
         temp, temp2 : String;
         loop : Integer;
     begin
-        debugLog('Start Load Participant Data', 3);
+        debugLog('LoadParticipant: Start Load Participant Data', 3);
         Assign(sourceFile, fileLocation + 'Competitors.epd');
         Reset(sourceFile);
         debugLog('Loaded File', 3);
@@ -543,27 +542,27 @@ procedure LoadParticipant();
         debugLog('Array Length Set', 3);
         while not Eof(sourceFile) do
             begin
-                debugLog('Loading Data', 3);
+                debugLog('LoadParticipant: Loading Data', 3);
                 loop := loop + 1;
                 ReadLn(sourceFile, temp);
                 data[loop].ID := dataDecryption(temp);
-                debugLog('Loaded ID', 3);
+                debugLog('LoadParticipant: Loaded ID', 3);
                 ReadLn(sourceFile, temp);
                 data[loop].Name := dataDecryption(temp);
-                debugLog('Loaded Name', 3);
+                debugLog('LoadParticipant: Loaded Name', 3);
                 ReadLn(sourceFile, temp);
                 data[loop].School := dataDecryption(temp);
-                debugLog('Loaded School', 3);
+                debugLog('LoadParticipant: Loaded School', 3);
                 ReadLn(sourceFile, temp2);
                 temp2 := dataDecryption(temp2);
-                debugLog('Loaded location', 3);
+                debugLog('LoadParticipant: Loaded location', 3);
                 ReadLn(sourceFile, temp);
                 data[loop].competitionRecordPosition := StrToInt(dataDecryption(temp));
                 if temp2 = 'True' then
                     data[loop].seed := True
                 else
                     data[loop].seed := False;
-                debugLog('Loaded Seed', 3);
+                debugLog('LoadParticipant: Loaded Seed', 3);
             end;
         Close(sourceFile);
     end;
@@ -578,7 +577,7 @@ function ValidateParticipantData(userSchool : String) : Boolean;
         try
             if participantArraySize > 0 then numberOfReseult := SearchForUser('','', userSchool, tempArray);
         except
-            debugLog('search error', 1);
+            debugLog('ValidateParticipantData: search error', 1);
         end;
         if numberOfReseult >= 1 then Result := False else Result := True;
     end;
@@ -602,7 +601,7 @@ procedure loadUserName(var usrData : array of String);
                     end;
             end;
         Close(sourceFile);
-        debugLog('loadUserName: execut success');
+        debugLog('loadUserName: execute success');
     end;
 function numberOfUser() : Integer;
     var
@@ -1111,11 +1110,11 @@ procedure startCreatingChart();
         while data[passInNoSeed].seed do passInNoSeed := passInNoSeed + 1;
         debugLog('Chart gen: counted number of seed as: ' + IntToStr(passInNoSeed));
         debugLog('Chart gen: creating chart');
-        // try
+        try
             createChart(0, Length(passInArray) - 1, passInNoSeed, tempForLoop + 1, passInArray);
-        // except
-            // debugLog('gen chart error', 1);
-        // end;
+        except
+            debugLog('Chart gen: gen chart error', 1);
+        end;
         debugLog('Chart gen: creat chart successfully');
     end;
 
@@ -1322,8 +1321,8 @@ procedure DeleteCompetitor();
     var
         serachResultArray : Array of Integer;
         searchResultNumber, targetID, tempForLoop : Integer;
-        correctInput, comfirmInput : Boolean;
-        comfirmInputText : String;
+        correctInput, confirmInput : Boolean;
+        confirmInputText : String;
     begin
         SetLength(serachResultArray, participantArraySize);
         searchResultNumber := SearchMenu2(serachResultArray);
@@ -1348,10 +1347,10 @@ procedure DeleteCompetitor();
                 repeat
                     Write('Are You Sure To Delete This Participant? [Y/N] : ');
                     correctInput := True;
-                    ReadLn(comfirmInputText);
-                    comfirmInput := False;
-                    case LowerCase(comfirmInputText) of
-                        'y' : comfirmInput := True;
+                    ReadLn(confirmInputText);
+                    confirmInput := False;
+                    case LowerCase(confirmInputText) of
+                        'y' : confirmInput := True;
                         'n' : exit;
                     else
                         correctInput := False;
@@ -1359,7 +1358,7 @@ procedure DeleteCompetitor();
                     end;
                 until correctInput;
                 quickSortParticipant(0, participantArraySize - 1);
-                if comfirmInput then
+                if confirmInput then
                     begin
                         debugLog('DeleteCompetitor: start deleting competitor ID: ' + IntToStr(targetID));
                         if targetID <> participantArraySize then 
@@ -1810,6 +1809,8 @@ begin
     Delete(fileLocation, Length(fileLocation) - 7, 8);
     fileLocation := fileLocation + 'File\';
     WriteLn(fileLocation);
+    If not DirectoryExists(fileLocation) then
+        if CreateDir(fileLocation) then debugLog('Create dir success') else debugLog('Fail to create dir', 1);
     ClearDebugLog;
     debugMode := True;
     debugLog('Start initalization');
@@ -1820,7 +1821,7 @@ begin
     currentRound := 0;
     createdChart := False;
     version := '1.2.1-Alpha';
-    WinPlat := False;
+    WinPlat := True;
     LoadParticipant;
     try
         quickSortParticipant(0, participantArraySize - 1);
