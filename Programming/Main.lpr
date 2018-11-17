@@ -29,15 +29,33 @@ procedure ClearDebugLog();
         Rewrite(DebugFile);
         Close(DebugFile);
     end;
-procedure debugLog(message : String ; level : Integer = 3); //Level 1: Fatal Error, Level 2: Warnning, Level 3: Debug
+procedure debugLog(message : String ; level : Integer = 3 ; errorCode : String = ''); //Level 1: Fatal Error, Level 2: Warnning, Level 3: Debug
     var
         DebugFile : Text;
     begin
+        Assign(DebugFile, fileLocation + 'debugLog.txt');
+        Append(DebugFile);
+        case level of
+            1 : begin
+                Write(DebugFile, 'Fatal Error, Level 1: ');
+                WriteLn(DebugFile, message);
+            end;
+            2 : begin
+                Write(DebugFile, 'Warnning, Level 2: ');
+                WriteLn(DebugFile, message);
+            end;
+            3 : begin
+                Write(DebugFile, 'Debug: ');
+                WriteLn(DebugFile, message);
+            end;
+        end;
+        Close(DebugFile);
         if level = 1 then 
             begin
                 TextColor(Red);
                 Writeln('Oops. I have detected an error in my program. Try restart me :(');
                 Writeln('Please also contact administrator');
+                if errorCode <> '' then writeln('error code: ' + errorCode);
                 if WinPlat then TextColor(White) else TextColor(Black);
                 Delay(500);
                 Write('Exiting Program');
@@ -47,6 +65,7 @@ procedure debugLog(message : String ; level : Integer = 3); //Level 1: Fatal Err
                 Delay(200);
                 Write('.');
                 Delay(100);
+                Halt(1);
                 programErrorBreak := True;
             end;
         if debugMode then
@@ -72,23 +91,6 @@ procedure debugLog(message : String ; level : Integer = 3); //Level 1: Fatal Err
                     end;
                 end;
             end;
-        Assign(DebugFile, fileLocation + 'debugLog.txt');
-        Append(DebugFile);
-        case level of
-            1 : begin
-                Write(DebugFile, 'Fatal Error, Level 1: ');
-                WriteLn(DebugFile, message);
-            end;
-            2 : begin
-                Write(DebugFile, 'Warnning, Level 2: ');
-                WriteLn(DebugFile, message);
-            end;
-            3 : begin
-                Write(DebugFile, 'Debug: ');
-                WriteLn(DebugFile, message);
-            end;
-        end;
-        Close(DebugFile);
     end;
 procedure debugPrintDataID();
     var
@@ -144,7 +146,7 @@ function dataDecryption(data : String):String;
             ReadLn(keyFile, key);
             Close(keyFile);
         except
-            debugLog('error when decryption', 1);
+            debugLog('error when decryption', 1, 'KEY ERROR');
             writeln('Error when decryption');         // Handle unexpected error
         end;
         try
@@ -158,7 +160,7 @@ function dataDecryption(data : String):String;
                 end;
             // Return encrypted message
         except
-            debugLog('Key Error', 1);
+            debugLog('Key Error', 1, 'KEY ERROR');
         end;
         debugLog('decryption successful', 3);
         dataDecryption := encryptedMessage;
@@ -534,8 +536,15 @@ procedure LoadParticipant();
     begin
         debugLog('LoadParticipant: Start Load Participant Data', 3);
         Assign(sourceFile, fileLocation + 'Competitors.epd');
+        try
+            Reset(sourceFile);
+            if eof(sourceFile) then debugLog('Loaded File', 3);
+        except
+            debugLog('LoadParticipant: No Competitors.epd found, creating one', 2);
+            Rewrite(sourceFile);
+        end;
+        Close(sourceFile);
         Reset(sourceFile);
-        debugLog('Loaded File', 3);
         numberOfParticipant();
         SetLength(data, participantArraySize);
         loop := -1;
@@ -609,10 +618,18 @@ function numberOfUser() : Integer;
         temp : String;
     begin
         AssignFile(sourceFile, fileLocation + 'user.epd');
-        debugLog('numberOfUser: Load file successful');
+        try
+        reset(sourceFile);
+        if not eof(sourceFile) then debugLog('numberOfUser: Load file successful');
+        except
+            debugLog('numberOfUser: user.epd missing, creating one.' , 2);
+            Rewrite(sourceFile);
+        end;
+        Close(sourceFile);
         reset(sourceFile);
         debugLog('numberOfUser: reset success');
         numberOfUser := 0;
+        try
         while not Eof(sourceFile) do
             begin
               numberOfUser := numberOfUser + 1;
@@ -620,6 +637,9 @@ function numberOfUser() : Integer;
               ReadLn(sourceFile, temp);
               ReadLn(sourceFile, temp);
             end;
+        except
+          debugLog('numberOfUser: user.epd not found');
+        end;
         Close(sourceFile);
         debugLog('numberOfUser: have ' + IntToStr(numberOfUser) + ' user');
         debugLog('numberOfUser: execute success');
@@ -748,12 +768,13 @@ procedure addParticipantData();
         inputSuccess := False;
         tempForLoop := 0;
         temp4 := False;
-        if participantArraySize <> 0 then 
+        if participantArraySize > 1 then 
             begin
                 quickSortParticipant(0, participantArraySize - 1, 4);
                 debugPrintDataID;
                 while data[tempForLoop].seed do tempForLoop := tempForLoop + 1; 
             end;
+        debugPrintDataID;
         debugLog('Number of seed : ' + IntToStr(tempForLoop));
         if tempForLoop < 4 then
             begin
@@ -795,7 +816,12 @@ procedure addParticipantData();
                 inputDataToFile();
                 debugLog('add participant successful');
                 // creatAccount(False, False, temp2); Function in dev.
-            end else WriteLn('This school already have 2 participant.');
+            end else 
+            begin
+                TextColor(Red);
+                WriteLn('This school already have 2 participant.');
+                if WinPlat then TextColor(White) else TextColor(Black);
+            end;
     end;
 procedure logIn();
     var
@@ -972,6 +998,7 @@ procedure createChart(start, ending ,noOfSeed ,noOfPlayer : Integer; inputArray 
                         sameSchool := False;
                         while (passInArray[tempForCheckSchool] <> -1) and (tempForCheckSchool < Length(passInArray)) do
                             begin
+                                if length(competitonRecord) = (ending - start + 1) then break;
                                 debugLog('createChart: check same school: checking: '  + IntToStr(tempForCheckSchool));
                                 if data[passInArray[tempForCheckSchool]].School = data[inputArray[tempForLoop]].School then
                                     begin
@@ -1013,6 +1040,7 @@ procedure createChart(start, ending ,noOfSeed ,noOfPlayer : Integer; inputArray 
                         sameSchool := False;
                         while (passInArray[tempForCheckSchool] <> -1) and (tempForCheckSchool < wall) do
                             begin
+                                if length(competitonRecord) = (ending - start + 1) then break;
                                 debugLog('createChart: check same school: checking: '  + IntToStr(tempForCheckSchool));
                                 if data[passInArray[tempForCheckSchool]].School = data[inputArray[tempForLoop]].School then
                                     begin
@@ -1266,7 +1294,7 @@ procedure ShowChart(print : Boolean = True);
                                     else
                                         begin
                                             if print then Writeln();
-                                            if print then ReadLn
+                                            if print and WinPlat then ReadLn
                                         end;
                                     if nextPointer < wall then nextPointer := wall else nextPointer := groupPointer + 1;
                                     if (numOfFinishedGroup = (Length(competitonRecord) div (2 * (totalNumberOfRound - loopingRound + 1)))) or (currentRound < loopingRound) then startNextRound := True else startNextRound := False;
@@ -1468,7 +1496,9 @@ procedure EditCompetitorSeed();
                 until correctInput;
                 if (newSeedStat = True) and (numberOfSeed >= 4) then
                     begin
+                        TextColor(Red);
                         Writeln('Number of seed already reaches maximum number.');
+                        if WinPlat then TextColor(White) else TextColor(Black);
                         Exit;
                     end;
                 data[targetID].seed := newSeedStat;
@@ -1514,7 +1544,9 @@ procedure EditCompetitorSchool();
                 searchResultNumber := SearchForUser('', '', newSchool, serachResultArray);
                 if searchResultNumber >= 1 then
                     begin
-                        WriteLn('This school already have 2 participants');
+                        TextColor(Red);
+                        WriteLn('This school already have 2 participant.');
+                        if WinPlat then TextColor(White) else TextColor(Black);
                         Exit;
                     end;
                 data[targetID].School := newSchool;
@@ -1535,7 +1567,7 @@ procedure CompetitorManagementMenu();
             WriteLn('2. Change Competitor School');
             WriteLn('3. Change Competitor Seed Status');
             Writeln('4. Delete Competitor');
-            Writeln('5. Add participant');
+            Writeln('5. Add Competitor');
             Writeln('9. Back To Main Screen');
             WriteLn;
             Write('Your Choice: ');
@@ -1605,6 +1637,7 @@ procedure addCompetitonResult();
         inputOfContinue, inputCorrect, inputResult : Boolean;
     begin
         if Round(power(2, currentRound - 1)) = numOfFinishedGroup then ShowChart(False);
+        if not createdChart then exit;
         WriteLn('Loading...');
         ClrScr;
         debugLog('currentRound = ' + IntToStr(currentRound));
@@ -1743,7 +1776,7 @@ procedure addCompetitonResult();
 procedure aboutProgram();
     begin
         writeln('This program is developed by Samuel Chan Sze Nok.');
-        writeln('This is a open source project, you may download the code from here: https://github.com/samuelch727/SBA');
+        writeln('This is an open source project, you may download the code from here: https://github.com/samuelch727/SBA');
         writeln('If you find any bug, plese report to me through the above link.');
         WriteLn('Status: In development');
         Writeln('Version: ' + version);
@@ -1803,11 +1836,14 @@ procedure Mainmenu();
             if choice <> 3 then ReadLn;
         until choice = 9;
     end;
+
 begin
     programErrorBreak := False;
+    WinPlat := False;
     fileLocation := ParamStr(0);
-    Delete(fileLocation, Length(fileLocation) - 7, 8);
-    fileLocation := fileLocation + 'File\';
+    if WinPlat then Delete(fileLocation, Length(fileLocation) - 7, 8) else Delete(fileLocation, Length(fileLocation) - 3, 4);
+    if WinPlat then fileLocation := fileLocation + 'File\' else fileLocation := fileLocation + '/File/';
+    Write('file location: ');
     WriteLn(fileLocation);
     If not DirectoryExists(fileLocation) then
         if CreateDir(fileLocation) then debugLog('Create dir success') else debugLog('Fail to create dir', 1);
@@ -1821,8 +1857,11 @@ begin
     currentRound := 0;
     createdChart := False;
     version := '1.2.1-Alpha';
-    WinPlat := True;
-    LoadParticipant;
+    try
+        LoadParticipant;
+    except
+        debugLog('Initalization: File corruption detected', 1, 'FILE CORRUPTION');
+    end;
     try
         quickSortParticipant(0, participantArraySize - 1);
     except
@@ -1837,5 +1876,9 @@ begin
             Writeln('No user account found! Please create one.');
             creatAccount(True, False);
         end;
+    try
     Mainmenu();
+    except
+        debugLog('Unknow error', 1, '001');
+    end;
 end.
